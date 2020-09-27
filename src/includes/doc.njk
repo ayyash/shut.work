@@ -1,0 +1,33 @@
+---
+layout: "base"
+list: [
+    {name: "General", href: "/css/general"},
+    {name: "Forms", href: "/css/forms"},
+    {name: "Grid", href: "/css/grid"},
+    {name: "Tables", href: "/css/tables"},
+    {name: "Type", href: "/css/type"},
+    {name: "Icons", href: "/css/icons"},
+    {name: "Functions", href: "/css/functions"},
+]
+---
+<div class="row-spaced">
+    <div class="col md-3">
+        <ul class="rowlist">
+            {% for item in list %}
+
+            <li>
+                <a href="{{item.href}}">
+
+                {{item.name}}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>        
+    </div>
+    <div class="col md-9">
+
+{% block content %}
+    {{ content | safe }}
+{% endblock content %}
+    </div>
+</div>

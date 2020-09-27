@@ -1,0 +1,142 @@
+---
+layout: "doc"
+---
+<div class="page">
+	<div class="container">
+<h1>Form elements</h1>
+<section>
+
+	<div class="spaced">
+		<fieldset >
+			<legend>Text</legend>
+			<ol class="stack stacklist">
+				<li>
+					<label>Label</label>
+					<input type="text" class="t4" placeholder="class .t1-.t12" />
+				</li>
+				<li>
+					<label>Error field</label>
+					<input type="text" class="t4 error" placeholder=".error" />
+				</li>
+				<li>
+					<label>Required field</label>
+					<div class="wrapvld">
+						<input type="text" class="t4" placeholder=".wrapvld container" />
+						<span class="req"></span>
+					</div>
+				</li>
+				<li>
+					<label>Required field validation error</label>
+					<div class="wrapvld">
+						<input type="text" class="t4" placeholder=".wrapvld container" />
+						<span class="req"></span>
+						<span class="errlabel">Required .errlabel</span>
+					</div>
+				</li>
+				<li>
+					<label>Required field validation error</label>
+					<div class="wrapvld">
+						<input type="text" class="t4" placeholder=".wrapvld container" />
+						<span class="req"></span>
+						<span class="herrlabel">Required .herrlabel</span>
+					</div>
+				</li>
+
+			</ol>
+		</fieldset>
+	</div>
+<pre><code class="language-html">&lt;label>Required field&lt;/label>
+&lt;div class="wrapvld">
+	&lt;input type="text" class="t4" placeholder=".wrapvld container" />
+	&lt;span class="req">&lt;/span>
+	&lt;span class="errlabel">Error message .errlabel or .herrlabel&lt;/span>
+&lt;/div>
+</code></pre>
+	<div class="detailed">
+		<fieldset>
+			<legend>Select</legend>
+			<div class="stack">
+				<label>Label</label>
+				<select class="t4">
+					<option>Value option </option>
+					<option>Value option </option>
+					<option>Value option </option>
+					<option>Value option </option>
+					<option>Value option </option>
+					<option>Value option </option>
+					<option>Value option </option>
+					<option>Value option </option>
+				</select>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Textarea</legend>
+			<div class="stack">
+				<label>Label</label>
+				<textarea class="t4 h2"></textarea>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Mimic text</legend>
+			<div class="stack">
+				<label>Label</label>
+				<div class="mimictextinput t4">Looks like text .mimictextinput</div>
+			</div>
+
+		</fieldset>
+		<fieldset>
+			<legend>Checkboxes</legend>
+			<div class="stack">
+				<label class="checkbox">
+					<input type="checkbox" /> .checkbox container
+				</label>
+				<label class="checkbox checked">
+					<input type="checkbox" /> .checkbox .checked container
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Radio buttons</legend>
+			<div class="stack">
+				<label class="radio">
+					<input type="radio" /> .radio container
+				</label>
+				<label class="radio checked">
+					<input type="radio" /> .radio .checked container
+				</label>
+			</div>
+		</fieldset>
+<pre><code class="language-html">&lt;label class="checkbox">
+	&lt;input type="checkbox" /> .checkbox container
+&lt;/label>
+&lt;label class="checkbox checked">
+	&lt;input type="checkbox" /> .checkbox .checked container
+&lt;/label>
+&lt;label class="radio">
+	&lt;input type="radio" /> .radio container
+&lt;/label>
+&lt;label class="radio checked">
+	&lt;input type="radio" /> .radio .checked container
+&lt;/label>
+</code></pre>
+		<fieldset>
+			<legend>Buttons</legend>
+			<div class="stack">
+				<button type="submit" class="btnrev">Active button .btnrev</button>
+				<button class="btn">Secondary button .btn</button>
+				<button class="btndiff">Different button .btndiff</button>
+				<button class="btn btngreen">Green button .btn.btngreen</button>
+
+			</div>
+			<div class="stack">
+				<button class="roundbtn">x</button>
+			</div>
+		</fieldset>
+
+	</div>
+</section>
+
+
+	</div>
+</div>

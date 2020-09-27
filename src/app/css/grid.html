@@ -1,0 +1,256 @@
+---
+layout: "doc"
+---
+<h1>Grid</h1>
+<h6 class="bthin">.incols (container), .col (for each child), .c1 - .c12 (for each child)</h6>
+<pre><code class="language-html">&lt;div class="incols">
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c1">c1&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c1">c1&lt;/div>
+	&lt;div class="col c11">c11&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c2">c2&lt;/div>
+	&lt;div class="col c10">c10&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c3">c3&lt;/div>
+	&lt;div class="col c9">c9&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c4">c4&lt;/div>
+	&lt;div class="col c8">c8&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c5">c5&lt;/div>
+	&lt;div class="col c7">c7&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c6">c6&lt;/div>
+	&lt;div class="col c6">c6&lt;/div>
+&lt;/div>
+&lt;div class="incols">
+	&lt;div class="col c12">c12&lt;/div>
+&lt;/div></code></pre>
+
+<section class="devgreygb">
+	<div class="incols">
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+		<div class="col c1">c1</div>
+
+	</div>
+
+	<div class="incols">
+		<div class="col c1">c1</div>
+		<div class="col c11">c11</div>
+	</div>
+	<div class="incols">
+		<div class="col c2">c2</div>
+		<div class="col c10">c10</div>
+	</div>
+	<div class="incols">
+		<div class="col c3">c3</div>
+		<div class="col c9">c9</div>
+	</div>
+	<div class="incols">
+		<div class="col c4">c4</div>
+		<div class="col c8">c8</div>
+	</div>
+	<div class="incols">
+		<div class="col c5">c5</div>
+		<div class="col c7">c7</div>
+	</div>
+	<div class="incols">
+		<div class="col c6">c6</div>
+		<div class="col c6">c6</div>
+	</div>
+	<div class="incols">
+		<div class="col c12">c12</div>
+	</div>
+
+
+
+</section>
+<section>
+	<h2 class="spaced">Offsets</h2>
+	<h6 class="bthin">.off1 - .off11 (for each child in a grid layout)</h6>
+
+	<div class="devgreygb incols">
+		<div class="col off1 c1 clear">off1</div>
+
+		<div class="col off2 c1 clear">off2</div>
+
+		<div class="col off3 c1 clear">off3</div>
+
+		<div class="col off4 c1 clear">off4</div>
+
+		<div class="col off5 c1 clear">off5</div>
+
+		<div class="col off6 c1 clear">off6</div>
+
+		<div class="col off7 c1 clear">off7</div>
+
+		<div class="col off8 c1 clear">off8</div>
+
+		<div class="col off9 c1 clear">off9</div>
+
+		<div class="col off10 c1 clear">off10</div>
+
+		<div class="col off11 c1 clear">off11</div>
+	</div>
+</section>
+<section>
+	<h2 class="spaced">Boxes</h2>
+	<h6 class="bthin">.box, .whitboxe (sub children of each child of a grid layout)</h6>
+<pre><code class="language-html">&lt;div class="incols">
+	&lt;div class="col c1">&lt;div class="whitebox">box c1&lt;/div>&lt;/div>
+	&lt;div class="col c2">&lt;div class="whitebox">box c2&lt;/div>&lt;/div>
+&lt;/div>
+</code></pre>
+
+
+	<div class="incols">
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c2"><div class="whitebox">box c2</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c3"><div class="whitebox">box c3</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+	</div>
+	<div class="incols">
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+		<div class="col c1"><div class="whitebox">box c1</div></div>
+	</div>
+</section>
+<section>
+	<h6 class="bthin">.box, .whitebox (of each child directly)</h6>
+<pre><code class="language-html">&lt;div class="incols">
+	&lt;div class="col c1 whitebox">box c1&lt;/div>
+	&lt;div class="col c2 whitebox">box c2&lt;/div>
+&lt;/div></code></pre>
+	<div class="incols">
+		<div class="col c1 whitebox">box c1</div>
+		<div class="col c2 whitebox">box c2</div>
+		<div class="col c1 whitebox">box c1</div>
+		<div class="col c3 whitebox">box c3</div>
+		<div class="col c1 whitebox">box c1</div>
+		<div class="col c1 whitebox">box c1</div>
+		<div class="col c1 whitebox">box c1</div>
+		<div class="col c1 whitebox">box c1</div>
+		<div class="col c1 whitebox">box c1</div>
+	</div>
+
+</section>
+<section>
+	<h2 class="spaced">Columned input fields</h2>
+	<h6 class="bthin">.w100 (sub input children of each child of a grid layout)</h6>
+	<div class="incols">
+		<div class="col c1"><input type="text" class="w100" /></div>
+		<div class="col c1"><input type="text" class="w100" /></div>
+		<div class="col c10"><input type="text" class="w100" /></div>
+	</div>
+	<div class="incols">
+		<div class="col c2"><input type="text" class="w100" /></div>
+
+	</div>
+</section>
+<section>
+	<h2 class="spaced">Grid sized input fields</h2>
+	<h6 class="bthin">.t1 - .t12 (for each input)</h6>
+
+	<div class="spaced">
+
+		<input type="text" class="t1" placeholder="t1" /><br />
+		<input type="text" class="t2" placeholder="t2" /><br />
+		<input type="text" class="t3" placeholder="t3" /><br />
+		<input type="text" class="t4" placeholder="t4" /><br />
+		<input type="text" class="t5" placeholder="t5" /><br />
+		<input type="text" class="t6" placeholder="t6" /><br />
+		<input type="text" class="t7" placeholder="t7" /><br />
+		<input type="text" class="t8" placeholder="t8" /><br />
+		<input type="text" class="t9" placeholder="t9" /><br />
+		<input type="text" class="t10" placeholder="t10" /><br />
+		<input type="text" class="t11" placeholder="t11" /><br />
+		<input type="text" class="t12" placeholder="t12" /><br />
+	</div>
+</section>
+<section>
+	<h2 class="spaced">Responsive grid</h2>
+	<h6 class="bthin">.rcols (container), .rcol (for each child), .r1 - .r12 (for each child)</h6>
+	<div class="devgreygb">
+
+		<div class="rcols">
+			<div class="rcol r12">r12</div>
+		</div>
+		<div class="rcols">
+			<div class="rcol r1">r1</div>
+			<div class="rcol r11">r11</div>
+		</div>
+		<div class="rcols">
+			<div class="rcol r2">r2</div>
+			<div class="rcol r10">r10</div>
+		</div>
+		<div class="rcols">
+			<div class="rcol r3">r3</div>
+			<div class="rcol r9">r9</div>
+		</div>
+		<div class="rcols">
+			<div class="rcol r4">r4</div>
+			<div class="rcol r8">r8</div>
+		</div>
+		<div class="rcols">
+			<div class="rcol r5">r5</div>
+			<div class="rcol r7">r7</div>
+		</div>
+		<div class="rcols">
+			<div class="rcol r6">r6</div>
+			<div class="rcol r6">r6</div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<h2 class="spaced">Heights</h2>
+	<h6 class="bthin">.h1 - .h12 (min-height), .hm1 - .hm12 (max-height)</h6>
+	<div class="devgreygb incols">
+		<div class="col c1 h1">h1</div>
+		<div class="col c1 h2">h2</div>
+		<div class="col c1 h3">h3</div>
+		<div class="col c1 h4">h4</div>
+		<div class="col c1 h5">h5</div>
+		<div class="col c1 h6">h6</div>
+		<div class="col c1 h7">h7</div>
+		<div class="col c1 h8">h8</div>
+		<div class="col c1 h9">h9</div>
+		<div class="col c1 h10">h10</div>
+		<div class="col c1 h11">h11</div>
+		<div class="col c1 h12">h12</div>
+	</div>
+</section>

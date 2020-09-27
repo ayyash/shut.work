@@ -1,0 +1,473 @@
+---
+layout: "doc"
+---
+<h1 class="spaced">Stacks</h1>
+<p>
+	Stacks are a way to layout the blocks quickly. The main two container types are <strong>.detailed</strong> and <strong>.overview</strong>. Inside of which, the <strong>.stack</strong> and <strong>.stacklist</strong> for an <code>ol</code> element, or a <code>dl</code> element, are expected to layout as following:
+</p>
+<p class="psnote">
+	Both classes (stack stacklist) can be added together to the <code>ol</code> element to reduce markup.
+</p>
+<section>
+	<h6 class="bthin">.detailed stack</h6>
+
+
+
+	<div class="detailed">
+		<fieldset>
+			<legend>Detailed fieldset</legend>
+			<div class="stack">
+				<ol class="stacklist">
+					<li>
+
+						Stacklist item inside a stack div, for detailed stack
+					</li>
+					<li>
+						<label>
+							A second stacklist item
+						</label>
+						<input type="text" />
+					</li>
+				</ol>
+			</div>
+		</fieldset>
+		<dl>
+			<dt>Detailed datalist</dt>
+			<dd>
+				Stacked DD, no need for special classes
+			</dd>
+		</dl>
+
+
+	</div>
+<pre><code class="language-html">&lt;div class="detailed">
+	&lt;fieldset>
+			&lt;legend>Detailed fieldset&lt;/legend>
+			&lt;div class="stack">
+				&lt;ol class="stacklist">
+					&lt;li>
+						Stacklist item inside a stack div, for detailed stack
+					&lt;/li>
+	 				&lt;li>
+	 					&lt;label>
+							A second stacklist item
+						&lt;/label>
+	 				&lt;input type="text" />
+				&lt;/li>
+				&lt;/ol>
+			&lt;/div>
+		&lt;/fieldset>
+		&lt;dl>
+			&lt;dt>Detailed datalist&lt;/dt>
+			&lt;dd>
+				Stacked DD, no need for special classes
+			&lt;/dd>
+		&lt;/dl>
+&lt;/div>
+</code>
+</pre>
+</section>
+
+<section>
+	<h6 class="bthin">.detailed .ingredients (detailed ingredients)</h6>
+
+	<div class="detailed ingredients">
+		<dl>
+			<dt>Name</dt>
+			<dd>
+				Ayyash
+			</dd>
+			<dt>Location</dt>
+			<dd>
+				Amman
+			</dd>
+		</dl>
+
+	</div>
+	<h6 class="bthin">.detailed .tight.ingredients (Tight detailed ingredients)</h6>
+
+	<div class="detailed tight ingredients c3">
+		<dl>
+			<dt>Name</dt>
+			<dd>
+				Ayyash
+			</dd>
+			<dt>Location</dt>
+			<dd>
+				Amman
+			</dd>
+		</dl>
+
+	</div>
+
+	<h6 class="bthin">.detailed .xlarge.ingredients (Large detailed ingredients)</h6>
+
+	<div class="detailed xlarge ingredients">
+		<dl>
+			<dt>Name</dt>
+			<dd>
+				Ayyash
+			</dd>
+			<dt>Location</dt>
+			<dd>
+				Amman
+			</dd>
+		</dl>
+
+	</div>
+
+
+
+<pre><code class="language-html">&lt;div class="detailed ingredients">
+	&lt;dl>
+		&lt;dt>Name&lt;/dt>
+		&lt;dd>
+			Ayyash
+		&lt;/dd>
+		&lt;dt>Location&lt;/dt>
+		&lt;dd>
+			Amman
+		&lt;/dd>
+	&lt;/dl>
+&lt;/div>
+&lt;div class="detailed tight ingredients c3">
+	&lt;dl>
+		&lt;dt>Name&lt;/dt>
+		&lt;dd>
+			Ayyash
+		&lt;/dd>
+		&lt;dt>Location&lt;/dt>
+		&lt;dd>
+			Amman
+		&lt;/dd>
+	&lt;/dl>
+&lt;/div>
+&lt;div class="detailed xlarge ingredients">
+	&lt;dl>
+		&lt;dt>Name&lt;/dt>
+		&lt;dd>
+			Ayyash
+		&lt;/dd>
+		&lt;dt>Location&lt;/dt>
+		&lt;dd>
+			Amman
+		&lt;/dd>
+	&lt;/dl>
+&lt;/div></code>
+</pre>
+</section>
+
+<section>
+	<h6 class="bthin">.overview stack</h6>
+
+	<div class="overview">
+		<fieldset>
+			<legend>Overview fieldset</legend>
+			<div class="stack">
+				<ol class="stacklist">
+					<li>
+						Stacklist item inside a stack div, for overview stack
+					</li>
+					<li>
+						<label>
+							A second stacklist item
+						</label>
+						<input type="text" />
+					</li>
+				</ol>
+			</div>
+		</fieldset>
+		<dl>
+			<dt>Overview datalist</dt>
+			<dd>
+				Stacked DD, no need for special classes
+			</dd>
+		</dl>
+	</div>
+<pre><code class="language-html">&lt;div class="overview">
+	&lt;fieldset>
+		&lt;legend>Overview fieldset&lt;/legend>
+		&lt;div class="stack">
+			&lt;ol class="stacklist">
+				&lt;li>
+					Stacklist item inside a stack div, for overview stack
+				&lt;/li>
+	 			&lt;li>
+	 				&lt;label>
+						A second stacklist item
+					&lt;/label>
+	 				&lt;input type="text" />
+				&lt;/li>
+			&lt;/ol>
+		&lt;/div>
+	&lt;/fieldset>
+	&lt;dl>
+		&lt;dt>Overview datalist&lt;/dt>
+		&lt;dd>
+			Stacked DD, no need for special classes
+		&lt;/dd>
+	&lt;/dl>
+&lt;/div>
+</code></pre>
+</section>
+
+<section>
+	<h6 class="bthin spaced">.indblock indentation block</h6>
+	<p class="psnote">.indblock expects a .indelem as the reference element to hang-indent.</p>
+
+
+	<div class="indblock">
+		<ul class="rowlist">
+			<li>
+				<label>
+					<input type="radio" name="e1" class="indelem" />
+					Yes
+				</label>
+				<p>Explanation here</p>
+			</li>
+			<li>
+				<label>
+					<input type="radio" name="e1" class="indelem " />
+					No
+				</label>
+			</li>
+			<li>
+				<span class="hmark">Help with question mark here</span>
+				<label>
+					<input type="checkbox" name="e3" class="indelem" />
+					Checkbox here
+				</label>
+			</li>
+			<li>
+				<span class="indelem red larger">*</span>
+				<p>anything goes</p>
+			</li>
+		</ul>
+	</div>
+<pre><code class="language-html">&lt;div class="indblock">
+	&lt;label>
+		&lt;input type="radio" name="e1" class="indelem" />
+		Yes
+	&lt;/label>
+	&lt;p>Explanation here&lt;/p>
+	&lt;label>
+		&lt;input type="radio" name="e1" class="indelem " />
+		No
+	&lt;/label>
+	&lt;span class="hmark">Help with question mark here&lt;/span>
+	&lt;label>
+		&lt;input type="checkbox" name="e3" class="indelem" />
+		Checkbox here
+	&lt;/label>
+	&lt;span class="indelem red larger">*&lt;/span>
+	&lt;p>anything goes&lt;/p>
+&lt;/div>
+</code></pre>
+</section>
+<section>
+	<h6 class="bthin spaced">.invstack inverse stack datalist</h6>
+
+	<dl class="invstack xxlarge">
+		<dd>Inverse stack, add xlarge, or xxlarge to make this bigger</dd>
+		<dt>Title here</dt>
+	</dl>
+	<div class="incols c8">
+		<dl class="invstack xlarge col c4">
+			<dd>Vinepaper</dd>
+			<dt>Website</dt>
+		</dl>
+		<dl class="invstack xxlarge col c4">
+			<dd>Shut</dd>
+			<dt>Framework name</dt>
+		</dl>
+		<dl class="invstack xlarge col c4">
+			<dd>Developer</dd>
+			<dt>Ayyash</dt>
+		</dl>
+		<dl class="invstack xlarge col c4">
+			<dd>Location</dd>
+			<dt>Amman</dt>
+		</dl>
+	</div>
+<pre><code class="language-html">&lt;dl class="invstack xxlarge">
+	&lt;dd>Inverse stack xxlarge&lt;/dd>
+	&lt;dt>Title here&lt;/dt>
+&lt;/dl>
+</code></pre>
+
+</section>
+
+
+<section>
+
+	<h6 class="bthin spaced">.tablelist</h6>
+
+	<ul class="tablelist">
+		<li>
+			<h6>Label</h6>
+			Content
+		</li>
+		<li>
+			<h6>Label</h6>
+			Content
+		</li>
+		<li>
+			<h6>Name</h6>
+			Ayyash
+		</li>
+		<li>
+			<h6>Location</h6>
+			Amman
+		</li>
+	</ul>
+<pre><code class="language-html">&lt;ul class="tablelist">
+	&lt;li>
+		&lt;h6>Label&lt;/h6>
+		Content
+	&lt;/li>
+	&lt;li>
+		&lt;h6>Label&lt;/h6>
+		Content
+	&lt;/li>
+&lt;/ol>
+</code></pre>
+</section>
+
+
+<section>
+
+	<h6 class="bthin">.fox (beta)</h6>
+
+	<ol class="fox rowlist">
+		<li>
+			<label>Fox</label>
+			Layout
+		</li>
+		<li>
+			<label>Label</label>
+			Content here
+		</li>
+		<li>
+			<label>Name</label>
+			<input type="text" />
+		</li>
+		<li>
+			<label>Location</label>
+			<input type="text" />
+		</li>
+	</ol>
+<pre><code class="language-html">&lt;ol class="fox [rowlist]">
+	&lt;li>
+		&lt;label>Fox&lt;/label>
+		Layout
+	&lt;/li>
+	&lt;li>
+		&lt;label>Label&lt;/label>
+		Content here
+	&lt;/li>
+&lt;/ol>
+</code></pre>
+</section>
+
+<section>
+
+	<h6 class="bthin spaced">.commasep (Comma seperated)</h6>
+
+	<ul class="commasep">
+		<li>
+			First element
+		</li>
+		<li>
+			Content
+		</li>
+		<li>
+			Ayyash
+		</li>
+		<li>
+			Amman
+		</li>
+	</ul>
+<pre><code class="language-html">&lt;ul class="commasep">
+	&lt;li>
+		First element
+	&lt;/li>
+	&lt;li>
+		Content
+	&lt;/li>
+	&lt;li>
+		Ayyash
+	&lt;/li>
+	&lt;li>
+		Amman
+	&lt;/li>
+&lt;/ul>
+</code></pre>
+</section>
+
+<section>
+
+	<h6 class="bthin spaced">.wizardlist</h6>
+
+	<ol class="wizardlist">
+		<li>
+			<a>First step</a>
+		</li>
+		<li>
+			<a>Second step</a>
+		</li>
+		<li class="selected"><a>Third step</a></li>
+		<li class="inactive">
+			<a>Foruth step</a>
+		</li>
+	</ol>
+<pre><code class="language-html">&lt;ol class="wizardlist">
+	&lt;li>
+		&lt;a>First step&lt;/a>
+	&lt;/li>
+	&lt;li>
+		&lt;a>Second step&lt;/a>
+	&lt;/li>
+	&lt;li class="selected">
+		&lt;a>Third step&lt;/a>
+	&lt;/li>
+	&lt;li class="inactive">
+		&lt;a>Foruth step&lt;/a>
+	&lt;/li>
+&lt;/ol></code></pre>
+</section>
+
+<section>
+
+	<h6 class="bthin spaced">.activelist</h6>
+
+	<ul class="activelist c4">
+		<li>
+			<a>Link</a>
+		</li>
+		<li>
+			<a>Active link</a>
+		</li>
+		<li>
+			<a>Another Link</a>
+		</li>
+		<li>
+			<a>Active link</a>
+		</li>
+	</ul>
+
+
+<pre><code class="language-html">&lt;ul class="activelist c4">
+	&lt;li>
+		&lt;a>Link&lt;/a>
+	&lt;/li>
+	&lt;li>
+		&lt;a>Active link&lt;/a>
+	&lt;/li>
+	&lt;li>
+		&lt;a>Another Link&lt;/a>
+	&lt;/li>
+	&lt;li>
+		&lt;a>Active link&lt;/a>
+	&lt;/li>
+&lt;/ul></code></pre>
+</section>

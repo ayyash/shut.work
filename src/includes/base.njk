@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {# <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"> #}
+        <link href="//fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/zenburn.min.css">
+
+        <script charset="UTF-8" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js"></script>
+        {# <script charset="UTF-8" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/css.min.js"></script>
+        <script charset="UTF-8" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script>
+        <script charset="UTF-8" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/xml.min.js"></script> #}
+
+        <script>hljs.initHighlightingOnLoad();</script>
+        
+        <link rel="stylesheet" href="/assets/css/sh.css">
+
+        <title>Shut -
+            {{ title }}</title>
+
+        {% block header %}{% endblock header %}
+    </head>
+
+    <body>
+        {% block content %}
+            {{ content | safe }}
+        {% endblock content %}
+    </body>
+
+</html>
