@@ -17,9 +17,9 @@ module.exports = function (eleventyConfig) {
         htmlTemplateEngine: "njk",
         templateFormats: ["html", "njk", "md"],
         dir: {
-            input: "src",
+            input: "src/app",
             output: "dist",
-            includes: "includes"
+            includes: "../includes"
         }
     };
 };

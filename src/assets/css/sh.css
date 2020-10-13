@@ -1332,15 +1332,15 @@ ul.boxed > li {
 }
 .box-red-light {
   background-color: #f96e69;
-  color: #202020;
+  color: #fff;
 }
 .box-yellow-light {
   background-color: #ffdc66;
-  color: #202020;
+  color: #fff;
 }
 .box-green-light {
   background-color: #98d28e;
-  color: #202020;
+  color: #fff;
 }
 .box-blue-light {
   background-color: #0ee8ff;
@@ -1453,7 +1453,7 @@ a.label {
 }
 a.label-red:hover {
   background-color: #f95650;
-  color: #202020;
+  color: #fff;
 }
 .label-yellow {
   background-color: #ffc400;
@@ -1461,7 +1461,7 @@ a.label-red:hover {
 }
 a.label-yellow:hover {
   background-color: #ffd64d;
-  color: #202020;
+  color: #fff;
 }
 .label-green {
   background-color: #57b347;
@@ -1469,7 +1469,7 @@ a.label-yellow:hover {
 }
 a.label-green:hover {
   background-color: #87cb7c;
-  color: #202020;
+  color: #fff;
 }
 .label-blue {
   background-color: #0097A7;
@@ -1481,7 +1481,7 @@ a.label-blue:hover {
 }
 .label-red-light {
   background-color: #f96e69;
-  color: #202020;
+  color: #fff;
 }
 a.label-red-light:hover {
   background-color: #fcb5b2;
@@ -1489,7 +1489,7 @@ a.label-red-light:hover {
 }
 .label-yellow-light {
   background-color: #ffdc66;
-  color: #202020;
+  color: #fff;
 }
 a.label-yellow-light:hover {
   background-color: #ffedb3;
@@ -1497,7 +1497,7 @@ a.label-yellow-light:hover {
 }
 .label-green-light {
   background-color: #98d28e;
-  color: #202020;
+  color: #fff;
 }
 a.label-green-light:hover {
   background-color: #cae8c5;
@@ -1509,7 +1509,7 @@ a.label-green-light:hover {
 }
 a.label-blue-light:hover {
   background-color: #5befff;
-  color: #202020;
+  color: #fff;
 }
 .label-light {
   background-color: #959595;
