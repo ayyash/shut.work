@@ -1,256 +1,486 @@
 ---
 layout: "doc"
 ---
-<h1>Grid</h1>
-<h6 class="bthin">.incols (container), .col (for each child), .c1 - .c12 (for each child)</h6>
-<pre><code class="language-html">&lt;div class="incols">
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c1">c1&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c1">c1&lt;/div>
-	&lt;div class="col c11">c11&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c2">c2&lt;/div>
-	&lt;div class="col c10">c10&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c3">c3&lt;/div>
-	&lt;div class="col c9">c9&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c4">c4&lt;/div>
-	&lt;div class="col c8">c8&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c5">c5&lt;/div>
-	&lt;div class="col c7">c7&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c6">c6&lt;/div>
-	&lt;div class="col c6">c6&lt;/div>
-&lt;/div>
-&lt;div class="incols">
-	&lt;div class="col c12">c12&lt;/div>
-&lt;/div></code></pre>
 
-<section class="devgreygb">
-	<div class="incols">
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
-		<div class="col c1">c1</div>
+<div class="outline">
+	<ul class="alist">
+		<li><code class="shut-inline">.row</code></li>
+		<li><code class="shut-inline">.row-spaced</code></li>
+		<li><code class="shut-inline">.w100</code></li>
+		<li><code class="shut-inline">.col</code></li>
+		<li><code class="shut-inline">.c-1</code> to <code class="shut-inline">.c-12</code></li>
+		<li><code class="shut-inline">.offset-c-1</code> to <code class="shut-inline">.offset-c-11</code></li>
+		<li><code class="shut-inline">.lauto</code></li>
+		<li><code class="shut-inline">.rauto</code></li>
+		<li><code class="shut-inline">.uc-1</code> to <code class="shut-inline">.uc-12</code></li>
+		<li><code class="shut-inline">.ucol</code></li>
+		<li><code class="shut-inline">.md-1</code> to <code class="shut-inline">.md-12</code></li>
+		<li><code class="shut-inline">.lg-1</code> to <code class="shut-inline">.lg-12</code></li>
+		<li><code class="shut-inline">.offset-md-1</code> to <code class="shut-inline">.offset-md-11</code></li>
+		<li><code class="shut-inline">.offset-lg-1</code> to <code class="shut-inline">.offset-lg-11</code></li>
+		<li><code class="shut-inline">.umd-1</code> to <code class="shut-inline">.umd-12</code></li>
+		<li><code class="shut-inline">.ulg-1</code> to <code class="shut-inline">.ulg-12</code></li>
+		<li><code class="shut-inline">.grid</code></li>
+		<li><code class="shut-inline">.g-1</code> to <code class="shut-inline">.g-11</code></li>
+		<li><code class="shut-inline">.gmd-1</code> to <code class="shut-inline">.gmd-11</code></li>
+		<li><code class="shut-inline">.glg-1</code> to <code class="shut-inline">.glg-11</code></li>
+		<li><code class="shut-inline">.grid.spacedout</code></li>
+		<li><code class="shut-inline">.g-bthin</code></li>
+		<li><code class="shut-inline">.g-bthin-dark</code></li>
+		<li><code class="shut-inline">.h-1</code> to <code class="shut-inline">.h-6</code></li>
+		<li><code class="shut-inline">.uh-1</code> to <code class="shut-inline">.uh-6</code></li>
+		
+	</ul>
 
+</div>
+<div class="page withoutline">
+	<div class="container">
+		<h1 class="f1 spaced">Grid</h1>
+		<h2 class="f2 spaced">The flexbox</h2>
+		<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;c-1&quot;&gt;c-1&lt;/div&gt;
+	&lt;div class=&quot;c-11&quot;&gt;c-11&lt;/div&gt;
+	&lt;div class=&quot;c-2&quot;&gt;c-2&lt;/div&gt;
+	&lt;div class=&quot;c-10&quot;&gt;c-10&lt;/div&gt;
+	&lt;div class=&quot;c-3&quot;&gt;c-3&lt;/div&gt;
+	&lt;div class=&quot;c-9&quot;&gt;c-9&lt;/div&gt;
+	&lt;div class=&quot;c-4&quot;&gt;c-4&lt;/div&gt;
+	&lt;div class=&quot;c-8&quot;&gt;c-8&lt;/div&gt;
+	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
+	&lt;div class=&quot;c-7&quot;&gt;c-7&lt;/div&gt;
+	&lt;div class=&quot;c-6&quot;&gt;c-6&lt;/div&gt;
+	&lt;div class=&quot;c-5&quot;&gt;c-6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+		<section>
+			<div class="row">
+				<div class="c-1 box box-white">c-1</div>
+				<div class="c-11 box box-white">c-11</div>
+				<div class="c-2 box box-white">c-2</div>
+				<div class="c-10 box box-white">c-10</div>
+				<div class="c-3 box box-white">c-3</div>
+				<div class="c-9 box box-white">c-9</div>
+				<div class="c-4 box box-white">c-4</div>
+				<div class="c-8 box box-white">c-8</div>
+				<div class="c-5 box box-white">c-5</div>
+				<div class="c-7 box box-white">c-7</div>
+				<div class="c-6 box box-white">c-6</div>
+				<div class="c-5 box box-white">c-6</div>
+			</div>
+		</section>
+		<section>
+			<h3 class="f5">Offsets</h3>
+
+			<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;offset-c-11&quot;&gt;offset-c-11&lt;/div&gt;
+	&lt;div class=&quot;offset-c-10&quot;&gt;offset-c-10&lt;/div&gt;
+	&lt;div class=&quot;offset-c-9&quot;&gt;offset-c-9&lt;/div&gt;
+	&lt;div class=&quot;offset-c-8&quot;&gt;offset-c-8&lt;/div&gt;
+	&lt;div class=&quot;offset-c-7&quot;&gt;offset-c-7&lt;/div&gt;
+	&lt;div class=&quot;offset-c-6&quot;&gt;offset-c-6&lt;/div&gt;
+	&lt;div class=&quot;offset-c-5&quot;&gt;offset-c-5&lt;/div&gt;
+	&lt;div class=&quot;offset-c-4&quot;&gt;offset-c-4&lt;/div&gt;
+	&lt;div class=&quot;offset-c-3&quot;&gt;offset-c-3&lt;/div&gt;
+	&lt;div class=&quot;offset-c-2&quot;&gt;offset-c-2&lt;/div&gt;
+	&lt;div class=&quot;offset-c-1&quot;&gt;offset-c-1&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			<div class="row">
+				<div class="offset-c-11 c-1 smaller box box-white">offset-c-11</div>
+				<div class="offset-c-10 c-2 box box-white">offset-c-10</div>
+				<div class="offset-c-9 c-3 box box-white">offset-c-9</div>
+				<div class="offset-c-8 c-4 box box-white">offset-c-8</div>
+				<div class="offset-c-7 c-5 box box-white">offset-c-7</div>
+				<div class="offset-c-6 c-6 box box-white">offset-c-6</div>
+				<div class="offset-c-5 c-7 box box-white">offset-c-5</div>
+				<div class="offset-c-4 c-8 box box-white">offset-c-4</div>
+				<div class="offset-c-3 c-9 box box-white">offset-c-3</div>
+				<div class="offset-c-2 c-10 box box-white">offset-c-2</div>
+				<div class="offset-c-1 c-11 box box-white">offset-c-1</div>
+			</div>
+
+		</section>
+		<section>
+			<h3 class="f5">Auto width</h3>
+			<p>
+				All elements in a row will stack horizontally with <code class="shut-inline">.row</code>
+			</p>
+			<div class="row">
+				<div class="box box-white">auto this</div>
+				<div class="box box-white">auto</div>
+				<div class="box box-white">auto that</div>
+			</div>
+		</section>
+		<section>
+
+			<h3 class="f5 ">Auto width and spaced between</h3>
+			<p>Add <code class="shut-inline">.row-spaced</code> to apply: <code class="shut-inline">justify-content:
+					space-between</code></p>
+			<div class="row-spaced ">
+				<div class="box box-white">auto</div>
+				<div class="box box-white">auto</div>
+				<div class="box box-white">auto</div>
+			</div>
+		</section>
+		<section>
+			<h3 class="f5 ">Fixed width and spaced between</h3>
+			<p>
+				On a 12-column grid, adding <code class="shut-inline">c-x</code> for the number of columns, places
+				content in x of 12 segments of the total width. (This is similar to Bootstrap).
+			</p>
+			<pre><code class="language-html">&lt;div class=&quot;row-spaced&quot;&gt;
+	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
+	&lt;div class=&quot;c-4&quot;&gt;c-4&lt;/div&gt;
+	&lt;div class=&quot;c-3&quot;&gt;c-2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			<div class="row-spaced spaced">
+				<div class="c-5 box box-white">c-5</div>
+				<div class="c-4 box box-white">c-4</div>
+				<div class="c-3 box box-white">c-2</div>
+			</div>
+		</section>
+		<section>
+			<h3 class="f5 weight-normal">Auto left and right margin</h3>
+			<p>The element with <code class="shut-inline">.lauto</code> has margin left set to auto.</p>
+			<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
+	&lt;div class=&quot;c-3 lauto&quot;&gt;c-3 lauto&lt;/div&gt;
+	&lt;div class=&quot;c-1&quot;&gt;c-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;c-1&quot;&gt;c-1&lt;/div&gt;
+	&lt;div class=&quot;c-5 rauto&quot;&gt;c-5 rauto&lt;/div&gt;
+	&lt;div class=&quot;c-3&quot;&gt;c-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+			<div class="row">
+				<div class="c-5 box box-white">c-5</div>
+				<div class="c-3 lauto box box-white-dark">c-3 lauto</div>
+				<div class="c-1 box box-white">c-1</div>
+			</div>
+			<div class="row">
+				<div class="c-1 box box-white">c-1</div>
+				<div class="c-5 rauto box box-white-dark">c-5 rauto</div>
+				<div class="c-3 box box-white">c-3</div>
+			</div>
+		</section>
+		<section>
+
+			<h3 class="f5 weight-normal">Row breaker</h3>
+			<p>To break free from a grid, add an element with <code class="shut-inline">.w100</code>, this sets width to
+				100%.</p>
+			<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	&lt;div&gt;auto&lt;/div&gt;
+	&lt;div&gt;auto&lt;/div&gt;
+	&lt;div class=&quot;w100&quot;&gt;&lt;/div&gt;
+	&lt;div&gt;auto&lt;/div&gt;
+	&lt;div&gt;auto&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			<div class="row">
+				<div class="box box-white">auto</div>
+				<div class="box box-white">auto</div>
+				<div class="w100"></div>
+				<div class="box box-white">auto</div>
+				<div class="box box-white">auto</div>
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5 weight-normal">Lists</h3>
+			<p>Rows may apply to ul, will carry forward column definition to li's of the same value. The class names are
+				<code class="shut-inline">.uc-1</code> to <code class="shut-inline">.uc-12</code></p>
+			<div class="spaced">
+				<pre><code class="language-html">&lt;ul class=&quot;uc-3 row&quot;&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+				<ul class="uc-3 row">
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+				</ul>
+			</div>
+
+			<div class="spaced">
+				<pre><code class="language-html">&lt;ul class=&quot;uc-2 row-spaced&quot;&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+				<ul class="uc-2 row-spaced">
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+				</ul>
+			</div>
+			<div class="spaced">
+				<p>Row breaker, same rule applies <code class="shut-inline">.w100</code> to the li element, breaks the
+					flex grid.</p>
+				<pre><code class="language-html">&lt;ul class=&quot;uc-1 row&quot;&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li class=&quot;w100&quot;&gt;breaker .w100&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+	&lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+				<ul class="uc-1 row">
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="w100 box box-white">breaker .w100</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+					<li class="box box-white">item</li>
+				</ul>
+			</div>
+
+		</section>
+
+	
+
+		<section>
+			<h3 class="f3">Example</h3>
+			<pre><code class="language-html">&lt;div class=&quot;row-spaced&quot;&gt;
+	&lt;div class=&quot;col md-6 box box-white-normal&quot;&gt;
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quos, reiciendis
+			laborum nam praesentium non libero tempore quam saepe a eos hic placeat quidem ex
+			dignissimos, ut porro sapiente eum?
+	&lt;/div&gt;
+	&lt;div class=&quot;col md-6 box box-green&quot;&gt;
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, consectetur facere
+			quasi culpa quae enim delectus in molestiae iure, est quo sit. Ducimus repudiandae minus
+			eos sunt obcaecati quae architecto.
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			<div class="row-spaced">
+				<div class="col md-6 box box-white-normal">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quos, reiciendis
+					laborum nam praesentium non libero tempore quam saepe a eos hic placeat quidem ex
+					dignissimos, ut porro sapiente eum?
+				</div>
+				<div class="col md-6 box box-green">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, consectetur facere
+					quasi culpa quae enim delectus in molestiae iure, est quo sit. Ducimus repudiandae minus
+					eos sunt obcaecati quae architecto.
+				</div>
+			</div>
+
+		</section>
+
+		<section>
+			<h2 class="f2">Simple grid</h2>
+			<p>
+				A simpler way to produce two columns of content, using css grid, depending on flat HTML elements.
+				Alternating.
+				The first column is defined by g-n (n is 1 to 11) and the second one is an auto width.
+			</p>
+			<pre><code class="language-html">&lt;div class=&quot;grid g-3&quot;&gt;
+	&lt;h5&gt;g-3&lt;/h5&gt;
+	&lt;div&gt;the auto column&lt;/div&gt;
+	&lt;h5&gt;g-3&lt;/h5&gt;
+	&lt;div&gt;the auto column&lt;/div&gt;
+	&lt;h5&gt;g-3&lt;/h5&gt;
+	&lt;div&gt;the auto column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+			<div class="grid g-3">
+				<h5>g-3</h5>
+				<div>the auto column</div>
+				<h5>g-3</h5>
+				<div>the auto column</div>
+				<h5>g-3</h5>
+				<div>the auto column</div>
+			</div>
+
+		</section>
+
+		<section>
+			<h3 class="f3">Extra classes</h3>
+			<p>Following are extra classes added to the main .grid element for extra styles.</p>
+			<div class="grid g-2 spacedout">
+
+				<code class="shut-inline">.grid.spacedout</code>
+				<span>Adds a gap in grid</span>
+
+				<code class="shut-inline">.g-bthin</code> 
+				<span>Adds thin border below grid elements</span>
+				
+				<code class="shut-inline">.g-bthin-dark</code> 
+				<span>Adds thin dark border below grid elements</span>
+
+				<code class="shut-inline">.w100</code> 
+				<span>Width 100%. Important</span>
+
+			</div>
+			
+		</section>
+
+		<h3 class="f3 spaced">Responsive</h3>
+
+		<section>
+			<p>Grid styles apply on smallest screen, if you wan the grid to apply to larger screens, the framework
+				defines two stops out of the box <code class="shut-inline">.md</code>, and <code
+					class="shut-inline">.lg</code>, for flex grid, and <code class="shut-inline">.gmd</code>, and <code
+					class="shut-inline">.glg</code> for css grid. As follows.</p>
+			<p class="box box-yellow-light spaced small">Assign <code class="shut-inline">.col</code> to every element,
+				to give it full width in smaller screens. <code class="shut-inline">.ucol</code> for ul elements.</p>
+			<div class="spaced">
+				<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col c-5&quot;&gt;col c-5&lt;/div&gt;
+	&lt;div class=&quot;col md-4&quot;&gt;col md-4&lt;/div&gt;
+	&lt;div class=&quot;col lg-3&quot;&gt;col lg-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				<div class="row">
+					<div class="col c-5 box box-white">col c-5</div>
+					<div class="col md-4 box box-white">col md-4</div>
+					<div class="col lg-3 box box-white">col lg-3</div>
+				</div>
+			</div>
+
+			<div class="spaced">
+				<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;offset-c-2 c-2  col&quot;&gt;offset-c-5&lt;/div&gt;
+	&lt;div class=&quot;offset-md-2 c-2 col&quot;&gt;offset-md-2&lt;/div&gt;
+	&lt;div class=&quot;offset-lg-2 c-2 col&quot;&gt;offset-lg-2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+				<div class="row">
+					<div class="offset-c-2 c-2  col box box-white">offset-c-5</div>
+					<div class="offset-md-2 c-2 col box box-white">offset-md-2</div>
+					<div class="offset-lg-2 c-2 col box box-white">offset-lg-2</div>
+				</div>
+			</div>
+
+			<div class="spaced">
+				<pre><code class="language-html">&lt;ul class=&quot;row umd-3 ucol&quot;&gt;
+	&lt;li&gt;Item umd-3&lt;/li&gt;
+	&lt;li&gt;Item umd-3&lt;/li&gt;
+	&lt;li&gt;Item umd-3&lt;/li&gt;
+	&lt;li&gt;Item umd-3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+				<ul class="row umd-3 ucol">
+					<li class="box box-white">Item umd-3</li>
+					<li class="box box-white">Item umd-3</li>
+					<li class="box box-white">Item umd-3</li>
+					<li class="box box-white">Item umd-3</li>
+				</ul>
+			</div>
+
+			<div class="spaced">
+				<pre><code class="language-html">&lt;ul class=&quot;row ulg-3 ucol&quot;&gt;
+	&lt;li&gt;Item ulg-3&lt;/li&gt;
+	&lt;li&gt;Item ulg-3&lt;/li&gt;
+	&lt;li&gt;Item ulg-3&lt;/li&gt;
+	&lt;li&gt;Item ulg-3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+				<ul class="row ulg-3 ucol">
+					<li class="box box-white">Item ulg-3</li>
+					<li class="box box-white">Item ulg-3</li>
+					<li class="box box-white">Item ulg-3</li>
+					<li class="box box-white">Item ulg-3</li>
+				</ul>
+			</div>
+
+			<div class="spaced">
+<pre><code class="language-html">&lt;div class=&quot;grid gmd-4 spacedout&quot;&gt;
+	&lt;strong&gt;.gmd-4&lt;/strong&gt;
+	&lt;span&gt;Grid&lt;/span&gt;
+	&lt;strong&gt;.gmd-4&lt;/strong&gt;
+	&lt;span&gt;Grid&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+			<div class="grid gmd-4 spacedout">
+				<strong>.gmd-4</strong>
+				<span>Grid</span>
+				<strong>.gmd-4</strong>
+				<span>Grid</span>
+			</div>
+			</div>
+
+		</section>
+
+		<section>
+			<h3 class="f5">LESS function</h3>
+			<p>Want more? Use the following function in LessCss to generate new grids.</p>
+			<pre><code class="language-css">/* generate media query for min-width set to 1200px */
+.media(1200, {
+	/* generates .offset-xl-c1 to .offset-xl-c11 */
+	.generate-offset(11, xl);
+
+	/* generates .xl-1 to .xl-12, 
+	and .uxl-1 > li to .uxl-12 > li */
+    .generate-column(12, xl);
+	
+	/* generats .gxl-1 to .gxl-11 with grid template */
+	.generate-grid(11, gxl);
+
+	/* generates .row-spaced > .xl-1 to .row-spaced > .xl-12 
+	and .row-spaced > .uxl-1 to .row-spaced > .uxl-12
+	with slightly smaller percentages to accomodate for spacing */
+    .row-spaced {
+        .generate-spaced-column(12, xl);
+    }
+});</code></pre>
+		</section>
+
+		<section>
+			<h3 class="f3">Bonus: heights</h3>
+			<p>Minimum height</p>
+			<p class="small box box-yellow-light">The heights are multiples of <code class="shut-inline">@grid-column-height</code></p>
+<pre><code class="language-html">&lt;ul class=&quot;row-spaced uc-2&quot;&gt;
+	&lt;li&gt;&lt;div class=&quot;h-1&quot;&gt;h-1&lt;/div&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;div class=&quot;h-2&quot;&gt;h-2&lt;/div&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;div class=&quot;h-3&quot;&gt;h-3&lt;/div&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;div class=&quot;h-4&quot;&gt;h-4&lt;/div&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;div class=&quot;h-5&quot;&gt;h-5&lt;/div&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;div class=&quot;h-6&quot;&gt;h-6&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			<ul class="row-spaced uc-2 spaced">
+				<li><div class="box box-white h-1">h-1</div></li>
+				<li><div class="box box-white h-2">h-2</div></li>
+				<li><div class="box box-white h-3">h-3</div></li>
+				<li><div class="box box-white h-4">h-4</div></li>
+				<li><div class="box box-white h-5">h-5</div></li>
+				<li><div class="box box-white h-6">h-6</div></li>
+			</ul>
+
+			<p>List minimum height</p>
+<pre><code class="language-html">&lt;ul class=&quot;row-spaced uc-2 uh-4&quot;&gt;
+	&lt;li&gt;uh-4&lt;/li&gt;
+	&lt;li&gt;uh-4&lt;/li&gt;
+	&lt;li&gt;uh-4&lt;/li&gt;
+	&lt;li&gt;uh-4&lt;/li&gt;
+	&lt;li&gt;uh-4&lt;/li&gt;
+	&lt;li&gt;uh-4&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			<ul class="row-spaced uc-2 uh-4 spaced">
+				<li class="box box-white">uh-4</li>
+				<li class="box box-white">uh-4</li>
+				<li class="box box-white">uh-4</li>
+				<li class="box box-white">uh-4</li>
+				<li class="box box-white">uh-4</li>
+				<li class="box box-white">uh-4</li>
+			</ul>
+
+		</section>
+		
 	</div>
-
-	<div class="incols">
-		<div class="col c1">c1</div>
-		<div class="col c11">c11</div>
-	</div>
-	<div class="incols">
-		<div class="col c2">c2</div>
-		<div class="col c10">c10</div>
-	</div>
-	<div class="incols">
-		<div class="col c3">c3</div>
-		<div class="col c9">c9</div>
-	</div>
-	<div class="incols">
-		<div class="col c4">c4</div>
-		<div class="col c8">c8</div>
-	</div>
-	<div class="incols">
-		<div class="col c5">c5</div>
-		<div class="col c7">c7</div>
-	</div>
-	<div class="incols">
-		<div class="col c6">c6</div>
-		<div class="col c6">c6</div>
-	</div>
-	<div class="incols">
-		<div class="col c12">c12</div>
-	</div>
-
-
-
-</section>
-<section>
-	<h2 class="spaced">Offsets</h2>
-	<h6 class="bthin">.off1 - .off11 (for each child in a grid layout)</h6>
-
-	<div class="devgreygb incols">
-		<div class="col off1 c1 clear">off1</div>
-
-		<div class="col off2 c1 clear">off2</div>
-
-		<div class="col off3 c1 clear">off3</div>
-
-		<div class="col off4 c1 clear">off4</div>
-
-		<div class="col off5 c1 clear">off5</div>
-
-		<div class="col off6 c1 clear">off6</div>
-
-		<div class="col off7 c1 clear">off7</div>
-
-		<div class="col off8 c1 clear">off8</div>
-
-		<div class="col off9 c1 clear">off9</div>
-
-		<div class="col off10 c1 clear">off10</div>
-
-		<div class="col off11 c1 clear">off11</div>
-	</div>
-</section>
-<section>
-	<h2 class="spaced">Boxes</h2>
-	<h6 class="bthin">.box, .whitboxe (sub children of each child of a grid layout)</h6>
-<pre><code class="language-html">&lt;div class="incols">
-	&lt;div class="col c1">&lt;div class="whitebox">box c1&lt;/div>&lt;/div>
-	&lt;div class="col c2">&lt;div class="whitebox">box c2&lt;/div>&lt;/div>
-&lt;/div>
-</code></pre>
-
-
-	<div class="incols">
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c2"><div class="whitebox">box c2</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c3"><div class="whitebox">box c3</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-	</div>
-	<div class="incols">
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-		<div class="col c1"><div class="whitebox">box c1</div></div>
-	</div>
-</section>
-<section>
-	<h6 class="bthin">.box, .whitebox (of each child directly)</h6>
-<pre><code class="language-html">&lt;div class="incols">
-	&lt;div class="col c1 whitebox">box c1&lt;/div>
-	&lt;div class="col c2 whitebox">box c2&lt;/div>
-&lt;/div></code></pre>
-	<div class="incols">
-		<div class="col c1 whitebox">box c1</div>
-		<div class="col c2 whitebox">box c2</div>
-		<div class="col c1 whitebox">box c1</div>
-		<div class="col c3 whitebox">box c3</div>
-		<div class="col c1 whitebox">box c1</div>
-		<div class="col c1 whitebox">box c1</div>
-		<div class="col c1 whitebox">box c1</div>
-		<div class="col c1 whitebox">box c1</div>
-		<div class="col c1 whitebox">box c1</div>
-	</div>
-
-</section>
-<section>
-	<h2 class="spaced">Columned input fields</h2>
-	<h6 class="bthin">.w100 (sub input children of each child of a grid layout)</h6>
-	<div class="incols">
-		<div class="col c1"><input type="text" class="w100" /></div>
-		<div class="col c1"><input type="text" class="w100" /></div>
-		<div class="col c10"><input type="text" class="w100" /></div>
-	</div>
-	<div class="incols">
-		<div class="col c2"><input type="text" class="w100" /></div>
-
-	</div>
-</section>
-<section>
-	<h2 class="spaced">Grid sized input fields</h2>
-	<h6 class="bthin">.t1 - .t12 (for each input)</h6>
-
-	<div class="spaced">
-
-		<input type="text" class="t1" placeholder="t1" /><br />
-		<input type="text" class="t2" placeholder="t2" /><br />
-		<input type="text" class="t3" placeholder="t3" /><br />
-		<input type="text" class="t4" placeholder="t4" /><br />
-		<input type="text" class="t5" placeholder="t5" /><br />
-		<input type="text" class="t6" placeholder="t6" /><br />
-		<input type="text" class="t7" placeholder="t7" /><br />
-		<input type="text" class="t8" placeholder="t8" /><br />
-		<input type="text" class="t9" placeholder="t9" /><br />
-		<input type="text" class="t10" placeholder="t10" /><br />
-		<input type="text" class="t11" placeholder="t11" /><br />
-		<input type="text" class="t12" placeholder="t12" /><br />
-	</div>
-</section>
-<section>
-	<h2 class="spaced">Responsive grid</h2>
-	<h6 class="bthin">.rcols (container), .rcol (for each child), .r1 - .r12 (for each child)</h6>
-	<div class="devgreygb">
-
-		<div class="rcols">
-			<div class="rcol r12">r12</div>
-		</div>
-		<div class="rcols">
-			<div class="rcol r1">r1</div>
-			<div class="rcol r11">r11</div>
-		</div>
-		<div class="rcols">
-			<div class="rcol r2">r2</div>
-			<div class="rcol r10">r10</div>
-		</div>
-		<div class="rcols">
-			<div class="rcol r3">r3</div>
-			<div class="rcol r9">r9</div>
-		</div>
-		<div class="rcols">
-			<div class="rcol r4">r4</div>
-			<div class="rcol r8">r8</div>
-		</div>
-		<div class="rcols">
-			<div class="rcol r5">r5</div>
-			<div class="rcol r7">r7</div>
-		</div>
-		<div class="rcols">
-			<div class="rcol r6">r6</div>
-			<div class="rcol r6">r6</div>
-		</div>
-	</div>
-</section>
-
-
-<section>
-	<h2 class="spaced">Heights</h2>
-	<h6 class="bthin">.h1 - .h12 (min-height), .hm1 - .hm12 (max-height)</h6>
-	<div class="devgreygb incols">
-		<div class="col c1 h1">h1</div>
-		<div class="col c1 h2">h2</div>
-		<div class="col c1 h3">h3</div>
-		<div class="col c1 h4">h4</div>
-		<div class="col c1 h5">h5</div>
-		<div class="col c1 h6">h6</div>
-		<div class="col c1 h7">h7</div>
-		<div class="col c1 h8">h8</div>
-		<div class="col c1 h9">h9</div>
-		<div class="col c1 h10">h10</div>
-		<div class="col c1 h11">h11</div>
-		<div class="col c1 h12">h12</div>
-	</div>
-</section>
+</div>

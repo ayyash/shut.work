@@ -10,24 +10,29 @@ list: [
     {name: "Functions", href: "/css/functions"},
 ]
 ---
-<div class="row-spaced">
-    <div class="col md-3">
-        <ul class="rowlist">
+<header>
+
+
+<div class="page withoutline">
+    <div class="container">
+
+        <ul class="row">
             {% for item in list %}
 
-            <li>
-                <a href="{{item.href}}">
+                <li class="box box-white">
+                    <a href="{{item.href}}">
 
-                {{item.name}}
-                </a>
-            </li>
+                        {{item.name}}
+                    </a>
+                </li>
             {% endfor %}
-        </ul>        
+        </ul>
     </div>
-    <div class="col md-9">
+
+</div>
+</header>
 
 {% block content %}
     {{ content | safe }}
 {% endblock content %}
-    </div>
-</div>
+
