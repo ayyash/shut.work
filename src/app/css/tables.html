@@ -1,570 +1,478 @@
 ---
 layout: "doc"
 ---
-	<h1>Tables</h1>
 
-	<h5 class="blue bthick spaced">Simplest form: Tabulated (.tabulated)</h5>
+
+<div class="outline">
+	<h4 class="f6 bthin light">THE BUTTER</h4>
+	<ul class="alist">
+		<li><code class="shut-inline">.w100</code></li>
+		<li><code class="shut-inline">.tabulated</code></li>
+		<li><code class="shut-inline">.spacedout</code></li>
+		<li><code class="shut-inline">.bordered</code></li>
+		<li><code class="shut-inline">.striped</code></li>
+		<li><code class="shut-inline">.rich</code></li>
+		<li><code class="shut-inline">.table-h</code></li>
+
+	</ul>
+</div>
+
+<div class="page withoutline">
+	<div class="container">
+		<h1 class="f1 spaced">Tables</h1>
+
+		<section>
+			<h3 class="f3 spaced">Simple table</h3>
+			<pre><code class="language-html">&lt;table&gt;
+	&lt;caption&gt;Caption&lt;/caption&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th class=&quot;txt-r&quot;&gt;.txt-r Header&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td class=&quot;txt-r&quot;&gt;.txt-r Cell&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+			<div class="box box-white">
+				<table>
+					<caption>Caption</caption>
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+
+			<h4 class="f4 spaced weight-light">Let's add width</h4>
+			<p>
+				<code class="shut-inline">.w100</code>
+
+			</p>
+			<div class="box box-white spaced">
+				<table class="w100">
+					<caption>Caption</caption>
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<h3 class="f5">Tabulated</h3>
+			<p>
+				Basic styling of underlines and footer overline. <code class="shut-inline">.tabulated</code>
+			</p>
+			<pre><code class="language-html">&lt;table class=&quot;w100 tabulated&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th class=&quot;txt-r&quot;&gt;.txt-r Header&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td class=&quot;txt-r&quot;&gt;.txt-r Cell&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Footer&lt;/td&gt;
+			&lt;td&gt;Footer&lt;/td&gt;
+			&lt;td class=&quot;txt-r&quot;&gt;.txt-r Footer&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+			<div class="spaced">
+				<table class="w100 tabulated">
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tfoot>
+						<tr>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td class="txt-r">.txt-r Footer</td>
+						</tr>
+					</tfoot>
+				</table>
+
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5">Space out</h3>
+			<p>Add spacing between cells. <code class="shut-inline">.spacedout</code></p>
+			<pre><code class="language-html">&lt;table class=&quot;w100 spacedout&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th class=&quot;txt-r&quot;&gt;.txt-r Header&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td class=&quot;txt-r&quot;&gt;.txt-r Cell&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+			<div class="spaced">
+				<table class="w100 spacedout">
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5">Borders</h3>
+			<p>Add borders around cells, with footer border top. <code class="shut-inline">.bordered</code></p>
+			<pre><code class="language-html">&lt;table class=&quot;w100 bordered&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th class=&quot;txt-r&quot;&gt;.txt-r Header&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td class=&quot;txt-r&quot;&gt;.txt-r Cell&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Footer&lt;/td&gt;
+			&lt;td&gt;Footer&lt;/td&gt;
+			&lt;td class=&quot;txt-r&quot;&gt;.txt-r Footer&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+			<div class="spaced">
+				<table class="w100 bordered">
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tfoot>
+						<tr>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td class="txt-r">.txt-r Footer</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</section>
+		<section>
+			<h4 class="f4 spaced weight-light">Let's add borders and spacing</h4>
+			<p>
+				<code class="shut-inline">.bordered.spacedout</code>
+
+			</p>
+			<div class="spaced">
+				<table class="w100 bordered spacedout">
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tfoot>
+						<tr>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td class="txt-r">.txt-r Footer</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5">Striped</h3>
+			<p>The old fashioned way of identifying rows, <code class="shut-inline">.striped</code></p>
+			<pre><code class="language-html">&lt;table class=&quot;w100 striped&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th class=&quot;txt-r&quot;&gt;.txt-r Header&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td class=&quot;txt-r&quot;&gt;.txt-r Cell&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+			<div class="spaced">
+				<table class="w100 striped">
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5">Rich</h3>
+			<p>All together, one shot, <code class="shut-inline">.rich</code></p>
+			<pre><code class="language-html">&lt;table class=&quot;w100 rich&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th&gt;Header&lt;/th&gt;
+		&lt;th class=&quot;txt-r&quot;&gt;.txt-r Header&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td&gt;Cell&lt;/td&gt;
+		&lt;td class=&quot;txt-r&quot;&gt;.txt-r Cell&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Foot&lt;/td&gt;
+			&lt;td&gt;Foot&lt;/td&gt;
+			&lt;td class=&quot;txt-r&quot;&gt;.txt-r Foot&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+			<div class="spaced">
+				<table class="w100 rich">
+					<tr>
+						<th>Header</th>
+						<th>Header</th>
+						<th class="txt-r">.txt-r Header</th>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td class="txt-r">.txt-r Cell</td>
+					</tr>
+					<tfoot>
+						<tr>
+							<td>Foot</td>
+							<td>Foot</td>
+							<td class="txt-r">.txt-r Foot</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5">Width</h3>
+			<p>Use the <code>.c-x</code> defined in grid, to define percentage widths. Best if you define width in
+				colgroup, as follows</p>
+			<p class="box box-yellow-light spaced small">And <code>.md-x</code>, <code>.lg-x</code> also apply.</p>
+<pre><code class="language-html">&lt;table class=&quot;tabulated spacedout w100&quot;&gt;
+	&lt;colgroup&gt;
+		&lt;col class=&quot;c-1 md-3&quot;&gt;
+		&lt;col class=&quot;c-2&quot;&gt;
+		&lt;col class=&quot;c-4&quot;&gt;
+		&lt;col class=&quot;c-1&quot;&gt;
+		&lt;col&gt;
+	&lt;/colgroup&gt;
+	&lt;tr&gt;
+		&lt;th&gt;c-1 md-3&lt;/th&gt;
+		&lt;th&gt;c-2&lt;/th&gt;
+		&lt;th&gt;c-4&lt;/th&gt;
+		&lt;th&gt;c-1&lt;/th&gt;
+		&lt;th&gt;*&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cell&lt;/td&gt;
+		&lt;td&gt;cell&lt;/td&gt;
+		&lt;td&gt;cell&lt;/td&gt;
+		&lt;td&gt;cell&lt;/td&gt;
+		&lt;td&gt;cell&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+			<div class="box spaced">
+				<table class="tabulated spacedout w100">
+					<colgroup>
+						<col class="c-1 md-3">
+						<col class="c-2">
+						<col class="c-4">
+						<col class="c-1">
+						<col>
+					</colgroup>
+
+					<tr>
+						<th>c-1 md-3</th>
+						<th>c-2</th>
+						<th>c-4</th>
+						<th>c-1</th>
+						<th>*</th>
+					</tr>
+
+					<tr>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+					</tr>
+					<tr>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+					</tr>
+					<tr>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+						<td>cell</td>
+					</tr>
+				</table>
+			</div>
+
+
+		</section>
+
 	
-	<section>
-		<h6 class="bthin spaced">.cl1 - .cl12 (per col in colgroup, or per td)</h6>
-		<table class="tabulated">
-			<colgroup>
-				<col class="cl1" />
-				<col class="cl2" />
-				<col class="cl3" />
-				<col class="cl4" />
-				<col class="cl5" />
+		<section>
+			<h3 class="f5">Bonus, horizonal</h3>
+			<p>I need this during prototyping phases, a simply, straight forward, scrolling table. Wrap the table in <code class="shut-inline">.table-h</code></p>
 
-				<col />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>
-						cl1
-					</th>
-					<th>
-						cl2
-					</th>
-					<th>
-						cl3
-					</th>
-					<th>
-						cl4
-					</th>
-					<th>
-						cl5
-					</th>
+			<div class="box table-h">
+				<table class="spacedout bordered">
+					<tbody>
+						<tr>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+							<td>cell long more text</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-					<th>
-						*
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>cell</td>
+	
 
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-
-				</tr>
-			</tfoot>
-		</table>
-	</section>
-	<section>
-		<h6 class="bthin spaced">.gcl1 - .gcl12 (per col in colgroup, or per td. Cells with extra gutter width to match grid columns)</h6>
-		<table class="tabulated">
-			<colgroup>
-				<col class="gcl1" />
-				<col class="gcl2" />
-				<col class="gcl3" />
-				<col class="gcl4" />
-
-
-				<col />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>
-						gcl1
-					</th>
-					<th>
-						gcl2
-					</th>
-					<th>
-						gcl3
-					</th>
-					<th>
-						gcl4
-					</th>
-
-					<th>*</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-					<td>cell</td>
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-
-
-				</tr>
-			</tfoot>
-		</table>
-	</section>
-
-	<h5 class="blue bthick spaced">Srtiped (.striped)</h5>
-	<section>
-		<h6 class="bthin  spaced">Striped and Tabulated (.striped .tabulated)</h6>
-		<table class="tabulated striped">
-			<colgroup>
-				<col class="gcl1" />
-				<col class="gcl2" />
-				<col class="gcl3" />
-				<col class="gcl4" />
-
-
-				<col />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>
-						gcl1
-					</th>
-					<th>
-						gcl2
-					</th>
-					<th>
-						gcl3
-					</th>
-					<th>
-						gcl4
-					</th>
-
-					<th>*</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-					<td>cell</td>
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-
-
-				</tr>
-			</tfoot>
-		</table>
-	</section>
-
-	<h5 class="blue bthick spaced">Relaxed (.spacedout)</h5>
-	<section>
-		<h6 class="bthin spaced">Spacedout and Bordered (.spacedout .bordered)</h6>
-		<table class="bordered spacedout">
-			<colgroup>
-				<col class="gcl1" />
-				<col class="gcl2" />
-				<col class="gcl3" />
-				<col class="gcl4" />
-				<col />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>
-						gcl1
-					</th>
-					<th>
-						gcl2
-					</th>
-					<th>
-						gcl3
-					</th>
-					<th>
-						gcl4
-					</th>
-
-					<th>*</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-					<td>cell</td>
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-
-
-				</tr>
-			</tfoot>
-		</table>
-	</section>
-
-	<h5 class="blue bthick spaced">Rich (.rich)</h5>
-	<section>
-		
-		<table class="rich">
-			<colgroup>
-				<col class="gcl1" />
-				<col class="gcl2" />
-				<col class="gcl3" />
-				<col class="gcl4" />
-
-
-				<col />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>
-						gcl1
-					</th>
-					<th>
-						gcl2
-					</th>
-					<th>
-						gcl3
-					</th>
-					<th>
-						gcl4
-					</th>
-
-					<th>*</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-					<td>cell</td>
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-
-				</tr>
-				<tr>
-					<td>
-						cl1
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-					<td>
-						cell
-					</td>
-
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-					<td>
-						footer
-					</td>
-
-
-				</tr>
-			</tfoot>
-		</table>
-	</section>
+	</div>
+</div>

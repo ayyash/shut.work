@@ -388,6 +388,30 @@ button:focus {
 .uh-6 > li {
   min-height: 360px;
 }
+.hm-1,
+.uhm-1 > li {
+  max-height: 60px;
+}
+.hm-2,
+.uhm-2 > li {
+  max-height: 120px;
+}
+.hm-3,
+.uhm-3 > li {
+  max-height: 180px;
+}
+.hm-4,
+.uhm-4 > li {
+  max-height: 240px;
+}
+.hm-5,
+.uhm-5 > li {
+  max-height: 300px;
+}
+.hm-6,
+.uhm-6 > li {
+  max-height: 360px;
+}
 .row,
 .row-spaced {
   display: flex;
@@ -1617,6 +1641,7 @@ table caption {
 table.tabulated th {
   padding-bottom: 2px;
   border-bottom: 1px solid #263238;
+  font-weight: 700;
 }
 table.tabulated td {
   padding: 2px 0;
@@ -1634,10 +1659,7 @@ table.bordered th {
   border: 1px solid #f3f3f3;
 }
 table.bordered tfoot td {
-  border-top: 2px solid #999999;
-}
-table.tabulated th {
-  font-weight: 700;
+  border-top: 2px solid #263238;
 }
 table.striped tbody tr:nth-child(odd) {
   background-color: #f3f3f3;
@@ -1650,15 +1672,19 @@ table.rich td {
 table.rich th {
   font-weight: 700;
   background-color: #f3f3f3;
-  border: 1px solid #999999;
+  border: 1px solid #9fb4be;
   border-bottom: 2px solid #263238;
 }
-.tresp {
+table.rich tfoot td {
+  border-top: 2px solid #9fb4be;
+  background-color: #f8f8f8;
+}
+.table-h {
   overflow-y: hidden;
   overflow-x: auto;
   width: 100%;
 }
-.tresp > table > tbody > tr > td {
+.table-h > table > tbody > tr > td {
   white-space: nowrap;
 }
 /* Print */

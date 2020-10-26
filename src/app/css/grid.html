@@ -3,6 +3,7 @@ layout: "doc"
 ---
 
 <div class="outline">
+	<h4 class="f6 bthin light">THE BUTTER</h4>
 	<ul class="alist">
 		<li><code class="shut-inline">.row</code></li>
 		<li><code class="shut-inline">.row-spaced</code></li>
@@ -29,6 +30,8 @@ layout: "doc"
 		<li><code class="shut-inline">.g-bthin-dark</code></li>
 		<li><code class="shut-inline">.h-1</code> to <code class="shut-inline">.h-6</code></li>
 		<li><code class="shut-inline">.uh-1</code> to <code class="shut-inline">.uh-6</code></li>
+		<li><code class="shut-inline">.hm-1</code> to <code class="shut-inline">.hm-6</code></li>
+		<li><code class="shut-inline">.uhm-1</code> to <code class="shut-inline">.uhm-6</code></li>
 		
 	</ul>
 
@@ -49,7 +52,7 @@ layout: "doc"
 	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
 	&lt;div class=&quot;c-7&quot;&gt;c-7&lt;/div&gt;
 	&lt;div class=&quot;c-6&quot;&gt;c-6&lt;/div&gt;
-	&lt;div class=&quot;c-5&quot;&gt;c-6&lt;/div&gt;
+	&lt;div class=&quot;c-6&quot;&gt;c-6&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 		<section>
@@ -65,7 +68,7 @@ layout: "doc"
 				<div class="c-5 box box-white">c-5</div>
 				<div class="c-7 box box-white">c-7</div>
 				<div class="c-6 box box-white">c-6</div>
-				<div class="c-5 box box-white">c-6</div>
+				<div class="c-6 box box-white">c-6</div>
 			</div>
 		</section>
 		<section>
@@ -444,7 +447,9 @@ layout: "doc"
 		<section>
 			<h3 class="f3">Bonus: heights</h3>
 			<p>Minimum height</p>
-			<p class="small box box-yellow-light">The heights are multiples of <code class="shut-inline">@grid-column-height</code></p>
+			<p class="small box box-yellow-light">The heights are multiples of <code class="shut-inline">@grid-column-height</code>. </p>
+			<p class="small box box-yellow-light">For <code >max-height</code> replce <code class="shut-inline">h-</code> with <code class="shut-inline">hm-</code></p>
+				
 <pre><code class="language-html">&lt;ul class=&quot;row-spaced uc-2&quot;&gt;
 	&lt;li&gt;&lt;div class=&quot;h-1&quot;&gt;h-1&lt;/div&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;div class=&quot;h-2&quot;&gt;h-2&lt;/div&gt;&lt;/li&gt;
@@ -463,6 +468,8 @@ layout: "doc"
 			</ul>
 
 			<p>List minimum height</p>
+			<p class="small box box-yellow-light">For <code >max-height</code> replce <code class="shut-inline">uh-</code> with <code class="shut-inline">uhm-</code></p>
+
 <pre><code class="language-html">&lt;ul class=&quot;row-spaced uc-2 uh-4&quot;&gt;
 	&lt;li&gt;uh-4&lt;/li&gt;
 	&lt;li&gt;uh-4&lt;/li&gt;
@@ -481,6 +488,16 @@ layout: "doc"
 			</ul>
 
 		</section>
-		
+		<section>
+			<h3 class="f5">LESS function</h3>
+			<p>The framework provides h-1 to h-6, you can generate more heights using the following LESS functions:</p>
+			<pre><code class="language-css">/* generate .h-7 to .h-12, .uh-7 to .uh-12 with min-height */
+.generate-min-heights(7, 12);
+
+/* generate .hm-7 to .hm-12, .uhm-7 to .uhm-12 with max-height */
+.generate-max-heights(7, 12);
+
+</code></pre>
+		</section>	
 	</div>
 </div>
