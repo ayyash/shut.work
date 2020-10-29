@@ -7,24 +7,321 @@ title: "Elements"
 <div class="outline">
 	<h4 class="f6 bthin light">THE BUTTER</h4>
 	<ul class="alist">
-		<li><code class="shut-inline">.w100</code></li>
-		<li><code class="shut-inline">.tabulated</code></li>
-		<li><code class="shut-inline">.spacedout</code></li>
-		<li><code class="shut-inline">.bordered</code></li>
-		<li><code class="shut-inline">.striped</code></li>
-		<li><code class="shut-inline">.rich</code></li>
-		<li><code class="shut-inline">.table-h</code></li>
-
+		<li>
+			<code class="shut-inline">.red</code>
+			<code class="shut-inline">.yellow</code>
+			<code class="shut-inline">.green</code>
+			<code class="shut-inline">.blue</code>
+			<code class="shut-inline">.red-light</code>
+			<code class="shut-inline">.yellow-light</code>
+			<code class="shut-inline">.green-light</code>
+			<code class="shut-inline">.blue-light</code>
+			<code class="shut-inline">.light</code>
+			<code class="shut-inline">.lighter</code>
+			<code class="shut-inline">.grey</code>
+			<code class="shut-inline">.grey-light</code>
+			<code class="shut-inline">.grey-dark</code>
+		</li>
+		<li>
+			<code class="shut-inline">.label</code> <code class="shut-inline">.label-(color)</code>
+		</li>
+		<li>
+			<code class="shut-inline">.box</code> <code class="shut-inline">.box-(color)</code>
+		</li>
+		<li>
+			<code class="shut-inline">.box-white-normal</code> <code class="shut-inline">.box-white-dark</code>
+		</li>
+		<li>
+			<code class="shut-inline">.boxed</code>
+		</li>
+		<li>
+			<code class="shut-inline">.box-shadow-none</code>
+			<code class="shut-inline">.box-shadow-shallow</code>
+			<code class="shut-inline">.box-shadow-normal</code>
+			<code class="shut-inline">.box-shadow-deep</code>
+			<code class="shut-inline">.box-shadow-deeper</code>
+		</li>
 	</ul>
 </div>
 
 <div class="page withoutline">
 	<div class="container">
-		<h1 class="f1">Box</h1>
-        
-        <h1 class="f1">Label</h1>
+		<h1 class="f1">Color</h1>
 
-        <h1 class="f1">Text</h1>
+		<p>The color collection in LESS variable look like this</p>
+		<pre><code class="language-less">@colors: {
+	red: 		@red;
+	yellow: 	@yellow;
+	green: 		@green;
+	blue: 		@blue;
+	red-light: 	@red-light;
+	yellow-light: 	@yellow-light;
+	green-light: 	@green-light;
+	blue-light: @blue-light;
+	light:  	@text-light;
+	lighter: 	@text-lighter;
+	grey: 		@grey;
+	grey-light: @grey-light;
+	grey-dark: 	@grey-dark;
+};</code></pre>
+
+		<p>The following styles loop through the collection to define new rules. Adding more to the collection, creates
+			new rules.</p>
+		<section>
+			<h3 class="f5">Text</h3>
+
+			<div class="grid g-2 g-bthin spacedout doublespaced">
+				<h6 class="f6">.red</h6>
+				<div class="red">Red text</div>
+				<h6 class="f6">.red-light</h6>
+				<div class="red-light">Red light text</div>
+				<h6 class="f6">.yellow</h6>
+				<div class="yellow">Yellow text</div>
+				<h6 class="f6">.yellow-light</h6>
+				<div class="yellow-light">Yellow light text</div>
+				<h6 class="f6">.green</h6>
+				<div class="green">Green text</div>
+				<h6 class="f6">.green-light</h6>
+				<div class="green-light">Green light text</div>
+				<h6 class="f6">.blue</h6>
+				<div class="blue">Blue text</div>
+				<h6 class="f6">.blue-light</h6>
+				<div class="blue-light">Blue light text</div>
+				<h6 class="f6">.light</h6>
+				<div class="light">Light text</div>
+				<h6 class="f6">.lighter</h6>
+				<div class="lighter">Even lighter text</div>
+				<h6 class="f6">.grey</h6>
+				<div class="grey">Grey text</div>
+				<h6 class="f6">.grey-light</h6>
+				<div class="grey-light">Grey light text</div>
+				<h6 class="f6">.grey-dark</h6>
+				<div class="grey-dark">Grey dark text</div>
+			</div>
+
+
+		</section>
+
+
+		<section>
+			<h3 class="f5">Label</h3>
+			<p>The foreground color of the label is decided between <code class="shut-inline">@white</code>, or <code
+					class="shut-inline">@text-color</code>
+				based on a contrast threshold of the color. The threshold by default is 43%. It can be modified through
+				<code class="shut-inline">@front-color-contrast</code></p>
+
+			<div class="small box box-yellow-light spaced">
+				Contrast is not easy to coin. Read about <a
+					href="http://lesscss.org/functions/#color-operations-contrast">LESS contrast function</a>.
+			</div>
+
+			<div class="small box box-yellow-light spaced">
+				Padding is set by <code class="shut-inline">@label-padding</code>. Border radius is set by 
+				<code class="shut-inline">@label-radius</code>, if <code
+					class="shut-inline">@enable-rounded</code> is set to true. 
+					For <code>white</code> rules, border size is set by <code class="shut-inline">@box-border</code>.
+			</div>
+
+
+			<div class="grid g-4 spacedout doublespaced">
+
+				<h6 class="f6">.label</h6>
+				<div><a href="" class="label">Plain label (padded and hover effect for links)</a></div>
+				<h6 class="f6">.label-yellow</h6>
+				<div><a href="" class="label label-yellow">yellow</a></div>
+				<h6 class="f6">.label-yellow-light</h6>
+				<div><a href="" class="label label-yellow-light">yellow light</a></div>
+				<h6 class="f6">.label-red</h6>
+				<div><a href="" class="label label-red">red</a></div>
+				<h6 class="f6">.label-red-light</h6>
+				<div><a href="" class="label label-red-light">red light</a></div>
+				<h6 class="f6">.label-green</h6>
+				<div><a href="" class="label label-green">green</a></div>
+				<h6 class="f6">.label-green-light</h6>
+				<div><a href="" class="label label-green-light">green light</a></div>
+				<h6 class="f6">.label-blue</h6>
+				<div><a href="" class="label label-blue">blue</a></div>
+				<h6 class="f6">.label-blue-light</h6>
+				<div><a href="" class="label label-blue-light">blue light</a></div>
+				<h6 class="f6">.label-light</h6>
+				<div><a href="" class="label label-light">light</a></div>
+				<h6 class="f6">.label-lighter</h6>
+				<div><a href="" class="label label-lighter">lighter</a></div>
+				<h6 class="f6">.label-grey-light</h6>
+				<div><a href="" class="label label-grey-light">grey light</a></div>
+				<h6 class="f6">.label-grey</h6>
+				<div><a href="" class="label label-grey">grey</a></div>
+				<h6 class="f6">.label-grey-dark</h6>
+				<div><a href="" class="label label-grey-dark">grey dark</a></div>
+				<h6 class="f6">.label-white</h6>
+				<div><a href="" class="label label-white">white</a></div>
+			</div>
+		</section>
+		<section>
+			<h3 class="f5">Box</h3>
+			<p>The foreground color is decided in the same way as in labels.</p>
+			<div class="small box box-yellow-light spaced">
+				Padding is set by <code class="shut-inline">@box-padding</code>. Border radius is set by 
+				<code class="shut-inline">@radius</code>, if <code
+					class="shut-inline">@enable-rounded</code> is set to true. 
+					For <code>white</code> rules, border size is set by <code class="shut-inline">@box-border</code>.
+			</div>
+
+
+			<div class="grid g-4 spacedout doublespaced">
+
+				<h6 class="f6">.box</h6>
+				<div class="box">Simple box</div>
+
+				<h6 class="f6">.box-yellow</h6>
+				<div class="box box-yellow">yellow</div>
+
+				<h6 class="f6">.box-yellow-light</h6>
+				<div class="box box-yellow-light">yellow light</div>
+
+				<h6 class="f6">.box-red</h6>
+				<div class="box box-red">red</div>
+
+				<h6 class="f6">.box-red-light</h6>
+				<div class="box box-red-light">red light</div>
+
+				<h6 class="f6">.box-green</h6>
+				<div class="box box-green">green</div>
+
+				<h6 class="f6">.box-green-light</h6>
+				<div class="box box-green-light">green light</div>
+
+				<h6 class="f6">.box-blue</h6>
+				<div class="box box-blue">blue</div>
+
+				<h6 class="f6">.box-blue-light</h6>
+				<div class="box box-blue-light">blue light</div>
+
+				<h6 class="f6">.box-grey</h6>
+				<div class="box box-grey">grey</div>
+
+				<h6 class="f6">.box-grey-dark</h6>
+				<div class="box box-grey-dark">grey dark</div>
+
+				<h6 class="f6">.box-grey-light</h6>
+				<div class="box box-grey-light">grey light</div>
+
+				<h6 class="f6">.box-white</h6>
+				<div class="box box-white">white (with grey-light border)</div>
+
+				<h6 class="f6">.box-white-dark</h6>
+				<div class="box box-white-dark">white dark (extra, with grey-dark border)</div>
+
+				<h6 class="f6">.box-white-normal</h6>
+				<div class="box box-white-light">white normal (extra, with grey border)</div>
+
+			</div>
+
+		</section>
+		<section>
+			<h3 class="f5">Shadows</h3>
+			<p>The shadow collection in LESS variables look like this </p>
+			<pre><code class="language-less">@shadows: {
+	none: none;
+    shallow: 0 0 5px 0 rgba(0,0,0,.1); 
+    normal: 0 2px 2px 0 rgba(@black,0.14), 0 1px 5px 0 rgba(@black,0.12), 0 3px 1px -2px rgba(@black,0.2);
+    deep: 0 6px 10px 0 rgba(@black,0.14), 0 1px 18px 0 rgba(@black,0.12), 0 3px 5px -1px rgba(@black,0.3);
+    deeper: 0 16px 24px 2px rgba(@black,0.14), 0 6px 30px 5px rgba(@black,0.12), 0 8px 10px -5px rgba(@black,0.3);
+};</code></pre>
+			<p>The following is a loop of these values to broduce <code class="shut-inline">.box-shadow-value</code>.
+			</p>
+
+			<div class="grid g-4 spacedout doublespaced">
+
+				<h6 class="f6">.box-shadow-none</h6>
+				<div class="box box-shadow-none">Remove shadow</div>
+
+				<h6 class="f6">.box-shadow-shallow</h6>
+				<div class="box box-shadow-shallow">Shallow</div>
+
+				<h6 class="f6">.box-shadow-normal</h6>
+				<div class="box box-shadow-normal">Normal</div>
+
+				<h6 class="f6">.box-shadow-deep</h6>
+				<div class="box box-shadow-deep">Deep</div>
+
+				<h6 class="f6">.box-shadow-deeper</h6>
+				<div class="box box-shadow-deeper">Deeper</div>
+
+			</div>
+
+		</section>
+		<section>
+			<h3 class="f5">Bonus: Boxed</h3>
+			<p>Define a list with <code class="shut-inline">.boxed</code>, and the li elements will inherit
+				<code>.box</code>. Here is an example combining
+				<code>.row-spaced.uc-6</code> with <code>.boxed</code></p>
+			<pre><code class="language-html">&lt;ul class=&quot;boxed row-spaced uc-6&quot;&gt;
+	&lt;li&gt;Box Element&lt;/li&gt;
+	&lt;li class=&quot;box-yellow&quot;&gt;Element&lt;/li&gt;
+	&lt;li&gt;Element&lt;/li&gt;
+	&lt;li&gt;Element&lt;/li&gt;
+	&lt;li class=&quot;box-red&quot;&gt;Element&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			<div class="box box-white">
+				<ul class="boxed row-spaced uc-6">
+					<li>Box Element</li>
+					<li class="box-yellow">Element</li>
+					<li>Element</li>
+					<li>Element</li>
+					<li class="box-red">Element</li>
+				</ul>
+			</div>
+		</section>
+
+
+
+		<section>
+			<h3 class="f5">Less functions</h6>
+
+				<p>Adding a new color to the color collection produces new color rules for text, labels and boxes</p>
+				<pre><code class="language-html">/* in sh._vars.less color collection */
+@colors: {
+	...
+	pink: #e611a6;
+};
+
+&lt;div class=&quot;spaced&quot;&gt;
+	&lt;span class=&quot;pink&quot;&gt;Pink text&lt;/span&gt; &lt;span class=&quot;label label-pink&quot;&gt;Pink label&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;box box-pink&quot;&gt;Pink box&lt;/div&gt;</code></pre>
+				<div class="box box-white spaced">
+					<div class="spaced">
+						<span class="pink">Pink text</span> <span class="label label-pink">Pink label</span>
+					</div>
+					<div class="box box-pink">Pink box</div>
+
+				</div>
+
+				<p>Adding a new shadow definiton to the shadows collection, produces a new rule for the shadow.</p>
+				<pre><code class="language-html">/* in sh._vars.less shadow collection */
+@shadows: {
+...
+	inner: inset 0 0 2px 2px rgba(@black, 0.5);
+};
+
+&lt;div class=&quot;box box-shadow-inner&quot;&gt;Inner shadow&lt;/div&gt;
+</code></pre>
+				<div class="box box-white spaced">
+					<div class="box box-shadow-inner">Inner shadow</div>
+				</div>
+
+				<pre><code class="language-less">/* This produces 
+color: contrast(#883373, @text-color, @white, @front-color-contrast) */
+.myclass {
+	.fcolor(#883373);
+	background-color: #883373;
+}
+</code></pre>
+				<div class="box box-white spaced">
+					<span class="label myclass">This is myclass</span>
+				</div>
+		</section>
 
 	</div>
 </div>

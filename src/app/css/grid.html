@@ -423,7 +423,7 @@ layout: "doc"
 		<section>
 			<h3 class="f5">LESS function</h3>
 			<p>Want more? Use the following function in LessCss to generate new grids.</p>
-			<pre><code class="language-css">/* generate media query for min-width set to 1200px */
+			<pre><code class="language-less">/* generate media query for min-width set to 1200px */
 .media(1200, {
 	/* generates .offset-xl-c1 to .offset-xl-c11 */
 	.generate-offset(11, xl);
@@ -441,7 +441,22 @@ layout: "doc"
     .row-spaced {
         .generate-spaced-column(12, xl);
     }
-});</code></pre>
+});
+/* the following generates width: 37.5% (4.5 / @wrapper * 100) */
+.myc-4-lookalike {
+    .columns(4.5);
+}
+/* the following generates width: calc(37.5% - 10px); */
+.myc-4-lookalike-off {
+    .columns(4.5, 10px);
+}
+</code></pre>
+
+			<div class="box box-white spaced">
+				<div class="myc-4-lookalike box-grey spaced">columns 4.5</div>
+				<div class="myc-4-lookalike-off box-grey">columns 4.5 - 10px;</div>
+
+			</div>
 		</section>
 
 		<section>

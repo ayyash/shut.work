@@ -55,7 +55,10 @@
 	grey: @grey;
 	grey-light: @grey-light;
 	grey-dark: @grey-dark; 
+	pink: #e611a6;
 };
+@front-color-contrast: 43%; 
+
 
 // table colors
 @table-th-border-color: @grey-dark;
@@ -101,14 +104,15 @@
 @font-weight-bold: 700;
 @font-weight-extra: 800;
 
-
-// shadows
+ 
+// shadows 
 @shadows: {
-    zero: none;
-    level1: 0 0 5px 0 rgba(0,0,0,.1); 
-    level2: 0 2px 2px 0 rgba(@black,0.14), 0 1px 5px 0 rgba(@black,0.12), 0 3px 1px -2px rgba(@black,0.2);
-    level3: 0 6px 10px 0 rgba(@black,0.14), 0 1px 18px 0 rgba(@black,0.12), 0 3px 5px -1px rgba(@black,0.3);
-    level4: 0 16px 24px 2px rgba(@black,0.14), 0 6px 30px 5px rgba(@black,0.12), 0 8px 10px -5px rgba(@black,0.3);
+	none: none;
+    shallow: 0 0 5px 0 rgba(0,0,0,.1); 
+    normal: 0 2px 2px 0 rgba(@black,0.14), 0 1px 5px 0 rgba(@black,0.12), 0 3px 1px -2px rgba(@black,0.2);
+    deep: 0 6px 10px 0 rgba(@black,0.14), 0 1px 18px 0 rgba(@black,0.12), 0 3px 5px -1px rgba(@black,0.3);
+	deeper: 0 16px 24px 2px rgba(@black,0.14), 0 6px 30px 5px rgba(@black,0.12), 0 8px 10px -5px rgba(@black,0.3);
+	inner: inset 0 0 2px 2px rgba(@black, 0.5);
 };
 
 // breakpoints

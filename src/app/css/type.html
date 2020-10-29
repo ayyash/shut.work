@@ -222,5 +222,26 @@ title: "Type"
 			<div class="f3 green">The purple roses <span class="f5 light">Unleashed</span></div>
 		</section>
 
+		<section>
+			<h3 class="f5">LESS functions</h3>
+			<p>Use the following functions in <code>LESS</code> as mixins when needed.</p>
+<pre><code class="language-less">/* this produces:
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+*/
+.ellipsis();
+
+/* if @enable-res-fonts is set to true produces
+font-size: @fontsize * 1.4; */
+.resfont(1.4);
+
+/* if @rem-enabled is set to true produces
+font-size: 1.2rem;
+else
+font-size: 12px; */
+#rem>.font-size(1.2);
+</code></pre>
+		</section>
 	</div>
 </div>

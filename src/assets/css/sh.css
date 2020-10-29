@@ -1337,7 +1337,7 @@ ul.boxed > li {
 }
 .box-yellow {
   background-color: #ffc400;
-  color: #fff;
+  color: #202020;
 }
 .box-green {
   background-color: #57b347;
@@ -1349,7 +1349,7 @@ ul.boxed > li {
 }
 .box-red-light {
   background-color: #f96e69;
-  color: #202020;
+  color: #fff;
 }
 .box-yellow-light {
   background-color: #ffdc66;
@@ -1361,7 +1361,7 @@ ul.boxed > li {
 }
 .box-blue-light {
   background-color: #0ee8ff;
-  color: #fff;
+  color: #202020;
 }
 .box-light {
   background-color: #959595;
@@ -1383,13 +1383,14 @@ ul.boxed > li {
   background-color: #263238;
   color: #fff;
 }
+.box-pink {
+  background-color: #e611a6;
+  color: #fff;
+}
 .box-white-dark {
   border: 1px solid #263238;
   background-color: #fff;
   color: #202020;
-}
-.box-white-light {
-  border: 1px solid #f3f3f3;
 }
 .box-white-normal {
   border: 1px solid #999999;
@@ -1399,14 +1400,14 @@ ul.boxed > li {
 .box-white {
   border: 1px solid #f3f3f3;
 }
-.box-shadow {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
 .box-shadow-none {
   box-shadow: none;
 }
 .box-shadow-shallow {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.box-shadow-normal {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 .box-shadow-deep {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
@@ -1414,8 +1415,8 @@ ul.boxed > li {
 .box-shadow-deeper {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
-.box-radius {
-  border-radius: 3px;
+.box-shadow-inner {
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 .red {
   color: #f31109;
@@ -1456,13 +1457,16 @@ ul.boxed > li {
 .grey-dark {
   color: #263238;
 }
+.pink {
+  color: #e611a6;
+}
 .label {
   padding: 0.1rem 0.5rem;
   border-radius: 3px;
   display: inline-block;
 }
 a.label {
-  transition: background-color 0.15s;
+  transition: background-color 0.15s, color 0.15s;
 }
 .label-red {
   background-color: #f31109;
@@ -1470,11 +1474,11 @@ a.label {
 }
 a.label-red:hover {
   background-color: #f95650;
-  color: #202020;
+  color: #fff;
 }
 .label-yellow {
   background-color: #ffc400;
-  color: #fff;
+  color: #202020;
 }
 a.label-yellow:hover {
   background-color: #ffd64d;
@@ -1494,11 +1498,11 @@ a.label-green:hover {
 }
 a.label-blue:hover {
   background-color: #00dcf3;
-  color: #fff;
+  color: #202020;
 }
 .label-red-light {
   background-color: #f96e69;
-  color: #202020;
+  color: #fff;
 }
 a.label-red-light:hover {
   background-color: #fcb5b2;
@@ -1522,7 +1526,7 @@ a.label-green-light:hover {
 }
 .label-blue-light {
   background-color: #0ee8ff;
-  color: #fff;
+  color: #202020;
 }
 a.label-blue-light:hover {
   background-color: #5befff;
@@ -1566,6 +1570,14 @@ a.label-grey-light:hover {
 }
 a.label-grey-dark:hover {
   background-color: #455b66;
+  color: #fff;
+}
+.label-pink {
+  background-color: #e611a6;
+  color: #fff;
+}
+a.label-pink:hover {
+  background-color: #f251c2;
   color: #fff;
 }
 .label-white {
@@ -1970,6 +1982,16 @@ pre::-webkit-scrollbar-thumb:horizontal {
   width: 50px;
   background-color: #263238;
   border-radius: 8px;
+}
+.myclass {
+  color: #fff;
+  background-color: #883373;
+}
+.myc-4-lookalike {
+  width: 37.5%;
+}
+.myc-4-lookalike-off {
+  width: calc(37.5% - 10px);
 }
 .outline {
   position: fixed;
