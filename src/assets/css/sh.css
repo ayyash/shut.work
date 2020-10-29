@@ -123,17 +123,6 @@ textarea {
 .txt-l {
   text-align: left;
 }
-.text-nowrap {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.wrap-break {
-  word-wrap: break-word;
-}
-.wrap-none {
-  white-space: nowrap;
-}
 .breath,
 ul.breathout > li,
 ol.breathout > li {
@@ -187,6 +176,17 @@ ol.doublespacedout > li {
 }
 .rauto {
   margin-right: auto;
+}
+.text-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wrap-break {
+  word-wrap: break-word;
+}
+.wrap-none {
+  white-space: nowrap;
 }
 .center-content {
   display: flex;
@@ -1270,7 +1270,7 @@ p {
   direction: ltr;
 }
 .rtl {
-  font-family: Traditional Arabic, tahoma, sans-serif;
+  font-family: Tajawal, Arabic, tahoma, sans-serif;
   direction: rtl;
 }
 /* CRITICAL END */
@@ -1298,11 +1298,10 @@ a[rel='track']:visited {
   color: #800080;
 }
 a:hover,
+.a:hover,
 a[rel='track']:hover {
   color: #048bca;
 }
-p.normalsize,
-.normalsize p,
 .normalsize {
   font-size: 1.4rem !important;
   font-family: "Work Sans", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
