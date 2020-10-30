@@ -63,22 +63,26 @@ textarea {
 /* rem */
 /* icons*/
 @font-face {
-  font-family: 'vpicons';
+  font-family: 'shuticons';
   font-display: block;
-  src: url('../fonts/vpicons.ttf') format('truetype'), url('../fonts/vpicons.woff') format('woff'), url('../fonts/vpicons.svg#icons') format('svg');
+  src: url('../fonts/shuticons.ttf') format('truetype'), url('../fonts/shuticons.woff') format('woff'), url('../fonts/shuticons.svg#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'vpicons';
-    src: url('../fonts/vpicons.svg#icons') format('svg');
+    font-family: 'shuticons';
+    src: url('../fonts/shuticons.svg#icons') format('svg');
   }
 }
 .liga,
 .symbol:before,
-.symbolAfter:after {
-  font-family: 'vpicons';
+.symbolAfter:after,
+.search-icon:before,
+.next-icon:after,
+.expand-icon:before,
+.collapse-icon:after {
+  font-family: 'shuticons';
   text-transform: none;
   font-style: normal;
   font-weight: normal;
@@ -96,6 +100,8 @@ textarea {
   font-variant-ligatures: discretionary-ligatures;
   /* ligatures? */
   content: attr(data-icon);
+  vertical-align: middle;
+  font-size: 150%;
 }
 .icon-inline:before {
   margin-right: 1.5rem;
@@ -1956,6 +1962,60 @@ code::-webkit-scrollbar-thumb:horizontal {
 }
 .vpatts .atth .vpdef {
   font-style: italic;
+}
+.icon-place:before {
+  content: "\e900";
+}
+.icon-remove:before {
+  content: "\e901";
+}
+.icon-down:before {
+  content: "\e902";
+}
+.icon-left:before {
+  content: "\e903";
+}
+.icon-right:before {
+  content: "\e904";
+}
+.icon-up:before {
+  content: "\e905";
+}
+.icon-user:before {
+  content: "\e906";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-search:before {
+  content: "\e908";
+}
+.icon-trash:before {
+  content: "\e909";
+}
+.search-icon:before {
+  content: "\e908";
+}
+.next-icon:after {
+  content: "\e904";
+}
+.expand-icon {
+  color: #57b347;
+}
+.expand-icon:before {
+  content: "\e902";
+}
+.expand-icon.expanded:before {
+  content: "\e905";
+}
+.collapse-icon {
+  color: #f31109;
+}
+.collapse-icon:after {
+  content: "\e905";
+}
+.collapse-icon.collapsed:after {
+  content: "\e902";
 }
 .image-fill {
   -o-object-fit: cover;

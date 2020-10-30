@@ -1,0 +1,50 @@
+
+// inject:icons
+@icon-place: "\e900";	.icon(icon-place,@icon-place);
+@icon-remove: "\e901";	.icon(icon-remove,@icon-remove);
+@icon-down: "\e902";	.icon(icon-down,@icon-down);
+@icon-left: "\e903";	.icon(icon-left,@icon-left);
+@icon-right: "\e904";	.icon(icon-right,@icon-right);
+@icon-up: "\e905";	.icon(icon-up,@icon-up);
+@icon-user: "\e906";	.icon(icon-user,@icon-user);
+@icon-close: "\e907";	.icon(icon-close,@icon-close);
+@icon-search: "\e908";	.icon(icon-search,@icon-search);
+@icon-trash: "\e909";	.icon(icon-trash,@icon-trash);
+
+// endinject
+ 
+// font basics
+.symbolDef() {
+    vertical-align: middle;
+    font-size: 150%;
+}
+
+.search-icon {
+    .getIcon(@icon-search);
+
+}
+
+.next-icon {
+    .getIcon(@icon-right, "after");
+}
+
+.expand-icon {
+    color: @green;
+    .getIcon(@icon-down);
+
+    &.expanded {
+        .changeIcon(@icon-up);
+    }
+}
+
+.collapse-icon {
+    color: @red;
+    .getIcon(@icon-up, "after");
+
+    &.collapsed {
+        .changeIcon(@icon-down, "after");
+    }
+}
+
+
+

@@ -2,86 +2,205 @@
 layout: "doc"
 ---
 <div class="outline">
+	<h4 class="f6 bthin light">THE BUTTER</h4>
+
 	<ul class="alist">
-		<li><code class="shut-inline">.row</code></li>
-
-
+		<li><code class="shut-inline">.symbol</code></li>
+		<li><code class="shut-inline">.symbolAfter</code></li>
+		<li><code class="shut-inline">.icon-[value]</code></li>
+		<li><code class="shut-inline">.icon-inline</code></li>
+		<li><code class="shut-inline">.liga</code></li>
+		<li><code class="shut-inline">[data-icon]</code></li>
 	</ul>
 
 </div>
 <div class="page withoutline">
 	<div class="container">
-		<h1 class="f1 spaced">Icons</h1>
+		<h1 class="f1">Icons</h1>
+		<p>Icons are very diverse, and special to every project. The only thing that a framework should provide for
+			icons, is a set of functions to use in LESS or SCSS. The following are the defitions and LESS functions in
+			this framework, and how to make use of them.</p>
+		<div class="spaced box box-yellow-light small">Don't just use a ready made collection of fonts, generate your
+			own icon font using online tools like <a href="https://icomoon.io/app/#/select">icomoon</a>, or <a
+				href="http://fontello.com/">fontello</a>. </div>
 
+		<section>
+			<h3 class="f5">Variables</h3>
+			<p>Generate an icon font of your favorite, per-project icons, then use these variables to make a single rule
+				ready to use <code class="shut-inline">.symbol</code>.</p>
+			<pre><code class="language-less">// If set to true, the rules for the icons are generated. 
+@enable-icon-font: true;
+
+// the icon file name (provide ttf, woff, and svg)
+@icon-font: 'vpicons';
+
+// path relative to css file for the folder where fonts are located
+@font-url: '../fonts/';
+
+// for inline icons that need space to the right, how much space?
+@icon-inline-margin: 1rem;
+</code></pre>
+		</section>
+
+		<section>
+			<h3 class="f5">Symbol definition</h3>
+			<p>The symbol definition in full, in the framework is this:</p>
+
+			<pre><code class="language-less">.symbolDef() {
+    font-family: @icon-font;
+    text-transform: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+    font-smooth: always;
+    /* Enable Ligatures */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: 'liga';
+    -moz-font-feature-settings: 'liga=1';
+    -moz-font-feature-settings: 'liga';
+    -ms-font-feature-settings: 'liga' 1;
+    -o-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+    /* ligatures? */
+    content: attr(data-icon);
+}</code></pre>
+
+			<h4 class="f5 weight-normal">Extend</h4>
+			<p>To extend the defintions in your project, add them like the following example (LESS merges the two
+				definitions into one):</p>
+			<pre><code class="language-less">.symbolDef() {
+     vertical-align: middle;
+	 font-size: 150%;
+	 line-height: 1;
+}</code></pre>
+
+			<h4 class="f5 weight-normal">Define</h4>
+			<p>Now add your icons using <code>.icon()</code> functions (handy but not necessary)</p>
+			<pre><code class="language-less">// this produces .icon-place class ready to use
+.icon(icon-place,"\e900");</code></pre>
+
+
+			<p>Also, to make the same variables usable in your less file, do as I do:</p>
+			<pre><code class="language-less">// create a variable @icon-place to use in LESS
+@icon-place: "\e900";
+	
+// then create icon-place rule
+.icon(icon-place,@icon-place);
+</code></pre>
+
+			<h4 class="f5 weight-normal">Use</h4>
+
+			<p>Use it in HTML like this (inside a button as an example)</p>
+			<pre><code class="language-html">&lt;button class=&quot;btn&quot;&gt;
+	&lt;span class=&quot;symbol icon-place&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+			<div class="spaced box box-white">
+				<button class="btn"><span class="symbol icon-place"></span></button>
+			</div>
+
+			<p>If appears inline and you want more space to the right of the icon (this is rare if you setup the icon
+				padding correctly in the icon font).</p>
+			<pre><code class="language-html">&lt;span class=&quot;symbol icon-place icon-inline&quot;&gt;Location&lt;/span&gt;</code></pre>
+
+			<div class="spaced box box-white">
+				<span class="symbol icon-place icon-inline">Location</span>
+			</div>
+
+			<p>If you have ligatures setup, use <code class="shut-inline">.liga</code> class, or pass it to <code
+					class="shut-inline">data-icon</code> attribute:</p>
+			<pre><code class="language-html">&lt;i class=&quot;liga&quot;&gt;place&lt;/i&gt; ligature location
+&lt;span class=&quot;symbol&quot; data-icon=&quot;place&quot;&gt;using data-icon&lt;/span&gt;
+&lt;span class=&quot;symbolAfter&quot; data-icon=&quot;place&quot;&gt;using symbolAfetr and data-icon&lt;/span&gt;
+			</code></pre>
+			<div class="spaced box box-white">
+				<i class="liga">place</i> ligature location
+				<br>
+				<span class="symbol" data-icon="place"></span> using data-icon <br>
+				<span class="symbolAfter" data-icon="place">using symbolAfetr and data-icon</span>
+
+			</div>
+		</section>
+		<section>
+			<h3 class="f5">LESS functions</h3>
+			<p>Using icon classnames directly in HTML is one way, using them in LESS is another fine-tuned way, here are
+				some LESS functions you can use.</p>
+			<pre><code class="language-less">// .getIcon(value) makes the rule ready for use with :before
+.search-icon {
+	.getIcon(@icon-search);
+}
+
+// pass "after" as a second argument to use :after instead
+.next-icon {
+	.getIcon(@icon-right, "after");
+}
+
+// use .changeIcon(value) to overwrite content only of :before
+.expand-icon {
+	color: @green;
+	.getIcon(@icon-down);
+
+	&.expanded {
+		.changeIcon(@icon-up);
+	}
+}
+
+// pass "after" as a second argument to overwrite content of :after 
+.collapse-icon {
+	color: @red;
+	.getIcon(@icon-up, "after");
+
+	&.collapsed {
+		.changeIcon(@icon-down, "after");
+	}
+}
+</code></pre>
+
+			<p>To use in HTML:</p>
+			<pre><code class="language-html">&lt;span class=&quot;search-icon&quot;&gt;&lt;/span&gt; Search
+&lt;span class=&quot;next-icon&quot;&gt;Icon after&lt;/span&gt;
+&lt;div class=&quot;expand-icon&quot;&gt;Expand&lt;/div&gt;...
+&lt;div class=&quot;expand-icon expanded&quot;&gt;Expanded&lt;/div&gt;
+&lt;div class=&quot;collapse-icon&quot;&gt;Collapse&lt;/div&gt;... 
+&lt;div class=&quot;collapse-icon collapsed&quot;&gt;Collapsed&lt;/div&gt;</code></pre>
+			<div class="box box-white spaced">
+				<ul class="alist">
+					<li>
+						<span class="search-icon"></span> Search
+					</li>
+					<li>
+						<span class="next-icon">Icon after</span>
+					</li>
+					<li class="card">
+						<div class="expand-icon">Expand</div> <span class="hbreath">...</span>
+						<div class="expand-icon expanded">Expanded</div>
+					</li>
+					<li class="card">
+						<div class="collapse-icon">Collapse</div> <span class="hbreath">...</span>
+						<div class="collapse-icon collapsed">Collapsed</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h3 class="f5">A note about RTL</h3>
+			<p>If you use an automatic mirror task to generate your RTL, you need to also take note of icons with
+				direction, and manually mirror them. Each left icon, will hold the right character, and each right icon
+				will hold the left character, the class names used in HTML should not change.</p>
+
+<pre><code class="language-less">.icon(icon-left, "\e903");
+.icon(icon-right,"\e904");
+
+// in RTL file
+.icon(icon-left, "\e904");
+.icon(icon-right,"\e903");
+</code></pre>
+		</section>
 	</div>
 </div>
-
-<h1>
-	Icons</h1>
-<p>Icons are set by the class <strong>.symbol</strong>, which depends on an iconated font, adding
-	<strong>.icon-</strong><span class="italicface">classname</span>
-	adds the character defined in CSS. Using open tools like <a href="https://icomoon.io/app/#/select">icomoon</a> and
-	<a href="http://fontello.com/">fontello</a>,
-	you can create the font, and just add new characters. Following are some of the existing icons defined in the font
-	included
-	in <strong>css</strong> folder (vpicons).</p>
-<p>Ligatures are also supported, using two methods, using the <strong>i</strong> element, and adding text of the
-	ligature, or
-	by defining <strong>data-icon</strong> property to an element that has <strong>symbol</strong> class.</p>
-<p class="psnote">If you are using LTR and RTL, avoid using ligatures for icons that indicate direction (like
-	arrow-right) and depend on CSS
-	definition.</p>
-
-<pre><code class="language-html">&lt;div class="symbol" data-icon="plus">This adds a ligature icon for icon-plus&lt;/div>
-&lt;i class="large">add&lt;/i> This adds icon-plus as well. 
-&lt;span class="symbol icon-plus">This also places a plus to the left of the element&lt;/span>
-</code></pre>
-<section class="bthin">
-
-	<div class="symbol" data-icon="plus">This adds a ligature icon for icon-plus</div><br />
-	<i class="large">add</i> This adds icon-plus as well.<br />
-	<span class="symbol icon-plus">This also places a plus to the left of the element</span>
-</section>
-
-
-<section>
-
-	<ul class="incols u4 large">
-		<li>
-			<span class="symbol  icon-plus">
-				.icon-plus
-			</span>
-			<span class="yellowtext smaller">(add, plus)</span>
-		</li>
-		<li><span class="symbol  icon-arrow-back">.icon-arrow-back</span> <span
-				class="yellowtext smaller">(backward)</span></li>
-		<li><span class="symbol  icon-arrow-forward">.icon-arrow-forward</span> <span
-				class="yellowtext smaller">(forward)</span></li>
-		<li><span class="symbol  icon-flag">.icon-flag</span> <span class="yellowtext smaller">(flag)</span></li>
-		<li><span class="symbol  icon-attach">.icon-attach</span> <span class="yellowtext smaller">(attachment)</span>
-		</li>
-		<li><span class="symbol  icon-wrench">.icon-wrench</span> <span class="yellowtext smaller">(tools)</span></li>
-		<li><span class="symbol  icon-tick">.icon-tick</span> <span class="yellowtext smaller">(tick, check)</span></li>
-		<li><span class="symbol  icon-x">.icon-x</span> <span class="yellowtext smaller">(close, clear)</span></li>
-		<li><span class="symbol  icon-exit">.icon-exit</span> <span class="yellowtext smaller">(exit)</span></li>
-		<li><span class="symbol  icon-info">.icon-info</span> <span class="yellowtext smaller">(info)</span></li>
-		<li><span class="symbol  icon-external">.icon-external</span> <span class="yellowtext smaller">(external,
-				popup)</span></li>
-		<li><span class="symbol  icon-chevron-down">.icon-chevron-down</span> <span
-				class="yellowtext smaller">(down)</span></li>
-		<li><span class="symbol  icon-chevron-left">.icon-chevron-left</span> <span
-				class="yellowtext smaller">(left)</span></li>
-		<li><span class="symbol  icon-chevron-right">.icon-chevron-right</span> <span
-				class="yellowtext smaller">(right)</span></li>
-		<li><span class="symbol  icon-chevron-up">.icon-chevron-up</span> <span class="yellowtext smaller">(up)</span>
-		</li>
-		<li><span class="symbol  icon-exclamation">.icon-exclamation</span> <span
-				class="yellowtext smaller">(exclamation, error)</span></li>
-		<li><span class="symbol  icon-inbox">.icon-inbox</span> <span class="yellowtext smaller">(inbox)</span></li>
-		<li><span class="symbol  icon-menu">.icon-menu</span> <span class="yellowtext smaller">(menu)</span></li>
-		<li><span class="symbol  icon-question">.icon-question</span> <span class="yellowtext smaller">(question,
-				help)</span></li>
-
-	</ul>
-
-</section>

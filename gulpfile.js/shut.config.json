@@ -3,6 +3,7 @@
 	"srcUrl": "./raw/",
 	"distUrl": "./src/assets/",
     "minisiteDistUrl": "./dist/",
+    "iconfontspath": "./fontfiles/",
     "projectName": "sh",
     "isRtl": false,
     "scripts": [
