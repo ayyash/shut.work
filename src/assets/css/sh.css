@@ -140,12 +140,22 @@ ol.doublespacedout > li {
   margin-bottom: 3rem;
 }
 .rbreath {
-  padding-right: 1.5rem;
+  padding-right: 0.75rem;
 }
 .lbreath {
-  padding-left: 1.5rem;
+  padding-left: 0.75rem;
 }
 .hbreath {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+.rpad {
+  padding-right: 1.5rem;
+}
+.lpad {
+  padding-left: 1.5rem;
+}
+.hpad {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -192,6 +202,9 @@ ol.doublespacedout > li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 .hidden {
   display: none;
@@ -246,6 +259,12 @@ ol.doublespacedout > li {
 .forprint {
   display: none;
 }
+.md-only {
+  display: none;
+}
+.lg-only {
+  display: none;
+}
 @media only screen and (min-width: 720px) {
   .page {
     width: calc(720px - 1.5rem * 2);
@@ -257,6 +276,12 @@ ol.doublespacedout > li {
   .container {
     padding: 1.5rem;
   }
+  .md-only {
+    display: block;
+  }
+  .xs-hide {
+    display: none;
+  }
 }
 @media only screen and (min-width: 960px) {
   .page {
@@ -264,6 +289,12 @@ ol.doublespacedout > li {
   }
   .singlepage {
     width: calc(720px - 1.5rem * 2);
+  }
+  .lg-only {
+    display: block;
+  }
+  .md-hide {
+    display: none;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -592,15 +623,6 @@ button:focus {
 .g-11 {
   grid-template-columns: 91.66666667% auto;
 }
-.md-only {
-  display: none;
-}
-.lg-only {
-  display: none;
-}
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
 @media only screen and (min-width: 720px) {
   .offset-md-1 {
     margin-left: 8.33333333%;
@@ -763,12 +785,6 @@ button:focus {
   .row-spaced > .md-12,
   .row-spaced.umd-12 > li {
     width: calc(100% - 0.75rem);
-  }
-  .md-only {
-    display: block;
-  }
-  .xs-hide {
-    display: none;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -933,12 +949,6 @@ button:focus {
   .row-spaced > .lg-12,
   .row-spaced.ulg-12 > li {
     width: calc(100% - 0.75rem);
-  }
-  .lg-only {
-    display: block;
-  }
-  .md-hide {
-    display: none;
   }
 }
 /* CRITICAL END */
@@ -1322,12 +1332,12 @@ del {
 }
 /* CRITICAL END */
 .box {
-  padding: 10px;
+  padding: 1.5rem;
   border-radius: 3px;
   position: relative;
 }
 ul.boxed > li {
-  padding: 10px;
+  padding: 1.5rem;
   border-radius: 3px;
   position: relative;
 }
@@ -1847,7 +1857,7 @@ code::-webkit-scrollbar-thumb:horizontal {
 }
 .psnote {
   border-left: 10px solid #ffc400;
-  padding: 10px;
+  padding: 1.5rem;
   border-radius: 3px;
   position: relative;
   padding-left: 10px;
@@ -1946,6 +1956,17 @@ code::-webkit-scrollbar-thumb:horizontal {
 }
 .vpatts .atth .vpdef {
   font-style: italic;
+}
+.image-fill {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+.border-bottom {
+  border-bottom: 1px solid #999999;
 }
 .shut-inline {
   padding: 0.1rem 0.5rem;
