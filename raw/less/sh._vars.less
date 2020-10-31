@@ -9,8 +9,36 @@
 @enable-icon-font: true;
 @enable-res-fonts: true; // allow scaling of fonts to change for smaller screens
 
+// fonts
+@fontface: "Bitter", "Segoe UI",  -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+@fontface-ar: Tajawal, Arabic, tahoma, sans-serif;
+
+@htmlFontBase: 62.5%;
+@resFontFactor: 1.2; // how much to reduce font sizes for smaller screens
+
 @icon-font: 'shuticons';
 @icon-inline-margin: @space;
+
+@font-size: 1.4; // in rem
+@font-size-print: 80%;
+@font-multiplier: {
+	larger: 3.5;
+	large: 3;
+	f1: 2.5;
+	f2:  2;
+	f3: 1.75;
+	f4: 1.5;
+	f5: 1.25;
+	f6: 1;
+	small: 0.9;
+	smaller: 0.8;
+};
+
+// whatever, this is variable
+@font-weight-light: 300;
+@font-weight: 400;
+@font-weight-bold: 750; 
+
 
 // colors
 @text-color: #202020; // basic text color
@@ -74,34 +102,6 @@
 @rowlist-border: @grey-light;
 @b-color: @grey; // bthin and bthick
 @b-dark-color: @grey-dark; // bthin-dark and bthick-dark
-
-// fonts
-@fontface: "Work Sans", "Segoe UI",  -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
-@fontface-ar: Tajawal, Arabic, tahoma, sans-serif;
-
-@htmlFontBase: 62.5%;
-@resFontFactor: 1.2; // how much to reduce font sizes for smaller screens
-
-@font-size: 1.4; // in rem
-@font-size-print: 80%;
-@font-multiplier: {
-	larger: 3.5;
-	large: 3;
-	f1: 2.5;
-	f2:  2;
-	f3: 1.75;
-	f4: 1.5;
-	f5: 1.25;
-	f6: 1;
-	small: 0.9;
-	smaller: 0.8;
-};
-
-@font-weight-light: 300;
-@font-weight: 400;
-@font-weight-bold: 700;
-@font-weight-extra: 800;
-
  
 // shadows 
 @shadows: {
@@ -119,11 +119,11 @@
 	sm: 600px; // mobile interface
 	md: 720px; // tablet portrait
 	lg: 960px; // the usual desktop and landscape tablets
-	xl: 960px; // unusually large with special treatment, else always fall back to normal 960
-	ds: 960px; // up above desktop
+	xl: 1200px; // unusually large with special treatment, else always fall back to normal 960
+	ds: 1600px; // up above desktop
 	};
-
-// content padding
+ 
+// content padding 
 @mainpad: @space;
 
 // rounded corder radius

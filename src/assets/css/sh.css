@@ -303,9 +303,9 @@ ol.doublespacedout > li {
     display: none;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1200px) {
   .page {
-    width: calc(960px - 1.5rem * 2);
+    width: calc(1200px - 1.5rem * 2);
   }
   .singlepage {
     width: calc(720px - 1.5rem * 2);
@@ -335,13 +335,13 @@ button:focus {
   font-size: 90%;
   cursor: pointer;
   border: 0;
-  -webkit-appearance: none;
 }
-.btn.loading-small,
-.btn-rev.loading-small,
-.btn-fake.loading-small,
-.btn-diff.loading-small {
-  background-position: center top;
+.btn[disabled],
+.btn-rev[disabled],
+.btn-fake[disabled],
+.btn-diff[disabled] {
+  opacity: 0.5;
+  cursor: default;
 }
 .btn {
   color: #0c00b4;
@@ -360,7 +360,7 @@ button:focus {
   color: #fff;
 }
 .btn-fake {
-  font-weight: 700;
+  font-weight: 750;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
@@ -1225,7 +1225,7 @@ textarea,
 select,
 option,
 input {
-  font-family: "Work Sans", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Bitter", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.4rem;
   color: #202020;
 }
@@ -1270,11 +1270,26 @@ p {
 .weight-light {
   font-weight: 300;
 }
+@supports (font-variation-settings: "wght"300) {
+  .weight-light {
+    font-weight: 300;
+  }
+}
 .weight-normal {
   font-weight: 400;
 }
+@supports (font-variation-settings: "wght"400) {
+  .weight-normal {
+    font-weight: 400;
+  }
+}
 .weight-bold {
   font-weight: 700;
+}
+@supports (font-variation-settings: "wght"750) {
+  .weight-bold {
+    font-weight: 750;
+  }
 }
 .face-italic {
   font-style: italic;
@@ -1282,7 +1297,7 @@ p {
 /* mixed content*/
 /* CRITICAL BEGIN */
 .ltr {
-  font-family: "Work Sans", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Bitter", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   direction: ltr;
 }
 .rtl {
@@ -1320,7 +1335,7 @@ a[rel='track']:hover {
 }
 .normalsize {
   font-size: 1.4rem !important;
-  font-family: "Work Sans", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Bitter", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
 }
 sup {
   font-size: 70%;
@@ -1668,7 +1683,7 @@ table caption {
 table.tabulated th {
   padding-bottom: 2px;
   border-bottom: 1px solid #263238;
-  font-weight: 700;
+  font-weight: 750;
 }
 table.tabulated td {
   padding: 2px 0;
@@ -1697,7 +1712,7 @@ table.rich td {
   padding: 0.75rem;
 }
 table.rich th {
-  font-weight: 700;
+  font-weight: 750;
   background-color: #f3f3f3;
   border: 1px solid #9fb4be;
   border-bottom: 2px solid #263238;
@@ -1722,6 +1737,7 @@ body {
   padding-top: 100px;
   height: 100vh;
   line-height: 1.6;
+  font-weight: 400;
 }
 header {
   position: fixed;
@@ -1729,13 +1745,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-}
-.f1,
-.f2,
-.f3,
-.f4,
-.f5 {
-  letter-spacing: -1px;
 }
 h1.sitelogo {
   width: 8.33333333%;
@@ -1955,6 +1964,12 @@ code::-webkit-scrollbar-thumb:horizontal {
 .vpatts ol.tbl .jsprop,
 .vpatts ol.tbl .vpmeth {
   font-weight: 700;
+}
+@supports (font-variation-settings: "wght"750) {
+  .vpatts ol.tbl .jsprop,
+  .vpatts ol.tbl .vpmeth {
+    font-weight: 750;
+  }
 }
 .vpatts .atth {
   border-bottom: 1px solid #263238;

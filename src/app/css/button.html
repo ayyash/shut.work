@@ -1,0 +1,171 @@
+---
+layout: "doc"
+title: "Button"
+---
+
+
+<div class="outline">
+    <h4 class="f6 bthin light">THE BUTTER</h4>
+    <ul class="alist">
+        <li><code class="shut-inline">.card</code></li>
+        <li><code class="shut-inline">.valign-center</code></li>
+        <li><code class="shut-inline">.valign-top</code></li>
+        <li><code class="shut-inline">.card-v</code></li>
+        <li><code class="shut-inline">.tail</code></li>
+        <li><code class="shut-inline">.corner</code></li>
+        <li><code class="shut-inline">.corner-bottom</code></li>
+        <li><code class="shut-inline">.tail-v</code></li>
+
+    </ul>
+</div>
+
+<div class="page withoutline">
+    <div class="container">
+        <h1 class="f1">Button</h1>
+
+        <section>
+            <h3 class="f6">Plain button</h3>
+            <p>Buttons are redefined and normalized to appear and behave as follows. The classnames mentioned below are
+                not bound to <code>button</code> tag.</p>
+            <div class="grid g-4 g-bthin spacedout doublespaced">
+                <h6 class="f6">button</h6>
+                <div>
+                    <button>Plain button</button>
+                </div>
+                <h6 class="f6">.btn</h6>
+                <div>
+                    <button class="btn">Normal button</button>
+                    <div class="smaller">Modify padding by <code class="shut-inline">@button-padding-h</code> and <code
+                            class="shut-inline">@button-padding-v</code></div>
+                </div>
+                <h6 class="f6">.btn-rev</h6>
+                <div>
+                    <button class="btn-rev">Reverse color button</button>
+                </div>
+                <h6 class="f6">.btn-diff</h6>
+                <div>
+                    <button class="btn-diff">Different button</button>
+                </div>
+
+                <h6 class="f6">.btn-fake</h6>
+                <div>
+                    <button class="btn-fake">Fake button</button>
+                </div>
+
+                <h6 class="f6">.btn-sm</h6>
+                <div>
+                    Add <code>.btn-sm</code> to make it smaller
+                    <div class="smaller">Modify padding by <code class="shut-inline">@button-sm-padding</code></div>
+
+                    <ul class="alist">
+                        <li>
+                            <button class="btn btn-sm">Tighter button</button><br>
+                        </li>
+                        <li>
+                            <button class="btn-rev btn-sm">Tighter button</button><br>
+                        </li>
+                        <li>
+                            <button class="btn-diff btn-sm">Tighter button</button><br>
+                        </li>
+                        <li>
+                            <button class="btn-fake btn-sm">Tighter button</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h6 class="f6">disabled</h6>
+                <div>
+                    <ul class="alist">
+                        <li>
+                            <button class="btn" disabled>Disabled button</button><br>
+                        </li>
+                        <li>
+                            <button class="btn-rev" disabled>Disabled button</button><br>
+                        </li>
+                        <li>
+                            <button class="btn-diff" disabled>Disabled button</button><br>
+                        </li>
+                        <li>
+                            <button class="btn-fake" disabled>Disabled button</button>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section>
+            <h3 class="f5">The button template</h3>
+            <p>The template used to define buttons is a LESS function <code class="shut-inline">.btntemplate()</code>.
+                Extend or overwrite this template by adding new definitons to the LESS function.</p>
+
+            <pre><code class="language-less">// The button template function in the framework
+.btntemplate(){
+    padding: @button-padding-v @button-padding-h;
+    display: inline-block;
+    transition: background-color .518s;
+    line-height: 1;
+    .border-radius(@radius);
+    text-transform: uppercase;
+    font-size: 90%;
+    cursor: pointer;
+    border: 0;
+}</code></pre>
+        </section>
+
+        <section>
+            <h3 class="f5">Bonus: fake button chop</h3>
+            <p>When placing fake buttons inside a box, the paddings add up and it might look out of alignment. Use <code
+                    class="shut-inline">.btn-chop</code> on wrapper to remove extra paddings.</p>
+
+            <h6 class="f6">.btn-chop and .btn-chop-start</h6>
+<pre><code class="language-html">&lt;div class=&quot;box&quot;&gt;
+    &lt;div class=&quot;btn-chop-start&quot;&gt;
+        &lt;button class=&quot;btn-fake&quot;&gt;Accept&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <div class="spaced box box-white md-6">
+                <p>
+                    Lorem ipsum dolor sit amet
+                </p>
+                <div>
+                    <button class="btn-fake">Accept</button> without <code class="shut-inline">.btn-chop</code>
+                </div>
+                <div class="tail-v btn-chop">
+                    <button class="btn-fake">Accept</button> chopped with <code class="shut-inline">.btn-chop</code>
+                </div>
+
+            </div>
+
+            <h6 class="f6">.btn-chop-end</h6>
+<pre><code class="language-html">&lt;div class=&quot;card box&quot;&gt;
+    &lt;div class=&quot;tail btn-chop-end&quot;&gt;
+        &lt;button class=&quot;btn-fake&quot;&gt;Remove&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <div class="md-6">
+                <div class="card box box-white spaced">
+                    <p>
+                        Without <code class="shut-inline">.btn-chop-end</code>
+                    </p>
+                    <div class="tail">
+                        <button class="btn-fake"><i class="liga">remove</i></button>
+                    </div>
+                </div>
+                <div class="card box box-white">
+                    <p>
+                        Apply chop <code class="shut-inline">.btn-chop-end</code>
+                    </p>
+                    <div class="tail btn-chop-end">
+                        <button class="btn-fake"><i class="liga">remove</i></button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </section>
+</div>
+</div>
