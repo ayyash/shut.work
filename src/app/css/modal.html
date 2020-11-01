@@ -1,0 +1,349 @@
+---
+layout: "doc"
+title: "Modal"
+---
+
+<div class="outline">
+    <h4 class="f6 bthin light">THE BUTTER</h4>
+    <ul class="alist">
+        <li><code class="shut-inline">button</code></li>
+        <li><code class="shut-inline">.btn</code></li>
+        <li><code class="shut-inline">.btn-rev</code></li>
+        <li><code class="shut-inline">.btn-diff</code></li>
+        <li><code class="shut-inline">.btn-fake</code></li>
+        <li><code class="shut-inline">.btn-sm</code></li>
+        <li><code class="shut-inline">.btn-chop</code></li>
+        <li><code class="shut-inline">.btn-chop-start</code></li>
+        <li><code class="shut-inline">.btn-chop-end</code></li>
+
+    </ul>
+</div>
+
+<div class="page withoutline">
+    <div class="container">
+        <h1 class="f1">Modal</h1>
+        <p>A modal window from a CSS point of view is very simple, what is left is to connect the behavior to javascript
+            button clicks to show and hide. Also, no real stying is added in framework, allowing for full custom
+            styling.</p>
+
+        <section>
+            <h3 class="f6">The window</h3>
+
+            <p>The dialog HTML is as follows, in its basic shape (javascript is needed to make it interactive).</p>
+            <pre><code class="language-html">&lt;div class=&quot;modal-overlay&quot;&gt;
+    &lt;div class=&quot;modal&quot;&gt;
+        &lt;div class=&quot;modal-dialog&quot;&gt;
+            &lt;div class=&quot;modal-content&quot;&gt;
+                &lt;div class=&quot;modal-header&quot;&gt;
+                    &lt;h6 class=&quot;f6 modal-title&quot;&gt;Title of dialog&lt;/h6&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;modal-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;modal-body&quot;&gt;
+                    Content of body
+                &lt;/div&gt;
+                &lt;div class=&quot;modal-footer&quot;&gt;
+                    footer content
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+            <div class="box">
+                <button class="btn opendialog">Open dialog</button>
+            </div>
+
+            {% modal "Title of dialog", ".opendialog", "footer" %}
+            Here is the body content
+            {% endmodal %}
+
+        </section>
+
+
+        <section>
+            <h3 class="f5">Flavors</h3>
+            <p>To use of the following styles of the modal, wrap the modal window or apply the classname to the root
+                node.</p>
+            <pre><code class="language-html">&lt;div class=&quot;modal-overlay modal-center&quot;&gt;
+    &lt;div class=&quot;modal&quot;&gt;
+        &lt;div class=&quot;modal-dialog&quot;&gt;
+            &lt;div class=&quot;modal-content&quot;&gt;
+                &lt;div class=&quot;modal-header&quot;&gt;
+                    &lt;h6 class=&quot;f6 modal-title&quot;&gt;Title of dialog&lt;/h6&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;modal-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;modal-body&quot;&gt;
+                    Content of body
+                &lt;/div&gt;
+                &lt;div class=&quot;modal-footer&quot;&gt;
+                    footer content
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+or wrap it
+&lt;div class=&quot;modal-center&quot;&gt;
+    &lt;div class=&quot;modal-overlay&quot;&gt;
+        &lt;div class=&quot;modal&quot;&gt;
+            &lt;div class=&quot;modal-dialog&quot;&gt;
+                &lt;div class=&quot;modal-content&quot;&gt;
+                    &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h6 class=&quot;f6 modal-title dr-title&quot;&gt;Title of dialog&lt;/h6&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;modal-close&quot;&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-body&quot;&gt;
+                        Content of body
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-footer&quot;&gt;
+                        footer content
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <div class="grid g-3 g-bthin spacedout doublespaced">
+                <h6 class="f6">.modal-center</h6>
+                <div>
+                    <button class="btn centermodal">Open centered dialog</button>
+                    <div class="modal-center">
+                        {% modal "Center modal", ".centermodal", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.modal-bottom-sheet</h6>
+                <div>
+                    <button class="btn bottomsheetmodal">Open bottom sheet</button>
+                    <div class="modal-bottom-sheet">
+                        {% modal "Bottom sheet", ".bottomsheetmodal", "" %}
+                        <div class="box">
+                            Here is the body
+                        </div>
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.modal-full-height</h6>
+                <div>
+                    <button class="btn fullheightmodal">Open full height dialog</button>
+                    <div class="modal-full-height">
+                        {% modal "Full height", ".fullheightmodal", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.modal-full-screen</h6>
+                <div>
+                    <button class="btn fullscreenmodal">Open full screen modal</button>
+                    <div class="modal-full-screen">
+                        {% modal "Full screen", ".fullscreenmodal", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.modal-half-screen</h6>
+                <div>
+                    <button class="btn halfscreenmodal">Open half screen</button>
+                    <div class="smaller">90vw of width in case of mobile screens.</div>
+                    <div class="modal-half-screen">
+                        {% modal "Half  screen", ".halfscreenmodal", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.modal-half-screen.reverse</h6>
+                <div>
+                    <button class="btn reversehalfscreenmodal">Open half screen reverse side</button>
+                    <div class="modal-half-screen reverse">
+                        {% modal "Half  screen other side", ".reversehalfscreenmodal", "Footer" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h3 class="f5">Animate</h3>
+            <p>Animation through css is the best way to animate. Following are basic class names you can add to the
+                wrapper, or root node. When binding behavior, apply the rule to show or hide to the <code
+                    class="shut-inline">.modal-overlay</code> element, to get results. <strong>The animation rules apply
+                    to all
+                    modals, but below are the best suitable combination for each animation.</strong></p>
+
+            <div class="grid g-3 g-bthin spacedout doublespaced">
+                <h6 class="f6">.animate.fromtop</h6>
+                <div>
+                    <button class="btn centermodalanimate">Opendialog animate from top</button>
+                    <div class="animate fromtop">
+                        {% modal "Animate from top", ".centermodalanimate", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.animate.fromleft<span class="weight-normal smaller">.modal-half-screen</span></h6>
+                <div>
+                    <button class="btn halfscreenmodal2">Open half screen, animate from left</button>
+                    <div class="modal-half-screen animate fromleft">
+                        {% modal "Half  screen", ".halfscreenmodal2", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.animate.fromright<span class="weight-normal smaller">.modal-half-screen.reverse</span>
+                </h6>
+                <div>
+                    <div>
+
+                        <button class="btn halfscreenmodal3">Open half screen, reverse, animate from right</button>
+                        <div class="label label-yellow-light smaller">RTL: The framework already contains enough
+                            definitions to mirror.</div>
+                    </div>
+                    <div class="modal-half-screen reverse animate fromright">
+                        {% modal "Half  screen", ".halfscreenmodal3", "" %}
+                        Here is the body
+                        {% endmodal %}
+                    </div>
+                </div>
+                <h6 class="f6">.animate.frombottom<span class="weight-normal smaller">.modal-bottom-sheet</span></h6>
+                <div>
+                    <button class="btn animatebottomsheet">Open bottom sheet, animate from bottom</button>
+                    <div class="modal-bottom-sheet animate frombottom">
+                        {% modal "Half  screen", ".animatebottomsheet", "" %}
+                        <div class="box spaced">
+                            Here is the body
+                        </div>
+                        {% endmodal %}
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h3 class="f5">LESS variables</h3>
+            <p>Following is the list of LESS variables that affect the dialog style.</p>
+            <div class="grid g-3 g-bthin spacedout doublespaced">
+                <h6 class="f6"><code class="shut-inline">@modal-bg</code></h6>
+                <div>The modal overlay background color.
+                    <div class="smaller">
+
+                        Default: <code class="shut-inline">fade(@black, 60)</code>
+                    </div>
+                </div>
+                <h6 class="f6"><code class="shut-inline">@modal-zindex</code></h6>
+                <div>The reference z-index of the modal window, the overlay itself is <code>@modal-zindex - 10</code>
+                    <div class="smaller">
+                        Default: <code class="shut-inline">1040</code>
+                    </div>
+                </div>
+                <h6 class="f6"><code class="shut-inline">@modal-margin</code></h6>
+                <div>The margin of the dialog window away from edges in small screens. Once width of browser reaches
+                    <code>md</code> minimum width, the margins are set to <code>auto</code>
+                    <div class="smaller">
+                        Default: <code class="shut-inline">@space</code>
+                    </div>
+                </div>
+                <h6 class="f6"><code class="shut-inline">@modal-padding</code></h6>
+                <div>The padding of the header, body, and footer elements.
+                    <div class="smaller">
+                        Default: <code class="shut-inline">@halfspace</code>
+                    </div>
+                </div>
+                <h6 class="f6"><code class="shut-inline">@modal-md-width</code></h6>
+                <div>The maximum default width of dialog when browser reaches <code>md</code> minimum width.
+                    <div class="smaller">
+                        Default: <code class="shut-inline">700px</code>
+                    </div>
+                </div>
+
+                <h6 class="f6"><code class="shut-inline">@modal-scrollbar-width</code></h6>
+                <div>The width of the scrollbar when applicable on body.
+                    <div class="smaller">
+                        Default: <code class="shut-inline">5px</code>
+                    </div>
+                </div>
+                <h6 class="f6"><code class="shut-inline">@trans-func</code></h6>
+                <div>The animation transition function.
+                    <div class="smaller">
+                        Default: <code class="shut-inline">cubic-bezier(.4,0,.2,1);</code>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h3 class="f5">Example customization</h3>
+            <p>You can pass any wrapper style to redefine the look and feel, here are some examples.</p>
+            <pre><code class="language-less">// define a close icon for the modal-close
+.modal-close {
+    .getIcon(@icon-close);
+}
+
+// add style for footer
+.modal-footer {
+    background-color: @grey-light;
+}
+
+// yellow info dialog
+.modal-info {
+    .modal-dialog {
+        max-width: 30vw;
+        width: 300px;
+    }
+    .modal-content {
+        background-color: @yellow-light;
+    }
+    .modal-footer {
+        background-color: @yellow;
+    }
+}</code></pre>
+            <div class="box">
+                <button class="infodialog btn">Open info dialog</button>
+                <div class="modal-info animate fromtop">
+                    {% modal "Watch out", ".infodialog", "<button class='btn-fake dr-close'>OK</button>" %}
+                    <div class="spaced">
+                        I feel yellow.
+                    </div>
+                    {% endmodal %}
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="f5">Bonus: mobile dynamic height</h3>
+            <p>If you designed interfaces for mobile devices, you probably ran into this problem, where the browser
+                address bar appears, or disappears according to user swiping up, or down. This affects the available
+                height of the content without changing <code>vh</code> value. To fix that, with a little of javascript,
+                here is what you can do.</p>
+            <pre><code class="language-javascript"> function setValue() {
+    // dynamically set the --vh css variable
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// set on load of page, and also watch window resize
+setValue();
+window.addEventListener('resize', setValue);
+</code></pre>
+
+            <p>In your css (less):</p>
+            <pre><code class="language-less">.modal-content {
+    max-height: calc((var(--vh, 1vh) * 100));
+}
+.modal-half-screen .modal-content {
+    min-height: calc((var(--vh, 1vh) * 100));
+    max-height: calc((var(--vh, 1vh) * 100));
+}    
+</code></pre>
+        </section>
+    </div>
+</div>

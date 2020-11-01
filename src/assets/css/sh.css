@@ -81,7 +81,8 @@ textarea {
 .search-icon:before,
 .next-icon:after,
 .expand-icon:before,
-.collapse-icon:after {
+.collapse-icon:after,
+.modal-close:before {
   font-family: 'shuticons';
   text-transform: none;
   font-style: normal;
@@ -958,7 +959,8 @@ button:focus {
   }
 }
 /* CRITICAL END */
-.dr-modal-overlay {
+.modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -966,9 +968,6 @@ button:focus {
   left: 0;
   z-index: 1030;
   background-color: rgba(0, 0, 0, 0.6);
-}
-.modal-overlay {
-  display: none;
 }
 .modal {
   position: fixed;
@@ -2031,6 +2030,44 @@ code::-webkit-scrollbar-thumb:horizontal {
 }
 .collapse-icon.collapsed:after {
   content: "\e902";
+}
+.modal-close:before {
+  content: "\e907";
+}
+.modal-content {
+  max-height: calc(var(--vh, 1vh) * 100);
+}
+.modal-half-screen .modal-content {
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
+}
+.modal-header {
+  min-height: 58px;
+}
+.modal-drawer .modal-dialog {
+  margin: 0;
+  max-width: 50vw;
+}
+.modal-drawer .modal-content {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+.modal-footer {
+  background-color: #f3f3f3;
+}
+.modal-info .modal-dialog {
+  max-width: 30vw;
+  width: 300px;
+}
+.modal-info .modal-content {
+  background-color: #ffdc66;
+}
+.modal-info .modal-footer {
+  background-color: #ffc400;
+}
+@media only screen and (min-width: 720px) {
+  .modal-drawer .modal-dialog {
+    max-width: 25vw;
+  }
 }
 .image-fill {
   -o-object-fit: cover;

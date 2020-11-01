@@ -1,0 +1,59 @@
+.modal-close {
+   .getIcon(@icon-close);
+}
+
+.modal-content {
+    // this is per project to allow for changing viewport in mobiles
+    max-height: calc((var(--vh, 1vh) * 100));
+}
+.modal-half-screen .modal-content {
+    min-height: calc((var(--vh, 1vh) * 100));
+    max-height: calc((var(--vh, 1vh) * 100));
+}
+
+// // FIXME: this is a chrome bug:
+.modal-header {
+    min-height: 58px;
+}
+
+
+.modal-drawer {
+    // animate model window
+
+    .modal-dialog {
+        margin: 0;
+        max-width: 50vw;
+    }
+    .modal-content {
+        min-height: calc((var(--vh, 1vh) * 100));
+    }
+}
+
+
+.modal-footer {
+    background-color: @grey-light;
+}
+.modal-info {
+    .modal-dialog {
+        max-width: 30vw;
+        width: 300px;
+    }
+    .modal-content {
+        background-color: @yellow-light;
+    }
+    .modal-footer {
+        background-color: @yellow;
+    }
+}
+
+.media(md, {
+
+    .modal-drawer {
+
+        .modal-dialog {
+            max-width: 25vw;
+        }
+
+    }
+
+});
