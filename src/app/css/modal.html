@@ -6,15 +6,29 @@ title: "Modal"
 <div class="outline">
     <h4 class="f6 bthin light">THE BUTTER</h4>
     <ul class="alist">
-        <li><code class="shut-inline">button</code></li>
-        <li><code class="shut-inline">.btn</code></li>
-        <li><code class="shut-inline">.btn-rev</code></li>
-        <li><code class="shut-inline">.btn-diff</code></li>
-        <li><code class="shut-inline">.btn-fake</code></li>
-        <li><code class="shut-inline">.btn-sm</code></li>
-        <li><code class="shut-inline">.btn-chop</code></li>
-        <li><code class="shut-inline">.btn-chop-start</code></li>
-        <li><code class="shut-inline">.btn-chop-end</code></li>
+        <li><code class="shut-inline">.modal-overlay</code></li>
+        <li><code class="shut-inline">.modal</code></li>
+        <li><code class="shut-inline">.modal-dialog</code></li>
+        <li><code class="shut-inline">.modal-content</code></li>
+        <li><code class="shut-inline">.modal-header</code></li>
+        <li><code class="shut-inline">.modal-title</code></li>
+        <li><code class="shut-inline">.modal-close</code></li>
+        <li><code class="shut-inline">.modal-body</code></li>
+        <li><code class="shut-inline">.modal-footer</code></li>
+        <li><code class="shut-inline">.modal-center</code> 
+            <code class="shut-inline">.modal-bottom-sheet</code>
+            <code class="shut-inline">.modal-full-height</code>
+            <code class="shut-inline">.modal-full-screen</code>
+            <code class="shut-inline">.modal-half-screen</code>
+            <code class="shut-inline">.reverse</code>
+         </li>
+        <li>
+            <code class="shut-inline">.animate</code> 
+            <code class="shut-inline">.fromtop</code> 
+            <code class="shut-inline">.fromleft</code> 
+            <code class="shut-inline">.fromright</code> 
+            <code class="shut-inline">.frombottom</code>
+        </li>
 
     </ul>
 </div>
@@ -343,6 +357,82 @@ window.addEventListener('resize', setValue);
     min-height: calc((var(--vh, 1vh) * 100));
     max-height: calc((var(--vh, 1vh) * 100));
 }    
+</code></pre>
+        </section>
+
+        <section>
+            <h3 class="f5">Bonus: Javascript</h3>
+            <p>Following is the least amount of javascript needed to get modals to work.</p>
+<pre><code class="language-javascript">
+    class Modal {
+
+        config = {
+            closeSelector: '.modal-close',
+            modalContentSelector: '.modal-content',
+            triggerAttr: 'data-trigger'
+        };
+    
+        constructor(element) {
+            this.modalElement = element;
+            this.trigger = element.getAttribute(this.config.triggerAttr);
+    
+            this.modalElement.addEventListener('click', event => {
+                const target = event.target;
+    
+                if (!target.closest(this.config.modalContentSelector)) {
+                    this.hide();
+                }
+                // if target is close, hide
+                if (target.matches(this.config.closeSelector)) {
+                    this.hide();
+                }
+            });
+    
+            window.document.addEventListener('click', event => {
+                const target = event.target;
+    
+                if (this.trigger) {
+                    if (target.matches(this.trigger) || target.closest(this.trigger)) {
+                        // itself or its parent
+                        this.show();
+                    }
+                }
+            });
+        }
+        show = () => {
+    
+             this.modalElement.style.display = 'block';
+        };
+    
+        hide = () => {
+            this.modalElement.style.display = 'none';
+            
+        };
+    
+    
+    }
+    
+    function setVh() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    window.addEventListener('DOMContentLoaded', (event) => {
+    
+        // set --vh
+        setVh();
+    
+        window.addEventListener('resize', setVh);
+    
+        // find dialogs and attach behaviors
+        const modals = document.querySelectorAll('.modal-overlay');
+    
+        modals.forEach(n => {
+    
+            new Modal(n);
+    
+        });
+    
+    });
 </code></pre>
         </section>
     </div>

@@ -7,13 +7,14 @@ class Modal {
         closeSelector: '.dr-close',
         titleSelector: '.dr-title',
         modalContentSelector: '.dr-content',
-        bodyCss: 'mdl-open'
+        bodyCss: 'mdl-open',
+        triggerAttr: 'data-trigger'
     };
 
 
     constructor(element) {
         this.modalElement = element;
-        this.trigger = element.getAttribute('data-trigger');
+        this.trigger = element.getAttribute(this.config.triggerAttr);
 
         this.modalElement.addEventListener('click', event => {
             const target = event.target;
