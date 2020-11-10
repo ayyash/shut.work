@@ -1738,28 +1738,6 @@ body {
   line-height: 1.6;
   font-weight: 400;
 }
-header {
-  position: fixed;
-  background-color: #fff;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-h1.sitelogo {
-  width: 8.33333333%;
-  margin-left: 40px;
-  font-size: 3rem;
-}
-h1.sitelogo a {
-  width: 8.33333333%;
-  background: transparent url("../images/ilogo.png") no-repeat left top;
-  background-size: contain;
-}
-/* footer */
-footer {
-  margin-top: 40px;
-  padding-top: 10px;
-}
 .sbar {
   position: fixed;
   left: 0;
@@ -1829,41 +1807,6 @@ footer {
   padding: 10px 20px;
   border-top: 1px dashed #999999;
   font-weight: 300;
-}
-.mobilenav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 7px;
-}
-code {
-  scrollbar-width: thin;
-}
-code::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-}
-code::-webkit-scrollbar-button:start:decrement,
-code::-webkit-scrollbar-button:end:increment {
-  display: block;
-  height: 0;
-  background-color: transparent;
-}
-code::-webkit-scrollbar-track-piece {
-  background-color: #f3f3f3;
-  border-radius: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-code::-webkit-scrollbar-thumb:vertical {
-  height: 50px;
-  background-color: #263238;
-  border-radius: 8px;
-}
-code::-webkit-scrollbar-thumb:horizontal {
-  width: 50px;
-  background-color: #263238;
-  border-radius: 8px;
 }
 .bluebox a {
   color: #fff;
@@ -1980,6 +1923,9 @@ code::-webkit-scrollbar-thumb:horizontal {
 .icon-place:before {
   content: "\e900";
 }
+.icon-close:before {
+  content: "\e90a";
+}
 .icon-remove:before {
   content: "\e901";
 }
@@ -1995,11 +1941,14 @@ code::-webkit-scrollbar-thumb:horizontal {
 .icon-up:before {
   content: "\e905";
 }
+.icon-menu:before {
+  content: "\e90b";
+}
 .icon-user:before {
   content: "\e906";
 }
-.icon-close:before {
-  content: "\e907";
+.icon-info:before {
+  content: "\e90c";
 }
 .icon-search:before {
   content: "\e908";
@@ -2032,7 +1981,7 @@ code::-webkit-scrollbar-thumb:horizontal {
   content: "\e902";
 }
 .modal-close:before {
-  content: "\e907";
+  content: "\e90a";
 }
 .modal-content {
   max-height: calc(var(--vh, 1vh) * 100);
@@ -2043,13 +1992,6 @@ code::-webkit-scrollbar-thumb:horizontal {
 }
 .modal-header {
   min-height: 58px;
-}
-.modal-drawer .modal-dialog {
-  margin: 0;
-  max-width: 50vw;
-}
-.modal-drawer .modal-content {
-  min-height: calc(var(--vh, 1vh) * 100);
 }
 .modal-footer {
   background-color: #f3f3f3;
@@ -2064,9 +2006,16 @@ code::-webkit-scrollbar-thumb:horizontal {
 .modal-info .modal-footer {
   background-color: #ffc400;
 }
+.modal-drawer .modal-dialog {
+  margin: 0;
+  max-width: 70vw;
+}
+.modal-drawer .modal-content {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
 @media only screen and (min-width: 720px) {
   .modal-drawer .modal-dialog {
-    max-width: 25vw;
+    max-width: 16rem;
   }
 }
 .image-fill {
@@ -2126,45 +2075,126 @@ pre::-webkit-scrollbar-thumb:horizontal {
 .myc-4-lookalike-off {
   width: calc(37.5% - 10px);
 }
-.outline {
+.dt-menu {
+  display: none;
+}
+header {
   position: fixed;
-  top: 10rem;
-  left: 0;
-  width: 20vw;
+  background-color: #fff;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header .logo {
+  width: 120px;
+}
+header .menu {
+  padding-right: 1.5rem;
+  font-size: 150%;
+  line-height: 1;
+}
+@media only screen and (min-width: 1200px) {
+  .menu {
+    display: none;
+  }
+  .modal-drawer {
+    display: none;
+  }
+  .dt-menu {
+    display: block;
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    width: 10vw;
+    padding: 1.5rem;
+    font-size: 90%;
+    bottom: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  .dt-menu::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  .dt-menu::-webkit-scrollbar-button:start:decrement,
+  .dt-menu::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 0;
+    background-color: transparent;
+  }
+  .dt-menu::-webkit-scrollbar-track-piece {
+    background-color: #f3f3f3;
+    border-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .dt-menu::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #263238;
+    border-radius: 8px;
+  }
+  .dt-menu::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #263238;
+    border-radius: 8px;
+  }
+  .page.withoutline .container {
+    padding-left: 10vw;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .page.withoutline .container {
+    padding-left: 1.5rem;
+  }
+}
+.outline {
   padding: 1.5rem;
   font-size: 90%;
-  bottom: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
 }
-.outline::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-}
-.outline::-webkit-scrollbar-button:start:decrement,
-.outline::-webkit-scrollbar-button:end:increment {
-  display: block;
-  height: 0;
-  background-color: transparent;
-}
-.outline::-webkit-scrollbar-track-piece {
-  background-color: #f3f3f3;
-  border-radius: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.outline::-webkit-scrollbar-thumb:vertical {
-  height: 50px;
-  background-color: #263238;
-  border-radius: 8px;
-}
-.outline::-webkit-scrollbar-thumb:horizontal {
-  width: 50px;
-  background-color: #263238;
-  border-radius: 8px;
-}
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 960px) {
+  .outline {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    width: 20vw;
+    padding: 1.5rem;
+    font-size: 90%;
+    bottom: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  .outline::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  .outline::-webkit-scrollbar-button:start:decrement,
+  .outline::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 0;
+    background-color: transparent;
+  }
+  .outline::-webkit-scrollbar-track-piece {
+    background-color: #f3f3f3;
+    border-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .outline::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #263238;
+    border-radius: 8px;
+  }
+  .outline::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #263238;
+    border-radius: 8px;
+  }
   .page.withoutline .container {
-    padding-left: 15vw;
+    padding-right: 20vw;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .page.withoutline .container {
+    padding-right: 7vw;
   }
 }

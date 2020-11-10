@@ -1,0 +1,62 @@
+
+
+.dt-menu {
+    display: none;
+}
+
+header {
+	position: fixed;
+	background-color: @white;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	.logo { 
+        width: 120px;
+    }
+    .menu {
+        padding-right: @space;
+        font-size: 150%;
+        line-height: 1;
+    }
+}  
+
+
+.media(xl, {
+
+   .menu {
+       display: none;
+   }
+    .modal-drawer {
+        display: none;
+    }
+
+    .dt-menu {
+        display: block;
+        position: fixed;
+        top: 10rem;
+        left: 0;
+        width: 10vw;
+        padding: @space;
+        font-size: 90%;
+        bottom: 0;
+        overflow-y: auto;
+        .scroll(2px);
+    }
+
+    .page.withoutline {
+		.container {
+			padding-left: 10vw;
+		}
+	}
+    
+   
+});
+
+
+.media(ds, {
+    .page.withoutline {
+        .container {
+            padding-left: @space;
+        }
+    }
+});

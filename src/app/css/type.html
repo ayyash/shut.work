@@ -21,167 +21,166 @@ title: "Type"
 	</ul>
 </div>
 
-<div class="page withoutline">
-	<div class="container">
-		<h1 class="f1">Type</h1>
-		<p>Headers are left alone. Instead, use <code class="shut-inline">.f1</code> to <code
-				class="shut-inline">.f6</code> to add header styling. This
-			breaks away syntax from styling, which is very handy for SEO purposes.</p>
 
-		<section>
-			<ul class="rowlist">
-				<li>
-					<h1 class="f1">.f1: Header 1</h1>
-				</li>
-				<li>
-					<h2 class="f2">.f2: Header 2</h2>
-				</li>
-				<li>
-					<h3 class="f3">.f3: Header 3</h3>
-				</li>
-				<li>
-					<h4 class="f4">.f4: Header 4</h4>
-				</li>
-				<li>
-					<h5 class="f5">.f5: Header 5</h5>
-				</li>
-				<li>
-					<h6 class="f6">.f6: Header 6 </h6>
-				</li>
-			</ul>
+<p>Headers are left alone. Instead, use <code class="shut-inline">.f1</code> to <code class="shut-inline">.f6</code> to
+	add header styling. This
+	breaks away syntax from styling, which is very handy for SEO purposes.</p>
 
-			<p>Make normal, or light by adding <code class="shut-inline">.weight-normal</code>, and <code
-					class="shut-inline">.weight-light</code></p>
+<section>
+	<ul class="rowlist">
+		<li>
+			<h1 class="f1">.f1: Header 1</h1>
+		</li>
+		<li>
+			<h2 class="f2">.f2: Header 2</h2>
+		</li>
+		<li>
+			<h3 class="f3">.f3: Header 3</h3>
+		</li>
+		<li>
+			<h4 class="f4">.f4: Header 4</h4>
+		</li>
+		<li>
+			<h5 class="f5">.f5: Header 5</h5>
+		</li>
+		<li>
+			<h6 class="f6">.f6: Header 6 </h6>
+		</li>
+	</ul>
 
-		</section>
+	<p>Make normal, or light by adding <code class="shut-inline">.weight-normal</code>, and <code
+			class="shut-inline">.weight-light</code></p>
 
-		<section>
-			<h3 class="f5">Formatting</h3>
-			<div class="box box-yellow-light small spaced">Font weights use <code>@support</code> statements to fall back to exact multiple of 100s, 
-				in case <code>font-variation-settings</code> is not supported, so variable fonts can be used.</div>
+</section>
 
-			<div class="grid g-4 g-bthin spacedout doublespaced">
-				<h6 class="f6">.weight-normal</h6>
+<section>
+	<h3 class="f5">Formatting</h3>
+	<div class="box box-yellow-light small spaced">Font weights use <code>@support</code> statements to fall back to
+		exact multiple of 100s,
+		in case <code>font-variation-settings</code> is not supported, so variable fonts can be used.</div>
+
+	<div class="grid g-4 g-bthin spacedout doublespaced">
+		<h6 class="f6">.weight-normal</h6>
+		<div>
+			<div class="weight-normal">Normal</div>
+			Defined by <code class="shut-inline">@font-weight</code>, default 400
+
+		</div>
+
+		<h6 class="f6">.weight-light</h6>
+		<div>
+			<div class="weight-light">Light</div>
+			Defined by <code class="shut-inline">@font-weight-light</code>, default 300
+		</div>
+
+		<h6 class="f6">.weight-bold</h6>
+		<div>
+			<div class="weight-bold">Bold</div>
+			Defined by <code class="shut-inline">@font-weight-bold</code>, default 700
+		</div>
+
+		<h6 class="f6">.face-italic</h6>
+		<div>
+			<div class="face-italic">Italic</div>
+		</div>
+
+		<h6 class="f6">.normalsize</h6>
+		<div>
+			<div class="normalsize">Normal size
+
 				<div>
-					<div class="weight-normal">Normal</div>
-					Defined by <code class="shut-inline">@font-weight</code>, default 400 
-					
+					(default set by <code class="shut-inline">@font-size</code> multiplier).
 				</div>
-
-				<h6 class="f6">.weight-light</h6>
-				<div>
-					<div class="weight-light">Light</div>
-					Defined by <code class="shut-inline">@font-weight-light</code>, default 300
-				</div>
-
-				<h6 class="f6">.weight-bold</h6>
-				<div>
-					<div class="weight-bold">Bold</div>
-					Defined by <code class="shut-inline">@font-weight-bold</code>, default 700
-				</div>
-
-				<h6 class="f6">.face-italic</h6>
-				<div>
-					<div class="face-italic">Italic</div>
-				</div>
-
-				<h6 class="f6">.normalsize</h6>
-				<div>
-					<div class="normalsize">Normal size
-
-						<div>
-							(default set by <code class="shut-inline">@font-size</code> multiplier).
-						</div>
-					</div>
-				</div>
-
-				<h6 class="f6">.large</h6>
-				<div>
-					<div class="large">Large</div>
-				</div>
-
-
-				<h6 class="f6">.larger</h6>
-				<div>
-					<div class="larger">Larger</div>
-				</div>
-
-				<h6 class="f6">.small</h6>
-				<div>
-					<div class="small">Small</div>
-				</div>
-				<h6 class="f6">.smaller</h6>
-				<div>
-					<div class="smaller">Even smaller</div>
-				</div>
-
-
-
 			</div>
+		</div>
+
+		<h6 class="f6">.large</h6>
+		<div>
+			<div class="large">Large</div>
+		</div>
 
 
-		</section>
+		<h6 class="f6">.larger</h6>
+		<div>
+			<div class="larger">Larger</div>
+		</div>
 
-		<section>
-			<h3 class="f5">HTML elements</h3>
-			<p>The <code>p</code> tag is by default <code>.spaced</code> (<code class="shut-inline">@space</code> bottom
-				margin), and the <code>section</code> tag is extra spaced (<code class="shut-inline">@extraspace</code>
-				bottom margin).</p>
-
-			<p>HTML <code>font-size</code> is set to <code class="shut-inline">@htmlFontBase</code> (default 62.5%).
-				When screen width is larger than <code class="shut-inline">md</code> (default 720px), the html font is
-				multiplied by <code class="shut-inline">@resFontFactor</code> (default 1.2).</p>
-			<div class="grid g-2 g-bthin spacedout doublespaced">
-				<h6 class="f6">a, .a</h6>
-				<div>
-					<a>A link.</a><br>
-					<span class="a">A span that looks like a link.</span>
-				</div>
-
-				<h6 class="f6">a.cam, <br>.a.cam,<br>.cam</h6>
-				<div>
-					<a class="cam">A camouflage link</a>. Or a <span class="cam">camouflage span.</span>
-					<div>A linked element that has normal color of text, to tone it down.</div>
-				</div>
-
-				<h6 class="f6">sup</h6>
-				<div>
-					Element <sup>sup</sup>
-				</div>
-
-				<h6 class="f6">del</h6>
-				<div>
-					Element <del>deleted</del>
-				</div>
+		<h6 class="f6">.small</h6>
+		<div>
+			<div class="small">Small</div>
+		</div>
+		<h6 class="f6">.smaller</h6>
+		<div>
+			<div class="smaller">Even smaller</div>
+		</div>
 
 
-			</div>
-		</section>
 
-		<section>
-			<h3 class="f6">Ltr and Rtl</h3>
-			<p>These two classes are used when mixed content is in the same page. Those definitions are not mirrored.
-				Combine with <code class="shut-inline">.dinline</code>
-				to get inline results of mixed content. Use this when you have dual lingual interface, but single
-				language data. Or when displaying formatted phone numbers
-				in RTL interfaces.
-			</p>
-			<div class="grid g-2 g-bthin spacedout spaced">
-
-				<h6 class="f6">.ltr</h6>
-				<span>Font family set to default <code class="shut-inline">@fontface</code>. Direction set to
-					<code>ltr</code></span>
-
-				<h6 class="f6">.rtl</h6>
-				<span>Font family set to default <code class="shut-inline">@fontface-ar</code>. Direction set to
-					<code>rtl</code></span>
+	</div>
 
 
-			</div>
+</section>
 
-			<div class="doublespaced">Example of mixed content.</div>
+<section>
+	<h3 class="f5">HTML elements</h3>
+	<p>The <code>p</code> tag is by default <code>.spaced</code> (<code class="shut-inline">@space</code> bottom
+		margin), and the <code>section</code> tag is extra spaced (<code class="shut-inline">@extraspace</code>
+		bottom margin).</p>
 
-			<pre><code class="language-html">&lt;div class=&quot;spaced&quot;&gt;
+	<p>HTML <code>font-size</code> is set to <code class="shut-inline">@htmlFontBase</code> (default 62.5%).
+		When screen width is larger than <code class="shut-inline">md</code> (default 720px), the html font is
+		multiplied by <code class="shut-inline">@resFontFactor</code> (default 1.2).</p>
+	<div class="grid g-2 g-bthin spacedout doublespaced">
+		<h6 class="f6">a, .a</h6>
+		<div>
+			<a>A link.</a><br>
+			<span class="a">A span that looks like a link.</span>
+		</div>
+
+		<h6 class="f6">a.cam, <br>.a.cam,<br>.cam</h6>
+		<div>
+			<a class="cam">A camouflage link</a>. Or a <span class="cam">camouflage span.</span>
+			<div>A linked element that has normal color of text, to tone it down.</div>
+		</div>
+
+		<h6 class="f6">sup</h6>
+		<div>
+			Element <sup>sup</sup>
+		</div>
+
+		<h6 class="f6">del</h6>
+		<div>
+			Element <del>deleted</del>
+		</div>
+
+
+	</div>
+</section>
+
+<section>
+	<h3 class="f6">Ltr and Rtl</h3>
+	<p>These two classes are used when mixed content is in the same page. Those definitions are not mirrored.
+		Combine with <code class="shut-inline">.dinline</code>
+		to get inline results of mixed content. Use this when you have dual lingual interface, but single
+		language data. Or when displaying formatted phone numbers
+		in RTL interfaces.
+	</p>
+	<div class="grid g-2 g-bthin spacedout spaced">
+
+		<h6 class="f6">.ltr</h6>
+		<span>Font family set to default <code class="shut-inline">@fontface</code>. Direction set to
+			<code>ltr</code></span>
+
+		<h6 class="f6">.rtl</h6>
+		<span>Font family set to default <code class="shut-inline">@fontface-ar</code>. Direction set to
+			<code>rtl</code></span>
+
+
+	</div>
+
+	<div class="doublespaced">Example of mixed content.</div>
+
+	<pre><code class="language-html">&lt;div class=&quot;spaced&quot;&gt;
 	Here is some English text. 
 	&lt;div class=&quot;dinline rtl&quot;&gt;وبعض العربي&lt;/div&gt;
 &lt;/div&gt;
@@ -189,37 +188,37 @@ title: "Type"
 &lt;div class=&quot;rtl spaced&quot;&gt;
 	هذا رقم الهاتف مع بعض الفراغات &lt;div class=&quot;dinline ltr&quot;&gt;00962 8838 2888&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<div class="box box-white">
+	<div class="box box-white">
 
-				<div class="spaced">
-					Here is some English text.
-					<div class="dinline rtl">وبعض العربي</div>
-				</div>
+		<div class="spaced">
+			Here is some English text.
+			<div class="dinline rtl">وبعض العربي</div>
+		</div>
 
-				<div class="rtl spaced">
-					هذا رقم الهاتف مع بعض الفراغات <div class="dinline ltr">00962 8838 2888</div>
-				</div>
-			</div>
+		<div class="rtl spaced">
+			هذا رقم الهاتف مع بعض الفراغات <div class="dinline ltr">00962 8838 2888</div>
+		</div>
+	</div>
 
-		</section>
+</section>
 
-		<section>
-			<h3 class="f6 spaced">Mix and match</h3>
-			<pre><code class="language-html">&lt;h1 class=&quot;weight-light f2 red&quot;&gt;The fox jumped already&lt;/h1&gt;
+<section>
+	<h3 class="f6 spaced">Mix and match</h3>
+	<pre><code class="language-html">&lt;h1 class=&quot;weight-light f2 red&quot;&gt;The fox jumped already&lt;/h1&gt;
 &lt;h3 class=&quot;weight-normal larger blue&quot;&gt;Over the rabbit&lt;/h3&gt;
 &lt;h6 class=&quot;f2 weight-normal&quot;&gt;The title is &lt;span class=&quot;rtl f1&quot;&gt;ما شاء الله&lt;/span&gt;&lt;/h6&gt;
 &lt;div class=&quot;f3 green&quot;&gt;The purple roses &lt;span class=&quot;f5 light&quot;&gt;Unleashed&lt;/span&gt;&lt;/div&gt;
 </code></pre>
-			<h1 class="weight-light f2 red">The fox jumped already</h1>
-			<h3 class="spaced weight-normal larger blue">Over the rabbit</h3>
-			<h6 class="f2 weight-normal">The title is <span class="rtl f1">ما شاء الله</span></h6>
-			<div class="f3 green">The purple roses <span class="f5 light">Unleashed</span></div>
-		</section>
+	<h1 class="weight-light f2 red">The fox jumped already</h1>
+	<h3 class="spaced weight-normal larger blue">Over the rabbit</h3>
+	<h6 class="f2 weight-normal">The title is <span class="rtl f1">ما شاء الله</span></h6>
+	<div class="f3 green">The purple roses <span class="f5 light">Unleashed</span></div>
+</section>
 
-		<section>
-			<h3 class="f5">LESS functions</h3>
-			<p>Use the following functions in <code>LESS</code> as mixins when needed.</p>
-			<pre><code class="language-less">/* this produces:
+<section>
+	<h3 class="f5">LESS functions</h3>
+	<p>Use the following functions in <code>LESS</code> as mixins when needed.</p>
+	<pre><code class="language-less">/* this produces:
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -236,6 +235,4 @@ else
 font-size: 12px; */
 #rem>.font-size(1.2);
 </code></pre>
-		</section>
-	</div>
-</div>
+</section>

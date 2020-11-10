@@ -1,5 +1,6 @@
 ---
 layout: "doc"
+title: "Icons"
 ---
 <div class="outline">
 	<h4 class="f6 bthin light">THE BUTTER</h4>
@@ -14,21 +15,19 @@ layout: "doc"
 	</ul>
 
 </div>
-<div class="page withoutline">
-	<div class="container">
-		<h1 class="f1">Icons</h1>
-		<p>Icons are very diverse, and special to every project. The only thing that a framework should provide for
-			icons, is a set of functions to use in LESS or SCSS. The following are the defitions and LESS functions in
-			this framework, and how to make use of them.</p>
-		<div class="spaced box box-yellow-light small">Don't just use a ready made collection of fonts, generate your
-			own icon font using online tools like <a href="https://icomoon.io/app/#/select">icomoon</a>, or <a
-				href="http://fontello.com/">fontello</a>. </div>
 
-		<section>
-			<h3 class="f5">Variables</h3>
-			<p>Generate an icon font of your favorite, per-project icons, then use these variables to make a single rule
-				ready to use <code class="shut-inline">.symbol</code>.</p>
-			<pre><code class="language-less">// If set to true, the rules for the icons are generated. 
+<p>Icons are very diverse, and special to every project. The only thing that a framework should provide for
+	icons, is a set of functions to use in LESS or SCSS. The following are the defitions and LESS functions in
+	this framework, and how to make use of them.</p>
+<div class="spaced box box-yellow-light small">Don't just use a ready made collection of fonts, generate your
+	own icon font using online tools like <a href="https://icomoon.io/app/#/select">icomoon</a>, or <a
+		href="http://fontello.com/">fontello</a>. </div>
+
+<section>
+	<h3 class="f5">Variables</h3>
+	<p>Generate an icon font of your favorite, per-project icons, then use these variables to make a single rule
+		ready to use <code class="shut-inline">.symbol</code>.</p>
+	<pre><code class="language-less">// If set to true, the rules for the icons are generated. 
 @enable-icon-font: true;
 
 // the icon file name (provide ttf, woff, and svg)
@@ -40,13 +39,13 @@ layout: "doc"
 // for inline icons that need space to the right, how much space?
 @icon-inline-margin: 1rem;
 </code></pre>
-		</section>
+</section>
 
-		<section>
-			<h3 class="f5">Symbol definition</h3>
-			<p>The symbol definition in full, in the framework is this:</p>
+<section>
+	<h3 class="f5">Symbol definition</h3>
+	<p>The symbol definition in full, in the framework is this:</p>
 
-			<pre><code class="language-less">.symbolDef() {
+	<pre><code class="language-less">.symbolDef() {
     font-family: @icon-font;
     text-transform: none;
     font-style: normal;
@@ -71,66 +70,66 @@ layout: "doc"
     content: attr(data-icon);
 }</code></pre>
 
-			<h4 class="f5 weight-normal">Extend</h4>
-			<p>To extend the defintions in your project, add them like the following example (LESS merges the two
-				definitions into one):</p>
-			<pre><code class="language-less">.symbolDef() {
+	<h4 class="f5 weight-normal">Extend</h4>
+	<p>To extend the defintions in your project, add them like the following example (LESS merges the two
+		definitions into one):</p>
+	<pre><code class="language-less">.symbolDef() {
      vertical-align: middle;
 	 font-size: 150%;
 	 line-height: 1;
 }</code></pre>
 
-			<h4 class="f5 weight-normal">Define</h4>
-			<p>Now add your icons using <code>.icon()</code> functions (handy but not necessary)</p>
-			<pre><code class="language-less">// this produces .icon-place class ready to use
+	<h4 class="f5 weight-normal">Define</h4>
+	<p>Now add your icons using <code>.icon()</code> functions (handy but not necessary)</p>
+	<pre><code class="language-less">// this produces .icon-place class ready to use
 .icon(icon-place,"\e900");</code></pre>
 
 
-			<p>Also, to make the same variables usable in your less file, do as I do:</p>
-			<pre><code class="language-less">// create a variable @icon-place to use in LESS
+	<p>Also, to make the same variables usable in your less file, do as I do:</p>
+	<pre><code class="language-less">// create a variable @icon-place to use in LESS
 @icon-place: "\e900";
 	
 // then create icon-place rule
 .icon(icon-place,@icon-place);
 </code></pre>
 
-			<h4 class="f5 weight-normal">Use</h4>
+	<h4 class="f5 weight-normal">Use</h4>
 
-			<p>Use it in HTML like this (inside a button as an example)</p>
-			<pre><code class="language-html">&lt;button class=&quot;btn&quot;&gt;
+	<p>Use it in HTML like this (inside a button as an example)</p>
+	<pre><code class="language-html">&lt;button class=&quot;btn&quot;&gt;
 	&lt;span class=&quot;symbol icon-place&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-			<div class="spaced box box-white">
-				<button class="btn"><span class="symbol icon-place"></span></button>
-			</div>
+	<div class="spaced box box-white">
+		<button class="btn"><span class="symbol icon-place"></span></button>
+	</div>
 
-			<p>If appears inline and you want more space to the right of the icon (this is rare if you setup the icon
-				padding correctly in the icon font).</p>
-			<pre><code class="language-html">&lt;span class=&quot;symbol icon-place icon-inline&quot;&gt;Location&lt;/span&gt;</code></pre>
+	<p>If appears inline and you want more space to the right of the icon (this is rare if you setup the icon
+		padding correctly in the icon font).</p>
+	<pre><code class="language-html">&lt;span class=&quot;symbol icon-place icon-inline&quot;&gt;Location&lt;/span&gt;</code></pre>
 
-			<div class="spaced box box-white">
-				<span class="symbol icon-place icon-inline">Location</span>
-			</div>
+	<div class="spaced box box-white">
+		<span class="symbol icon-place icon-inline">Location</span>
+	</div>
 
-			<p>If you have ligatures setup, use <code class="shut-inline">.liga</code> class, or pass it to <code
-					class="shut-inline">data-icon</code> attribute:</p>
-			<pre><code class="language-html">&lt;i class=&quot;liga&quot;&gt;place&lt;/i&gt; ligature location
+	<p>If you have ligatures setup, use <code class="shut-inline">.liga</code> class, or pass it to <code
+			class="shut-inline">data-icon</code> attribute:</p>
+	<pre><code class="language-html">&lt;i class=&quot;liga&quot;&gt;place&lt;/i&gt; ligature location
 &lt;span class=&quot;symbol&quot; data-icon=&quot;place&quot;&gt;using data-icon&lt;/span&gt;
 &lt;span class=&quot;symbolAfter&quot; data-icon=&quot;place&quot;&gt;using symbolAfetr and data-icon&lt;/span&gt;
 			</code></pre>
-			<div class="spaced box box-white">
-				<i class="liga">place</i> ligature location
-				<br>
-				<span class="symbol" data-icon="place"></span> using data-icon <br>
-				<span class="symbolAfter" data-icon="place">using symbolAfetr and data-icon</span>
+	<div class="spaced box box-white">
+		<i class="liga">place</i> ligature location
+		<br>
+		<span class="symbol" data-icon="place"></span> using data-icon <br>
+		<span class="symbolAfter" data-icon="place">using symbolAfetr and data-icon</span>
 
-			</div>
-		</section>
-		<section>
-			<h3 class="f5">LESS functions</h3>
-			<p>Using icon classnames directly in HTML is one way, using them in LESS is another fine-tuned way, here are
-				some LESS functions you can use.</p>
-			<pre><code class="language-less">// .getIcon(value) makes the rule ready for use with :before
+	</div>
+</section>
+<section>
+	<h3 class="f5">LESS functions</h3>
+	<p>Using icon classnames directly in HTML is one way, using them in LESS is another fine-tuned way, here are
+		some LESS functions you can use.</p>
+	<pre><code class="language-less">// .getIcon(value) makes the rule ready for use with :before
 .search-icon {
 	.getIcon(@icon-search);
 }
@@ -161,46 +160,44 @@ layout: "doc"
 }
 </code></pre>
 
-			<p>To use in HTML:</p>
-			<pre><code class="language-html">&lt;span class=&quot;search-icon&quot;&gt;&lt;/span&gt; Search
+	<p>To use in HTML:</p>
+	<pre><code class="language-html">&lt;span class=&quot;search-icon&quot;&gt;&lt;/span&gt; Search
 &lt;span class=&quot;next-icon&quot;&gt;Icon after&lt;/span&gt;
 &lt;div class=&quot;expand-icon&quot;&gt;Expand&lt;/div&gt;...
 &lt;div class=&quot;expand-icon expanded&quot;&gt;Expanded&lt;/div&gt;
 &lt;div class=&quot;collapse-icon&quot;&gt;Collapse&lt;/div&gt;... 
 &lt;div class=&quot;collapse-icon collapsed&quot;&gt;Collapsed&lt;/div&gt;</code></pre>
-			<div class="box box-white spaced">
-				<ul class="alist">
-					<li>
-						<span class="search-icon"></span> Search
-					</li>
-					<li>
-						<span class="next-icon">Icon after</span>
-					</li>
-					<li class="card">
-						<div class="expand-icon">Expand</div> <span class="hbreath">...</span>
-						<div class="expand-icon expanded">Expanded</div>
-					</li>
-					<li class="card">
-						<div class="collapse-icon">Collapse</div> <span class="hbreath">...</span>
-						<div class="collapse-icon collapsed">Collapsed</div>
-					</li>
-				</ul>
-			</div>
-		</section>
+	<div class="box box-white spaced">
+		<ul class="alist">
+			<li>
+				<span class="search-icon"></span> Search
+			</li>
+			<li>
+				<span class="next-icon">Icon after</span>
+			</li>
+			<li class="card">
+				<div class="expand-icon">Expand</div> <span class="hbreath">...</span>
+				<div class="expand-icon expanded">Expanded</div>
+			</li>
+			<li class="card">
+				<div class="collapse-icon">Collapse</div> <span class="hbreath">...</span>
+				<div class="collapse-icon collapsed">Collapsed</div>
+			</li>
+		</ul>
+	</div>
+</section>
 
-		<section>
-			<h3 class="f5">A note about RTL</h3>
-			<p>If you use an automatic mirror task to generate your RTL, you need to also take note of icons with
-				direction, and manually mirror them. Each left icon, will hold the right character, and each right icon
-				will hold the left character, the class names used in HTML should not change.</p>
+<section>
+	<h3 class="f5">A note about RTL</h3>
+	<p>If you use an automatic mirror task to generate your RTL, you need to also take note of icons with
+		direction, and manually mirror them. Each left icon, will hold the right character, and each right icon
+		will hold the left character, the class names used in HTML should not change.</p>
 
-<pre><code class="language-less">.icon(icon-left, "\e903");
+	<pre><code class="language-less">.icon(icon-left, "\e903");
 .icon(icon-right,"\e904");
 
 // in RTL file
 .icon(icon-left, "\e904");
 .icon(icon-right,"\e903");
 </code></pre>
-		</section>
-	</div>
-</div>
+</section>

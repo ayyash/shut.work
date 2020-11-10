@@ -1,5 +1,5 @@
 .modal-close {
-   .getIcon(@icon-close);
+   .getIcon(@icon-close); 
 }
 
 .modal-content {
@@ -14,19 +14,6 @@
 // // FIXME: this is a chrome bug:
 .modal-header {
     min-height: 58px;
-}
-
-
-.modal-drawer {
-    // animate model window
-
-    .modal-dialog {
-        margin: 0;
-        max-width: 50vw;
-    }
-    .modal-content {
-        min-height: calc((var(--vh, 1vh) * 100));
-    }
 }
 
 
@@ -46,14 +33,24 @@
     }
 }
 
-.media(md, {
 
-    .modal-drawer {
 
-        .modal-dialog {
-            max-width: 25vw;
-        }
+.modal-drawer {
+    // animate model window
 
+    .modal-dialog {
+        margin: 0;
+        max-width: 70vw;
     }
+    .modal-content {
+        min-height: calc((var(--vh, 1vh) * 100));
+    }
+}
 
+.media(md, {
+    .modal-drawer {
+        .modal-dialog {
+            max-width: 16rem;
+        }
+    }
 });

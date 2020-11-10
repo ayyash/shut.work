@@ -1,22 +1,35 @@
 .outline {
-    position: fixed;
-    top: 10rem;
-    left: 0;
-    width: 20vw;
     padding: @space;
     font-size: 90%;
-    bottom: 0;
-    overflow-y: auto;
-    .scroll(2px);
 
 }
 
 
-.media(md, {
+.media(lg, {
+
+    .outline {
+        position: fixed;
+        top: 10rem;
+        right: 0;
+        width: 20vw;
+        padding: @space;
+        font-size: 90%;
+        bottom: 0;
+        overflow-y: auto;
+        .scroll(2px);
+    
+    }   
 	.page.withoutline {
 		.container {
-			padding-left: 15vw;
+			padding-right: 20vw;
 		}
 	}
 });
 
+.media(ds, {
+    .page.withoutline {
+        .container {
+            padding-right: 7vw;
+        }
+    }
+});

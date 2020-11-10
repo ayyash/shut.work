@@ -1,6 +1,6 @@
 ---
 layout: "doc"
-title: "Elements"
+title: "Card"
 ---
 
 
@@ -19,16 +19,13 @@ title: "Elements"
 	</ul>
 </div>
 
-<div class="page withoutline">
-	<div class="container">
-		<h1 class="f1">Card</h1>
-		<p>Card-ing is hard. In all my years of experience, I never reused a card. So this framework produces the
-			simplest form of a card, which is enough to pick up prototyping. Extra fine-tuning will always be needed.
-		</p>
-		<section>
-			<h3 class="f6">The card</h3>
-			<p>Simple flexbox horizontal layout. <code>(flow-direction: row)</code></p>
-			<pre><code class="language-html">&lt;div class=&quot;card&quot;&gt;
+<p>Card-ing is hard. In all my years of experience, I never reused a card. So this framework produces the
+	simplest form of a card, which is enough to pick up prototyping. Extra fine-tuning will always be needed.
+</p>
+<section>
+	<h3 class="f6">The card</h3>
+	<p>Simple flexbox horizontal layout. <code>(flow-direction: row)</code></p>
+	<pre><code class="language-html">&lt;div class=&quot;card&quot;&gt;
 	&lt;div class=&quot;rspace&quot;&gt;
 		&lt;h4 class=&quot;f4&quot;&gt;Title of card&lt;/h4&gt;
 		Simple horizontal flexbox
@@ -38,21 +35,21 @@ title: "Elements"
 	&lt;/div&gt;
 	&lt;div class=&quot;tail&quot;&gt;With a .tail&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<div class="doublespaced">
-				<div class="card">
-					<div class="rspace">
-						<h4 class="f4">Title of card</h4>
-						Simple horizontal flexbox
-					</div>
-					<div class="blue">
-						another div
-					</div>
-					<div class="tail">With a .tail</div>
-				</div>
-
+	<div class="doublespaced">
+		<div class="card">
+			<div class="rspace">
+				<h4 class="f4">Title of card</h4>
+				Simple horizontal flexbox
 			</div>
+			<div class="blue">
+				another div
+			</div>
+			<div class="tail">With a .tail</div>
+		</div>
 
-			<pre><code class="language-html">&lt;div class=&quot;card h-3 box box-white&quot;&gt;
+	</div>
+
+	<pre><code class="language-html">&lt;div class=&quot;card h-3 box box-white&quot;&gt;
 	&lt;div&gt;
 		content here
 	&lt;/div&gt;
@@ -61,44 +58,44 @@ title: "Elements"
 &lt;/div&gt;
 </code></pre>
 
-			<div class="doublespaced card h-3 box box-white">
-				<div>
-					content here
-				</div>
-				<div class="corner red">.corner</div>
-				<div class="corner-bottom green">.corner-bottom</div>
-			</div>
-		</section>
+	<div class="doublespaced card h-3 box box-white">
+		<div>
+			content here
+		</div>
+		<div class="corner red">.corner</div>
+		<div class="corner-bottom green">.corner-bottom</div>
+	</div>
+</section>
 
-		<section>
-			<h3 class="f5">Align items</h3>
-			<p>A card is a flexbox with horizontal layout.</p>
-			<div class="grid g-3 g-bthin spacedout doublespaced">
-				<h6 class="f6">.valign-center</h6>
-				<div>align-items: center</div>
+<section>
+	<h3 class="f5">Align items</h3>
+	<p>A card is a flexbox with horizontal layout.</p>
+	<div class="grid g-3 g-bthin spacedout doublespaced">
+		<h6 class="f6">.valign-center</h6>
+		<div>align-items: center</div>
 
-				<h6 class="f6">.valign-top</h6>
-				<div>align-items: flex-start</div>
-			</div>
-			<pre><code class="language-html">&lt;div class=&quot;card valign-center&quot;&gt;
+		<h6 class="f6">.valign-top</h6>
+		<div>align-items: flex-start</div>
+	</div>
+	<pre><code class="language-html">&lt;div class=&quot;card valign-center&quot;&gt;
 	&lt;button class=&quot;btn-fake&quot;&gt;one botton&lt;/button&gt;
 	&lt;button class=&quot;btn-diff&quot;&gt;another botton&lt;/button&gt;
 	&lt;span class=&quot;hbreath&quot;&gt;Just text&lt;/span&gt;
 	&lt;div class=&quot;tail&quot;&gt;tail&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<div class="card valign-center doublespaced">
-				<button class="btn-fake">one botton</button>
-				<button class="btn-diff">another botton</button>
-				<span class="hbreath">Just text</span>
-				<div class="tail">tail</div>
-			</div>
+	<div class="card valign-center doublespaced">
+		<button class="btn-fake">one botton</button>
+		<button class="btn-diff">another botton</button>
+		<span class="hbreath">Just text</span>
+		<div class="tail">tail</div>
+	</div>
 
-		</section>
+</section>
 
-		<section>
-			<h3 class="f5">Vertical card</h3>
-			<p>Align content vertically. <code>(flow-direction: column)</code></p>
-			<pre><code class="language-html">&lt;div class=&quot;card box-white-dark card-v doublespaced&quot;&gt;
+<section>
+	<h3 class="f5">Vertical card</h3>
+	<p>Align content vertically. <code>(flow-direction: column)</code></p>
+	<pre><code class="language-html">&lt;div class=&quot;card box-white-dark card-v doublespaced&quot;&gt;
 	&lt;div class=&quot;box&quot;&gt;
 		First element
 	&lt;/div&gt;
@@ -115,30 +112,30 @@ title: "Elements"
 		.corner-bottom
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<div class="card box-white-dark card-v doublespaced">
-				<div class="box">
-					First element
-				</div>
-				<div class="box">
-					content vertically directed .card-v
-				</div>
-				<div class="hpad breath box-green">
-					the bottom card
-				</div>
-				<div class="corner box-red">
-					.corner
-				</div>
-				<div class="corner-bottom box-yellow">
-					.corner-bottom
-				</div>
-			</div>
+	<div class="card box-white-dark card-v doublespaced">
+		<div class="box">
+			First element
+		</div>
+		<div class="box">
+			content vertically directed .card-v
+		</div>
+		<div class="hpad breath box-green">
+			the bottom card
+		</div>
+		<div class="corner box-red">
+			.corner
+		</div>
+		<div class="corner-bottom box-yellow">
+			.corner-bottom
+		</div>
+	</div>
 
-			<p>
-				<code class="shut-inline">.v-tail</code> creats a tail with <code>margin-top: auto</code>.
-				This becomes handy in a flex-box row of eleements.
-			</p>
+	<p>
+		<code class="shut-inline">.v-tail</code> creats a tail with <code>margin-top: auto</code>.
+		This becomes handy in a flex-box row of eleements.
+	</p>
 
-<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+	<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;box c-4 card card-v&quot;&gt;
 		&lt;div class=&quot;h-1 box box-grey-light&quot;&gt;short content&lt;/div&gt;
 		&lt;div class=&quot;tail-v box-yellow&quot;&gt;.tail-v&lt;/div&gt;
@@ -149,30 +146,30 @@ title: "Elements"
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-			<div class="box box-white ">
-				<div class="row">
-					<div class="box c-4 card card-v">
-						<div class="h-1 box box-grey-light">short content</div>
-						<div class="tail-v box-yellow">.tail-v</div>
-					</div>
-					<div class="box c-4 card card-v">
-						<div class="h-2 box box-grey-light">long content</div>
-						<div class="tail-v box-yellow">.tail-v</div>
-					</div>
-				</div>
+	<div class="box box-white ">
+		<div class="row">
+			<div class="box c-4 card card-v">
+				<div class="h-1 box box-grey-light">short content</div>
+				<div class="tail-v box-yellow">.tail-v</div>
 			</div>
-		</section>
+			<div class="box c-4 card card-v">
+				<div class="h-2 box box-grey-light">long content</div>
+				<div class="tail-v box-yellow">.tail-v</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
-		<section>
-			<h3 class="f5">Examples</h3>
-			<p>Following is a popular example, which can be built with framework out of the box classes. Though the
-				mantra of this
-				framework is to prototype fast, then build specific style on top of the back bones, to increase
-				site-wide
-				control, and reduce maintenance.</p>
+<section>
+	<h3 class="f5">Examples</h3>
+	<p>Following is a popular example, which can be built with framework out of the box classes. Though the
+		mantra of this
+		framework is to prototype fast, then build specific style on top of the back bones, to increase
+		site-wide
+		control, and reduce maintenance.</p>
 
-			<pre><code class="language-html">&lt;ul class=&quot;row-spaced ucol umd-6&quot;&gt;
+	<pre><code class="language-html">&lt;ul class=&quot;row-spaced ucol umd-6&quot;&gt;
 	&lt;li class=&quot;box-shadow-normal spaced&quot;&gt;
 		&lt;div class=&quot;card card-v border-bottom&quot;&gt;
 			&lt;a class=&quot;dblock&quot;&gt;&lt;img class=&quot;h-1 hm-3 image-fill&quot; src=&quot;/assets/images/upl1.png&quot;&gt;&lt;/a&gt;
@@ -219,8 +216,8 @@ title: "Elements"
 	&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
-			<p>Extra styles</p>
-			<pre><code class="language-less">.image-fill {
+	<p>Extra styles</p>
+	<pre><code class="language-less">.image-fill {
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
@@ -230,54 +227,50 @@ title: "Elements"
 .border-bottom {
 	border-bottom: 1px solid @grey;
 }</code></pre>
-			<ul class="row-spaced ucol umd-6">
-				<li class="box-shadow-normal spaced">
-					<div class="card card-v border-bottom">
-						<a class="dblock"><img class="h-1 hm-3 image-fill" src="/assets/images/upl1.png"></a>
-						<div class="box">
-							<h4 class="f6 weight-bold"><a href="">Lorem Ipsum</a></h4>
-							<div class="small"><a class="cam weight-bold">Disposables</a> / <a class="cam">Ships</a>.
-							</div>
-						</div>
-						<div class="corner">
-							<div class="box">
-								<button title="Send" class="btn"><i class="liga">trash</i></button>
-							</div>
-						</div>
+	<ul class="row-spaced ucol umd-6">
+		<li class="box-shadow-normal spaced">
+			<div class="card card-v border-bottom">
+				<a class="dblock"><img class="h-1 hm-3 image-fill" src="/assets/images/upl1.png"></a>
+				<div class="box">
+					<h4 class="f6 weight-bold"><a href="">Lorem Ipsum</a></h4>
+					<div class="small"><a class="cam weight-bold">Disposables</a> / <a class="cam">Ships</a>.
 					</div>
-					<div class="card box valign-center">
-						<a class="dblock c-2 rspace"><img class="h-1 hm-1 image-fill" src="/assets/images/upl2.png"></a>
-						<div>
-							<h3 class="f6 text-nowrap weight-normal"><a>The Shaft Corp.</a></h3>
-							<div class="small light"> India </div>
-						</div>
+				</div>
+				<div class="corner">
+					<div class="box">
+						<button title="Send" class="btn"><i class="liga">trash</i></button>
 					</div>
-				</li>
-				<li class="box-shadow-normal spaced">
-					<div class="card card-v border-bottom">
-						<a class="dblock"><img class="h-1 hm-3 image-fill" src="/assets/images/upl1.png"></a>
-						<div class="box">
-							<h4 class="f6 weight-bold"><a href="">Lorem Ipsum</a></h4>
-							<div class="small"><a class="cam weight-bold">Disposables</a> / <a class="cam">Ships</a>.
-							</div>
-						</div>
-						<div class="corner">
-							<div class="box">
-								<button title="Send" class="btn"><i class="liga">trash</i></button>
-							</div>
-						</div>
+				</div>
+			</div>
+			<div class="card box valign-center">
+				<a class="dblock c-2 rspace"><img class="h-1 hm-1 image-fill" src="/assets/images/upl2.png"></a>
+				<div>
+					<h3 class="f6 text-nowrap weight-normal"><a>The Shaft Corp.</a></h3>
+					<div class="small light"> India </div>
+				</div>
+			</div>
+		</li>
+		<li class="box-shadow-normal spaced">
+			<div class="card card-v border-bottom">
+				<a class="dblock"><img class="h-1 hm-3 image-fill" src="/assets/images/upl1.png"></a>
+				<div class="box">
+					<h4 class="f6 weight-bold"><a href="">Lorem Ipsum</a></h4>
+					<div class="small"><a class="cam weight-bold">Disposables</a> / <a class="cam">Ships</a>.
 					</div>
-					<div class="card box valign-center">
-						<a class="dblock c-2 rspace"><img class="h-1 hm-1 image-fill" src="/assets/images/upl2.png"></a>
-						<div>
-							<h3 class="f6 text-nowrap weight-normal"><a>The Shaft Corp.</a></h3>
-							<div class="small light"> India </div>
-						</div>
+				</div>
+				<div class="corner">
+					<div class="box">
+						<button title="Send" class="btn"><i class="liga">trash</i></button>
 					</div>
-				</li>
-			</ul>
-		</section>
-
-
-	</div>
-</div>
+				</div>
+			</div>
+			<div class="card box valign-center">
+				<a class="dblock c-2 rspace"><img class="h-1 hm-1 image-fill" src="/assets/images/upl2.png"></a>
+				<div>
+					<h3 class="f6 text-nowrap weight-normal"><a>The Shaft Corp.</a></h3>
+					<div class="small light"> India </div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</section>
