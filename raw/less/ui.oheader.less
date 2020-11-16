@@ -4,6 +4,19 @@
     display: none;
 }
 
+[aria-current="page"] {
+    a {
+        pointer-events: none;
+        color: @text-color;
+        font-weight: @font-weight-bold;
+    }
+}
+
+.homelogo {
+    display: block;
+    width: 100%;
+}
+
 header {
 	position: fixed;
 	background-color: @white;
@@ -11,7 +24,7 @@ header {
 	width: 100%;
 	z-index: 1000;
 	.logo { 
-        width: 120px;
+        width: 40px;
     }
     .menu {
         padding-right: @space;
@@ -19,7 +32,11 @@ header {
         line-height: 1;
     }
 }  
-
+.media(md, {
+    .homelogo {
+        width: 300px;
+    }
+});
 
 .media(xl, {
 

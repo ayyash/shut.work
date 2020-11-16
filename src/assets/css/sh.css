@@ -361,7 +361,7 @@ button:focus {
   color: #fff;
 }
 .btn-fake {
-  font-weight: 750;
+  font-weight: 700;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
@@ -1224,7 +1224,7 @@ textarea,
 select,
 option,
 input {
-  font-family: "Bitter", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.4rem;
   color: #202020;
 }
@@ -1285,9 +1285,9 @@ p {
 .weight-bold {
   font-weight: 700;
 }
-@supports (font-variation-settings: "wght"750) {
+@supports (font-variation-settings: "wght"700) {
   .weight-bold {
-    font-weight: 750;
+    font-weight: 700;
   }
 }
 .face-italic {
@@ -1296,7 +1296,7 @@ p {
 /* mixed content*/
 /* CRITICAL BEGIN */
 .ltr {
-  font-family: "Bitter", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   direction: ltr;
 }
 .rtl {
@@ -1334,7 +1334,7 @@ a[rel='track']:hover {
 }
 .normalsize {
   font-size: 1.4rem !important;
-  font-family: "Bitter", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, "Fira Sans", "Helvetica Neue", Arial, sans-serif;
 }
 sup {
   font-size: 70%;
@@ -1682,7 +1682,7 @@ table caption {
 table.tabulated th {
   padding-bottom: 2px;
   border-bottom: 1px solid #263238;
-  font-weight: 750;
+  font-weight: 700;
 }
 table.tabulated td {
   padding: 2px 0;
@@ -1711,7 +1711,7 @@ table.rich td {
   padding: 0.75rem;
 }
 table.rich th {
-  font-weight: 750;
+  font-weight: 700;
   background-color: #f3f3f3;
   border: 1px solid #9fb4be;
   border-bottom: 2px solid #263238;
@@ -1737,6 +1737,13 @@ body {
   height: 100vh;
   line-height: 1.6;
   font-weight: 400;
+}
+.f1,
+.f2,
+.f3,
+.f4,
+.f5 {
+  letter-spacing: -1px;
 }
 .sbar {
   position: fixed;
@@ -1907,10 +1914,10 @@ body {
 .vpatts ol.tbl .vpmeth {
   font-weight: 700;
 }
-@supports (font-variation-settings: "wght"750) {
+@supports (font-variation-settings: "wght"700) {
   .vpatts ol.tbl .jsprop,
   .vpatts ol.tbl .vpmeth {
-    font-weight: 750;
+    font-weight: 700;
   }
 }
 .vpatts .atth {
@@ -2078,6 +2085,15 @@ pre::-webkit-scrollbar-thumb:horizontal {
 .dt-menu {
   display: none;
 }
+[aria-current="page"] a {
+  pointer-events: none;
+  color: #202020;
+  font-weight: 700;
+}
+.homelogo {
+  display: block;
+  width: 100%;
+}
 header {
   position: fixed;
   background-color: #fff;
@@ -2086,12 +2102,17 @@ header {
   z-index: 1000;
 }
 header .logo {
-  width: 120px;
+  width: 40px;
 }
 header .menu {
   padding-right: 1.5rem;
   font-size: 150%;
   line-height: 1;
+}
+@media only screen and (min-width: 720px) {
+  .homelogo {
+    width: 300px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .menu {
