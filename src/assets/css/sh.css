@@ -255,12 +255,12 @@ ol.doublespacedout > li {
 }
 /* layout */
 /* CRITICAL BEGIN */
-.page {
-  margin: 0 auto;
-  padding: 1.5rem;
-}
+.page,
 .singlepage {
   margin: 0 auto;
+  width: 100%;
+}
+.container {
   padding: 1.5rem;
 }
 .forprint {
@@ -274,14 +274,10 @@ ol.doublespacedout > li {
 }
 @media only screen and (min-width: 720px) {
   .page {
-    width: calc(720px - 1.5rem * 2);
-    padding: 0;
+    max-width: 720px;
   }
   .singlepage {
-    width: calc(600px - 1.5rem * 2);
-  }
-  .container {
-    padding: 1.5rem;
+    max-width: 600px;
   }
   .md-only {
     display: block;
@@ -292,10 +288,10 @@ ol.doublespacedout > li {
 }
 @media only screen and (min-width: 960px) {
   .page {
-    width: calc(960px - 1.5rem * 2);
+    max-width: 960px;
   }
   .singlepage {
-    width: calc(720px - 1.5rem * 2);
+    max-width: 720px;
   }
   .lg-only {
     display: block;
@@ -306,10 +302,10 @@ ol.doublespacedout > li {
 }
 @media only screen and (min-width: 1200px) {
   .page {
-    width: calc(1200px - 1.5rem * 2);
+    max-width: 1200px;
   }
   .singlepage {
-    width: calc(720px - 1.5rem * 2);
+    max-width: 720px;
   }
 }
 /* CRITICAL END */
@@ -1926,6 +1922,9 @@ body {
 }
 .vpatts .atth .vpdef {
   font-style: italic;
+}
+.icon-github:before {
+  content: "\e907";
 }
 .icon-place:before {
   content: "\e900";

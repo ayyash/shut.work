@@ -1,0 +1,88 @@
+---
+layout: "doc"
+title: "Responsive"
+---
+
+
+
+<div class="outline">
+  <h4 class="f6 bthin light">THE BUTTER</h4>
+  <ul class="alist">
+    <li><code class="shut-inline">.page</code></li>
+
+  </ul>
+</div>
+
+
+<section>
+  <h3 class="f5">in LESS</h3>
+  <p>
+    The following functions are available in LESS to create media queries.
+  </p>
+  <pre><code class="language-less">// Create @media only screen and (min-width: @screen[md])
+.media(md, {
+  // applies to screen size 720px and above
+});
+
+// Create  @media only screen and (max-width: @screen[md])
+.mediamax(md, {
+  // applies to screen size 720px and below
+});
+</code></pre>
+
+  <p>The media variables (<code>md</code>) is part of the variables defined in <code class="shut-inline">@screen</code>
+    collection, by default it looks like this:</p>
+  <pre><code class="language-less">// breakpoints
+@screen: {
+  xs: 480px; // special cases
+  sm: 600px; // mobile interface
+  md: 720px; // tablet portrait
+  lg: 960px; // the usual desktop and landscape tablets
+  xl: 1280px; // unusually large with special treatment, else always fall back to normal 960
+  ds: 1600px; // up above desktop
+};</code></pre>
+  <p>You can add more breakpoints, and start using it with media functions, or change the values.</p>
+</section>
+<section>
+  <h3 class="f5">Page layout</h3>
+  <p>By default, <code class="shut-inline">.page</code> is defined for three break points, in addition to the default
+    (mobile first). To control padding inside page, wrap content with <code>.container</code> element, to control
+    padding, customize <code class="shut-inline">@mainpad</code> variable.</p>
+  <div class="box box-yellow-light spaced smaller">Up to the smallest size, the layout is fluid, after which, layout is
+    fixed.</div>
+  
+  <div class="grid g-3 g-bthin spacedout doublespaced">
+    <h6 class="f6">Default</h6>
+    <div>Mobile first, full width</div>
+    <h6 class="f6">md</h6>
+    <div>width: @screen[md]</div>
+    <h6 class="f6">lg</h6>
+    <div>width: @screen[lg]</div>
+    <h6 class="f6">xl</h6>
+    <div>width: @screen[xl]</div>
+  </div>
+
+</section>
+
+<section>
+  <h3 class="f5">Responsive font size</h3>
+  <p>By default, at screen width <code>md</code>, the font is scaled by <code class="shut-inline">@resFontFactor</code>
+    factor. To switch that off, set <code class="shut-inline">@enable-res-fonts</code> to false.</p>
+  <div class="spaced smaller box box-yellow">There is only one breakpoint in the framework for fast prototyping.
+    Creating a more responsive behavior, is project-specific. </div>
+  <p>The following function is availbale in LESS when <code class="shut-inline">@enable-res-fonts</code> is set to true
+  </p>
+  <pre><code class="language-less">// Produces font-size: 12px * 1.2 
+.resfont(12px);
+
+// To use with media queries, to produce a class with responsive font size.
+.myClass {
+  font-size: 2rem;
+}
+.media(lg, {
+  .myClass {
+    .resfont(2rem);
+  }
+});
+</code></pre>
+</section>
