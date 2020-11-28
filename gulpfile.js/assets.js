@@ -93,13 +93,13 @@ const rawMirror = gulp.series(rawlessRtl, function(){
 
  
 const buildcss = function() {
-    // minify the disturl and place in minisite public
+    // minify the disturl and place in minisite public (in this project, place in same src folder)
 	// this step is not part of the shut, but rather the working environment of every project
     return gulp
         .src(shutConfig.distUrl+ 'css/sh.css')
         .pipe(cssmin())
         .pipe(rename({ basename: 'sh', suffix: '.min' }))
-        .pipe(gulp.dest(shutConfig.minisiteDistUrl + 'css'))
+        .pipe(gulp.dest(shutConfig.distUrl + 'css'))
         .on('error', console.error.bind(console));
 };
 
@@ -108,7 +108,7 @@ const buildRtlcss = function(){
         .src(shutConfig.distUrl+ 'css/sh.rtl.css')
         .pipe(cssmin())
         .pipe(rename({ basename: 'sh', suffix: '.rtl.min' }))
-        .pipe(gulp.dest(shutConfig.minisiteDistUrl + 'css'))
+        .pipe(gulp.dest(shutConfig.distUrl + 'css'))
         .on('error', console.error.bind(console));
 
 }

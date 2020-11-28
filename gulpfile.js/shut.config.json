@@ -2,7 +2,6 @@
     "shutUrl": "./node_modules/shut/src/",
 	"srcUrl": "./raw/",
 	"distUrl": "./src/assets/",
-    "minisiteDistUrl": "./dist/",
     "iconfontspath": "./fontfiles/",
     "projectName": "sh",
     "isRtl": false,

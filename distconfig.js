@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
 
     // eleventyConfig.addPassthroughCopy({"src/config/dist.js": "assets/js/config.js"});
 
+    eleventyConfig.addLayoutAlias('base', 'base.dist.njk');
 
     return {
         passthroughFileCopy: true,
