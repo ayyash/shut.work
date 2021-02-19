@@ -2366,6 +2366,11 @@ pre[class*=language-] {
   border-right-color: transparent;
   border-bottom-color: transparent;
 }
+.borderradius {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 5px;
+  padding: 1.5rem;
+}
 .myc-4-lookalike {
   width: 37.5%;
 }
