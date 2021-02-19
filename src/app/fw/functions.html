@@ -1,0 +1,227 @@
+---
+layout: "create.njk"
+title: "LESS functions"
+---
+
+<section >
+	<a name="arrows"></a>
+	<h3 class="f3 spaced">Arrow functions</h3>
+	<h4 class="f4">Arrow</h4>
+	<p>Arrows are small triangles by default set to 5px base. </p>
+	<pre><code class="language-less">#arrow > .left(@arrowWidth: 5px);
+#arrow > .right(@arrowWidth: 5px);
+#arrow > .above(@arrowWidth: 5px);
+#arrow > .below(@arrowWidth: 5px);
+</code></pre>
+	<h4 class="f4">Pointer</h4>
+	<p>Pointers are arrows with larger base, and enough margins next to them.</p>
+	<pre><code class="language-less">#pointer > .left(@arrowWidth: 6px);
+#pointer > .right(@arrowWidth: 6px);
+#pointer > .up(@arrowWidth: 6px);
+#pointer > .down(@arrowWidth: 6px);
+#pointer > .diagonalupleft(@arrowWidth: 8px);
+#pointer > .diagonalupright(@arrowWidth: 8px);
+#pointer > .diagonaldownleft(@arrowWidth: 8px);
+#pointer > .diagonaldownright(@arrowWidth: 8px);
+</code></pre>
+
+	<h4 class="f4">Usage</h4>
+	<p>Arrow functions define as little as possible to generate the triangle, it is best used within containers of <code
+			class="shut-inline">inline-block</code> or in pseudo element.</p>
+	<pre><code class="language-less">// exampel of arrow above
+.arrow-above {
+	&:before {
+		display: inline-block;
+		margin-right: @space; 
+		content: '';
+		#arrow > .above();
+	}	
+}
+
+// example of pointer up
+.pointer-up {
+	&:before {
+		display: inline-block;
+		content: '';
+		#pointer > .up();
+	}
+}
+</code></pre>
+
+	<ul class="spaced boxed row uc-6">
+
+		<li>
+			<div class="arrow-above">Arrow above</div>
+		</li>
+		<li>
+			<div class="arrow-below">Arrow below</div>
+		</li>
+		<li>
+			<div class="arrow-left">Arrow left</div>
+		</li>
+		<li>
+			<div class="arrow-right">Arrow right</div>
+		</li>
+
+		<li>
+			<div class="pointer-up">Pointer up</div>
+		</li>
+		<li>
+			<div class="pointer-down">Pointer down</div>
+		</li>
+		<li>
+			<div class="pointer-left">Pointer left</div>
+		</li>
+		<li>
+			<div class="pointer-right">Pointer right</div>
+		</li>
+
+		<li>
+			<div class="pointer-diagonalupleft">Pointer up left</div>
+		</li>
+		<li>
+			<div class="pointer-diagonalupright">Pointer up right</div>
+		</li>
+		<li>
+			<div class="pointer-diagonaldownleft">Pointer down left</div>
+		</li>
+		<li>
+			<div class="pointer-diagonaldownright">Pointer down right</div>
+		</li>
+		<li>
+			<div class="arrow-standalone"></div> Example of stand alone arrow <br>
+			<code class="shut-inline">#arrow > .left(10px);</code>
+		</li>
+		<li>
+			<div class="pointer-standalone"></div> Example of stand alone pointer<br>
+			<code class="shut-inline">#pointer > .right(10px);</code>
+		</li>
+	</ul>
+
+
+
+	<p>If used with <code class="shut-inline">position: absolute</code> basic positioning occurs based on intended
+		context. This is pretty subjective, in order to define your own positioning, you can override the position
+		values, or you can position parent block as fits.</p>
+
+	<ul class="spaced boxed row uc-6">
+
+		<li>
+			<div class="arrow-above positioned">Arrow above</div>
+		</li>
+		<li>
+			<div class="arrow-below positioned">Arrow below</div>
+		</li>
+		<li>
+			<div class="arrow-left positioned">Arrow left</div>
+		</li>
+		<li>
+			<div class="arrow-right positioned">Arrow right</div>
+		</li>
+
+		<li>
+			<div class="pointer-up positioned">Pointer up</div>
+		</li>
+		<li>
+			<div class="pointer-down positioned">Pointer down</div>
+		</li>
+		<li>
+			<div class="pointer-left positioned">Pointer left</div>
+		</li>
+		<li>
+			<div class="pointer-right positioned">Pointer right</div>
+		</li>
+
+		<li>
+			<div class="pointer-diagonalupleft positioned">Pointer up left</div>
+		</li>
+		<li>
+			<div class="pointer-diagonalupright positioned">Pointer up right</div>
+		</li>
+		<li>
+			<div class="pointer-diagonaldownleft positioned">Pointer down left</div>
+		</li>
+		<li>
+			<div class="pointer-diagonaldownright positioned">Pointer down right</div>
+		</li>
+
+	</ul>
+
+	<h4 class="f4">Examples</h4>
+	<pre><code class="language-less">.coloredarrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	padding: @halfspace;
+	border:1px solid @grey-light;
+	border-radius: 1000px;
+	&:before {
+		border-color: @yellow; 
+		content: '';
+		display: inline-block;
+		#arrow > .right(10px);
+	}
+}</code></pre>
+	<div class="box box-white card valign-center">
+		<div class="content">
+			Some colored arrow to the right
+		</div>
+		<div class="tail">
+
+			<div class="coloredarrow"></div>
+		</div>
+	</div>
+
+
+	<!-- // TODO: collapsable CSS example -->
+</section>
+
+<section>
+	<a name="borders"></a>
+	<h3 class="f3 spaced">Borders</h3>
+
+	
+</section>
+
+
+<section>
+	<a name="font"></a>
+	<h3 class="f3 spaced">Font</h3>
+</section>
+
+<section>
+	<a name="gradient"></a>
+	<h3 class="f3 spaced">Gradient</h3>
+</section>
+
+<section>
+	<a name="media"></a>
+	<h3 class="f3 spaced">Media</h3>
+</section>
+
+<section>
+	<a name="scroll"></a>
+	<h3 class="f3 spaced">Scroll</h3>
+</section>
+
+<section>
+	<a name="button"></a>
+	<h3 class="f3 spaced">Button</h3>
+</section>
+
+<section>
+	<a name="grid"></a>
+	<h3 class="f3 spaced">Grid</h3>
+</section>
+
+<section>
+	<a name="icon"></a>
+	<h3 class="f3 spaced">Icon</h3>
+</section>
+
+<section>
+	<a name="other"></a>
+	<h3 class="f3 spaced">Other</h3>
+</section>
