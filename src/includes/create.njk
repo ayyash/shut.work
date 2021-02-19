@@ -1,17 +1,20 @@
 ---
 layout: "base"
 list: [
-    {name: "General", href: "/css/general/"},
-    {name: "Grid", href: "/css/grid/"},
-    {name: "Tables", href: "/css/tables/"},
-    {name: "Type", href: "/css/type/"},
-    {name: "Icons", href: "/css/icons/"},
-    {name: "Lists", href: "/css/lists/"},
-    {name: "Color", href: "/css/color/"},
-    {name: "Card", href: "/css/card/"},
-    {name: "Button", href: "/css/button/"},
-    {name: "Modal", href: "/css/modal/"},
-    {name: "Responsive", href: "/css/responsive/"},
+    {name: "Get started", href: "/fw/start/"},
+    {name: "LESS variables", href: "/fw/vars/"},
+    {name: "LESS functions", href: "/fw/functions/", children: [
+        {name: "Arrows", hname: "#arrows"},
+        {name: "Borders", hname: "#borders"},
+        {name: "Font", hname: "#font"},
+        {name: "Gradient", hname: "#gradient"},
+        {name: "Media", hname: "#media"},
+        {name: "Scroll", hname: "#scroll"},
+        {name: "Button", hname: "#button"},
+        {name: "Grid", hname: "#grid"},
+        {name: "Icon", hname: "#icon"},
+        {name: "Other", hname: "#other"}
+    ]}
 ]
 ---
 <header>
@@ -31,7 +34,7 @@ list: [
 
         <nav class="lauto">
             <a href="https://cdn.jsdelivr.net/npm/shut@6/dist/css/sh.min.css" target="_blank" class="download"><i class="liga">download</i><span> Download</span></a>
-            <a href="/fw/start">Create</a>
+            <a href="/css/general">Docs</a>
             <a href="https://github.com/ayyash/shut" class="github">
                 <i class="liga">github</i>
             </a>
@@ -47,10 +50,17 @@ list: [
         {% for item in list %}
 
             <li>
-                <a  {% if page.url === item.href %} aria-current="page" {% endif %} href="{{item.href}}">
-
+                <a {% if page.url === item.href %} aria-current="page" {% endif %} href="{{item.href}}">
                     {{item.name}}
                 </a>
+                {% if page.url === item.href %} 
+                 <ul class="subnav alist">
+                     {% for child in item.children %}
+                      <li><a class="cam" href="{{ child.hname}}">{{ child.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+               
             </li>
         {% endfor %}
     </ul>
@@ -60,10 +70,17 @@ list: [
     <ul class="alist">
         {% for item in list %}
             <li>
-                <a  {% if page.url === item.href %} aria-current="page" {% endif %} href="{{item.href}}">
+                <a {% if page.url === item.href %} aria-current="page" {% endif %} href="{{item.href}}" class="top">
 
                     {{item.name}}
                 </a>
+                 {% if page.url === item.href %} 
+                 <ul class="subnav alist">
+                     {% for child in item.children %}
+                      <li><a class="cam" href="{{ child.hname}}">{{ child.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>

@@ -4,12 +4,10 @@
     display: none;
 }
 
-[aria-current="page"] {
-    a {
-        pointer-events: none;
-        color: @text-color;
-        font-weight: @font-weight-bold;
-    }
+a[aria-current="page"] {
+    pointer-events: none;
+    color: @text-color;
+    font-weight: @font-weight-bold;
 }
 
 .homelogo {
@@ -31,8 +29,42 @@ header {
         font-size: 150%;
         line-height: 1;
     }
-}  
+
+    nav {
+        a {
+            display: inline-block;
+            padding-left: @space;
+            .smaller();
+            
+            color: @text-color;
+        }
+       
+    }
+} 
+.subnav {
+    padding-left: @halfspace;
+    margin-left: @halfspace;
+    border-left: 1px solid @grey-light;
+    margin-top: @halfspace;
+    margin-bottom: @halfspace;
+}
+.download {
+     
+    .liga {
+        font-size: 110%;
+    }
+   
+    span {
+        display: none;
+    }
+}
+.github {
+    font-size: 1.4rem;
+} 
 .media(md, {
+    .download span {
+        display: inline;
+    }
     .homelogo {
         width: 400px;
     }

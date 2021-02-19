@@ -1,9 +1,111 @@
 ---
-layout: "base.njk"
-title: "Framework"
+layout: "create.njk"
+title: "Get started"
 ---
 
-Write it down here
+<section>
+<p>
+	Get started immidiately with the default CSS, by including it in the header:
+</p>
+<pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shut@6/dist/css/sh.min.css" /></code></pre>
 
+<p>
+	And here is the simplest starting template:
+</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/shut@6/dist/css/sh.min.css&quot;&gt;
+	&lt;title&gt;Shut template&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class=&quot;page&quot;&gt;
+		&lt;div class=&quot;container&quot;&gt;
+			Responsive content
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+
+<section>
+	<h3 class="f3">Let's open the box</h3>
+	<p>In order to create your own css, based on the basic rules of SHUT, you need to have at least LESS installed, or a <a href="http://lesscss.org/" target="_blank">LESS</a> task running plugin. I use <a href="https://www.npmjs.com/package/gulp" target="_blank">Gulp</a>, and <a href="https://www.npmjs.com/package/gulp-less" target="_blank">Gulp-less</a>.</p>
+</section>
+<section>
+	<h3 class="f3">Inside the box</h3>
+	<p>The following imprts are used to create the default sh.css. </p>
+<pre><code class="language-less">// you vars
+@import "sh.vars.less";
+
+/* resetting */
+@import "css.Reset";
+
+// include if used
+@import "utilities/arrow";
+@import "utilities/border";
+@import "utilities/gradient";
+@import "utilities/functions.less";
+@import "utilities/media";
+@import "utilities/scroll";
+
+// icon functions 
+@import "css.Icon.less";
+
+// all other styles
+@import "css.General.less";
+@import "css.Layout.less";
+@import "css.Card.less";
+@import "css.Lists.less";
+@import "css.Table.less";
+
+// uses utitilites/media
+@import "css.Grid.less";
+
+// uses utitilites/border and utilities/functions
+@import "css.Button.less";
+@import "css.Box.less";
+@import "css.Label.less";
+
+// uses utitilites/scroll
+@import "css.Modal.less";
+
+// uses utitilites/media and utilities/functions
+@import "css.Type.less"; 
+
+/* Print */
+@import "media.print.less";</code></pre>
+
+	<ol class="normal spacedout">
+		<li>
+			or // or simply
+			@import "sh.less";
+			// you vars
+			@import "sh._vars.less";
+		</li>
+		<li>
+			Create a folder for extended LESS files
+		</li>
+		<li>
+			Imports and override the vars
+			
+// you vars, overwrites shut vars
+@import "sh._vars.less";
+		</li>
+		<li>
+			import your css files afterwards, or use gulp-inject 
+			
+			// inject:uiless
+			// endinject
+			// inject:medialess
+			// endinject
+			
+		</li>
+	</ol>
+</section>
 - create a less folder, copy gulpfile.js
 - chagen config
+

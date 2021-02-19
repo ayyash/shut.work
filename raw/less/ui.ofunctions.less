@@ -1,0 +1,142 @@
+// arrows
+
+.arrow-standalone {
+	display: inline-block;
+	#arrow > .left(10px);
+}
+.beforearrow() {
+	&:before {
+		display: inline-block;
+		margin-right: @space; 
+		content: '';
+		
+	} 
+}
+
+.arrow-above {
+	.beforearrow();
+	&:before {
+		#arrow > .above();
+	}	
+}
+
+.arrow-below {
+	.beforearrow();
+	&:before {
+		#arrow > .below();
+	}	
+}
+
+.arrow-right {
+	.beforearrow();
+	&:before {
+		#arrow > .right();
+	}	
+}
+
+.arrow-left {
+	.beforearrow();
+	&:before {
+		#arrow > .left();
+	}	
+}
+
+.positioned {
+	position: relative;
+	background-color: @grey-light;
+
+	&:before {
+		position: absolute;
+	}
+}
+
+
+
+
+.pointer-standalone {
+	display: inline-block;
+	#pointer > .right(10px);
+}
+
+.beforepointer() {
+	&:before {
+		display: inline-block;
+		content: '';
+	}
+}
+
+.pointer-up {
+	.beforepointer();
+	&:before {
+		#pointer > .up();
+	}
+}
+
+.pointer-right {
+	.beforepointer();
+	&:before {
+		#pointer > .right();
+	}
+}
+.pointer-down {
+	.beforepointer();
+	&:before {
+		#pointer > .down();
+	}
+	
+}
+
+.pointer-left {
+	.beforepointer();
+	&:before {
+		#pointer > .left();
+	}
+}
+
+.pointer-diagonalupleft {
+	.beforepointer();
+	&:before {
+		#pointer > .diagonalupleft();
+	}
+}
+
+.pointer-diagonalupright {
+	.beforepointer();
+	&:before {
+		#pointer > .diagonalupright();
+	}
+}
+
+
+.pointer-diagonaldownleft {
+	.beforepointer();
+	&:before {
+		#pointer > .diagonaldownleft();
+	}
+}
+
+
+.pointer-diagonaldownright {
+	.beforepointer();
+	&:before {
+		#pointer > .diagonaldownright();
+	}
+}
+
+.coloredarrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	padding: @halfspace;
+	border:1px solid @grey-light;
+	border-radius: 1000px;
+	&:before {
+		border-color: @yellow; 
+		content: '';
+		display: inline-block;
+		#arrow > .right(10px);
+	}
+	
+}

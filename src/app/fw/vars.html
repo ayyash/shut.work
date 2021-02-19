@@ -1,0 +1,221 @@
+---
+layout: "create.njk"
+title: "LESS variables"
+---
+
+<section>
+	<p>Here is a list of variables used to define SHUT. Copy the file into your own space, and redefine the values. It
+		is always a good idea to copy all of the variables, not just the ones you want to overwrite, to be always aware
+		of what is available.</p>
+
+
+</section>
+
+<section>
+	<h3 class="f3">Folder locations</h3>
+	<pre><code class="language-less">// icon fonts location, if used
+@font-url: '../fonts/';
+</code></pre>
+</section>
+<section>
+	<h3 class="f3">Options</h3>
+	<pre><code class="language-less">// enable rem, if false, the font sizes generated in px.
+@rem-enabled: true;
+// if false, the radius will be ignored anywhere it is used
+@enable-rounded: true;
+// if true, the icon font face, and font styles are included
+// if you do not yet have a font for icons, set this to false
+@enable-icon-font: false;
+// if true, the font scales for larger screens (read under responsive font size)
+@enable-res-fonts: true; </code></pre>
+</section>
+
+<section>
+	<h3 class="f3">Fonts</h3>
+	<pre><code class="language-less">
+	@rem-enabled: true;
+
+@font-url: '../fonts/';
+@icon-font: 'vpicons';
+@icon-inline-margin: @space;
+
+@fontface: -apple-system, BlinkMacSystemFont,  "Roboto", "Segoe UI", "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+@fontface-ar: Traditional Arabic, tahoma, sans-serif;
+
+@htmlFontBase: 62.5%;
+@resFontFactor: 1.2; // how much to reduce font sizes for smaller screens
+
+@font-size: 1.4; // in rem
+@font-size-print: 80%;
+@font-multiplier: {
+	larger: 3.5;
+	large: 3;
+	f1: 2.5;
+	f2:  2;
+	f3: 1.75;
+	f4: 1.5;
+	f5: 1.25;
+	f6: 1;
+	small: 0.9;
+	smaller: 0.8;
+};
+
+@font-weight-light: 300;
+@font-weight: 400;
+@font-weight-bold: 700;
+</code></pre>
+</section>
+<section>
+	<h3 class="f3">Colors</h3>
+	<pre><code class="language-less">// colors
+	@text-color: #202020; // basic text color
+	@text-light: #959595;
+	@text-lighter: #cccccc;
+	@text-dark: #202020;
+	@white:		#fff; // the inverse of basic text
+	@grey-light:#f3f3f3;
+	@grey: 		#999999;
+	@grey-dark: #263238;
+	@black: 	#000;
+	
+	@linkcolor: 	#0c00b4;
+	@visitedcolor:	#800080;
+	@altcolor: 		#048bca; // alt link color
+	
+	// main colors only, the rest should be by user definition
+	@red: 	#f31109;
+	@yellow:#ffc400;
+	@green: #57b347;
+	@blue: 	#0097A7;
+	
+	@red-light: lighten(@red, 20%);
+	@yellow-light: lighten(@yellow, 20%);
+	@green-light: lighten(@green, 20%);
+	@blue-light: lighten(@blue, 20%);
+	
+	@colors: {
+		red: @red;
+		yellow:@yellow;
+		green: @green;
+		blue: 	@blue;
+		red-light: 		@red-light;
+		yellow-light: 	@yellow-light;
+		green-light: 	@green-light;
+		blue-light: 	@blue-light;
+		light:  @text-light;
+		lighter: @text-lighter;
+		grey: @grey;
+		grey-light: @grey-light;
+		grey-dark: @grey-dark;
+	};
+</code></pre>
+</section>
+<section>
+	<h3 class="f3">Tables</h3>
+	<pre><code class="language-less">
+	// table colors
+	@table-th-border-color: @grey-dark;
+	@table-td-border-color: @grey-light;
+	@table-ft-border-color: @grey-dark;
+	@table-spaced: @space;
+	@table-half-spaced: @halfspace;
+	@table-striped-bg-color: @grey-light;
+	@table-th-bg-color: @grey-light;
+</code></pre>
+</section>
+
+<section>
+	<h3 class="f3">Other</h3>
+	<pre><code class="language-less">
+	// breakpoints
+@screen: {
+	xs: 480px; // special cases
+	sm: 600px; // mobile interface
+	md: 720px; // tablet portrait
+	lg: 960px; // the usual desktop and landscape tablets
+	xl: 1280px; // unusually large with special treatment, else always fall back to normal 960
+	ds: 1600px; // up above desktop
+	};
+
+</code></pre>
+</section>
+
+
+<section>
+	<h3 class="f3">Layout</h3>
+	<pre><code class="language-less">
+
+	// content padding
+	@mainpad: @space;
+	
+	// rounded corder radius
+	@radius: 3px;
+	// for forms @radius-input: 0;
+	
+	/* spacing and layout */
+	@space: 		15px;
+	@halfspace: 	@space * 0.5;
+	@extraspace: 	@space * 1.5;
+	@doublespace: 	@space * 2;
+	
+	@box-border: 1px; // for white boxes
+	@box-padding: 10px;
+	@list-spacing: 0.7rem; // lists spacing (multiplied by two for padding and margin)
+	@label-padding: 0.25rem 0.8rem;
+	@label-radius: @radius;
+
+	@wrapper: 12; // columns
+@grid-column-height: 60px; 
+</code></pre>
+</section>
+
+
+<section>
+	<h3 class="f3">Modals</h3>
+	<pre><code class="language-less">
+	// modals
+	@modal-bg: fade(@black, 60);
+	@modal-zindex: 1040; // overlay is -10
+	@modal-margin: @space;
+	@modal-padding: @halfspace;
+	@modal-md-width: 700px;
+	@modal-scrollbar-width: 5px;
+</code></pre>
+</section>
+
+<section>
+	<h3 class="f3">Other</h3>
+	<pre><code class="language-less">
+	// buttons
+	@btn-diff-bg: @red;
+	@button-padding-h:  1.6rem;
+@button-padding-v: 1.2rem;
+@button-sm-padding: 0.8rem;
+	@rowlist-border: @grey-light;
+	@b-color: @grey; // bthin and bthick
+	@b-dark-color: @grey-dark; // bthin-dark and bthick-dark
+</code></pre>
+</section>
+
+
+
+
+<section>
+
+	<h3 class="f3">In progress</h3>
+	<p>These variables are not solid, they are on trial basis</p>
+	<pre><code class="language-less">
+	@front-color-contrast: 43%;
+	@lightLabel: 15; // light labels on hover of a link to how much percentage
+	@shadows: {
+		none: none;
+		shallow: 0 0 5px 0 rgba(0,0,0,.1); 
+		normal: 0 2px 2px 0 rgba(@black,0.14), 0 1px 5px 0 rgba(@black,0.12), 0 3px 1px -2px rgba(@black,0.2);
+		deep: 0 6px 10px 0 rgba(@black,0.14), 0 1px 18px 0 rgba(@black,0.12), 0 3px 5px -1px rgba(@black,0.3);
+		deeper: 0 16px 24px 2px rgba(@black,0.14), 0 6px 30px 5px rgba(@black,0.12), 0 8px 10px -5px rgba(@black,0.3);
+	};
+
+@trans-func: cubic-bezier(.4,0,.2,1); // basic most used animation
+
+</code></pre>
+</section>

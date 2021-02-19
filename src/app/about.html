@@ -1,0 +1,115 @@
+---
+layout: "about"
+title: "Why SHUT?"
+---
+
+<div class="page">
+	<div class="container md-8 center">
+
+
+		<h1 class="f1 spaced">{{ title }}</h1>
+
+		<p>
+			As all frameworks (or libraries if you may), this started from the necessity to control repeating patterns
+			of design and coding. Naming CSS before css processors, was very crucial, maintaining them was not easy.
+			Shut framework was conceived in around 2004.
+			<strong>Yes. I am a procrastinator.</strong>
+		</p>
+
+		<h3 class="f3 spaced">The case against Bootstrap</h3>
+
+		<p>Bootstrap provided developers with a stylehsheet that allows them to draw anything, in HTML. Literally
+			anything. Developers can control paddings and margins, background colors, borders, and a lot more. This, was
+			not ideal, because <strong>it took the responsibility of maintaining site style out of stylesheets, into
+				HTML pages</strong>. It created chaos.</p>
+
+		<p><strong>Naming in Bootstrap is data-driven</strong> (sometimes), meaning, "btn-danger" is not always used for
+			"danger" related options. Making a distinctive different looking button is a design option. CSS is not
+			supposed to describe data, rather style, or choice of style. (For example, box-red, or box-light).</p>
+
+		<p><strong>Detailed styling, over-loads the outcome stylesheet</strong>. SHUT framework provides enough for
+			designers to quickly prototype, but to add style, and look and feel, they should roll up their sleeves and
+			get their hands dirty. The output stylesheet is always smaller, and if done right, more maintainable.
+			Bootstrap is a black box, hard to control.</p>
+
+		<h3 class="f3 spaced">SHUT is to prototype.</h3>
+
+		<p>Shut framework was first built with one target in mind: <strong>I am a designer</strong>, who wants to create
+			a quick prototype, that can be used later to develop real code. I do not want to throw it all away and start
+			over (as we do with prototype apps), and I do not want to dig too deep into the engine to customize it (like
+			in Bootstrap).</p>
+
+		<h3 class="f3 spaced">The case against prototyping apps</h3>
+		<p>
+			The first online prototyping app I used was <a href="https://invisionapp.com"
+				target="_blank"><strong>InvisionApp</strong></a>. Great app. Today I use <a
+				href="https://www.figma.com/" target="_blank"><strong>Figma</strong></a> as my design Adobe-alternative
+			tool, basically for everything. Except prototyping.
+		</p>
+
+		<p>Knowing how to code myself, I admittedly never tried to dig deeper into those apps' ability to create code. I
+			just didn't care enough.</p>
+
+		<p>In addition to that, my fingers hurt after a couple of hours moving and clicking the mouse to align things on
+			screen! Am I becoming the grumpy old neighbor?</p>
+
+		<p>My argument: just as Bootstrap caters for developers who do not design, those apps cater for designers who do
+			not develop. They may have some coding skills though. But if you know how to code like I do, you would feel
+			absolutely limited by those apps. <strong>So if you know how to code, CODE your prototype</strong>.</p>
+
+		<h3 class="f3 spaced">Developers are color-blind</h3>
+
+		<p>My cynical comeback to developers trying to design something out of the box. Developers who do not design,
+			should not be given the power Bootstrap gives, they will most definitely screw it up. Stopped counting the
+			number of times I was asked to “clean up and fix” code that went out of control, that was built by
+			Bootstrap.</p>
+
+		<h3 class="f3 spaced">SHUT, the world between.</h3>
+
+		<p>Somewhere between Figma, the awesome prototyping tool, and Bootstrap the awesome CSS framework, lies SHUT.
+		</p>
+
+		<ul class="normal alist">
+			<li>
+				<strong>LESS based.</strong> Better documentation, easier, and simpler. Sorry SASS people, but nothing
+				beats the simple “.small()” to include existing rules with no hassle.
+			</li>
+			<li>
+				<strong>Does not involve JavaScript,</strong> nor has any prebuilt components. JavaScript is reliant on
+				framework used by developers, to have a CSS framework have an opinion about it, is intrusive.
+
+			</li>
+			<li>
+				<strong>Mobile-first, responsive, and development-ready</strong>. I do not have to throw away my
+				prototype code any more.
+			</li>
+			<li>
+				<strong>Unobtrusive.</strong> Beyond resetting and normalization, no HTML element is redefined.
+			</li>
+			<li>
+				<strong>Customizable.</strong> Colors, sizes, shadows, et. al., are defined in the LESS variables file.
+				LESS functions are documented to allow every project to have its own extended values.
+			</li>
+			<li>
+				<strong>RTL enabled.</strong> I speak Arabic.
+			</li>
+		</ul>
+
+
+		<h3 class="f3 spaced">Why was it called SHUT?</h3>
+
+		<p>Why not?</p>
+
+		<ul class="boxed card valign-center center-content smaller">
+			<li class="btn-chop-start">
+				<a href="/css/general" class="btn-rev">Docs</a>
+			</li>
+			<li>
+				<a class="cam" href="/fw/start">Create your own</a>
+			</li>
+			<li>
+				<a href="https://github.com/ayyash/shut" class="cam">Shut on GitHub</a>
+			</li>
+		</ul>
+	</div>
+</div>
