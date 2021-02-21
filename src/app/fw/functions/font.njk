@@ -1,0 +1,62 @@
+
+
+<section>
+	<a name="font" class="anchor-target" ></a>
+	<h3 class="f3 spaced">Font</h3>
+
+	<h4 class="f4">Size</h4>
+	<p>Set the size to <code>rem</code> or <code>px</code>, or multiply font by a factor, to control responsive behavior.</p>
+<pre><code class="language-less">// pass a value equal to 1 rem, it will output either 1 rem, or 10 px, 
+// depending on @rem-enabled option
+#rem > .font-size(@font-size);
+
+// multiple the font passed by a factor of @resFontFactor
+// depending on @enable-res-fonts option
+.resfont(@fontsize);
+</code></pre>
+
+<p>Usage: this helps in making fonts responsive by a predefined fraction, without fine tuning them.</p>
+<pre><code class="language-less">// set font to 1.5 rem, if @rem-enabled is true, 15px if not
+.responsivefont {
+	#rem > .font-size(1.5);
+}
+
+.media(md, {
+	.responsivefont {
+		// set font to 1.5rem * @resFontFactor if @rem-enabled and @enable-res-fonts are true
+		// or 15px * @resFontFactor if @rem-enabled is false
+		// or 1.5rem if @enable-res-fonts is false
+		// or 15px if both are false
+		#rem > .res-font-size(1.5);
+	}
+});</code></pre>
+
+<div class="box box-white doublespaced">
+	<span class="responsivefont">1.5 rem on mobile, a bit migger on .md screen</span>
+</div>
+
+	<h4 class="f4">Color contrast</h4>
+	<p>Set the font color in contrast to the background color, using <a href="http://lesscss.org/functions/#color-operations-contrast" target="_blank">LESS <code>contrast</code> function</a>. This is a shortcut used with the following (still in beta):</p>
+<pre><code class="language-less">// the function uses @text-color, @white, @front-color-contrast variables
+color: contrast(@c, @text-color, @white, @front-color-contrast);
+
+// usage
+.fcolor (@c);</code></pre>
+<p>Example:</p>
+<pre><code class="language-less">.colorcontrast-light {
+	.box();
+	background-color: @yellow-light;
+	.fcolor($background-color);
+}
+
+.colorcontrast-dark {
+	.box();
+	background-color: @green;
+	.fcolor($background-color);
+}
+</code></pre>
+<div class="box box-white doublespaced">
+	<button class="colorcontrast-light">Light background color .colorcontrast-light</button>
+	<button class="colorcontrast-dark">Dark background color .colorcontrast-dark</button>
+</div>
+</section>

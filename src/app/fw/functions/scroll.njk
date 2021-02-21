@@ -1,0 +1,38 @@
+
+<section>
+	<a name="scroll" class="anchor-target" ></a>
+	<h3 class="f3 spaced">Scroll</h3>
+
+	<p>To quickly define the shape of the scrollbar for webkit browsers, and a specific width, use the shortcut: <code class="shut-inline">.scroll()</code>. This is very handy when making prototypes, and the definiton is very basic. To use it, define the overflow and height.</p>
+<pre><code class="language-less">// defaults to 9px width
+.scroll(@width: 9px);
+
+// example:
+.scrollme {
+	overflow-x: hidden;
+	overflow-y: auto;
+	.hm-1(); 
+	.scroll();
+}
+
+.scrollme-x {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	.scroll(2px);
+}
+</code></pre>
+
+<div class="row-spaced">
+	<div class="col md-6 box box-white scrollme">
+
+		.scrollme Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi maiores laborum asperiores, optio quis. Optio et fugit vitae, saepe dolorum sed illo vel dolore commodi! Optio odit iste accusantium.
+		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sit voluptatum quidem alias officiis. Accusamus minima dolore delectus perferendis autem tempora, voluptates sequi iusto ad doloribus amet expedita quaerat cumque?
+	</div>
+	<div class="col md-6 box box-white scrollme-x">
+
+		.scrollme-x Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi maiores laborum asperiores, optio quis. Optio et fugit vitae, saepe dolorum sed illo vel dolore commodi! Optio odit iste accusantium.
+		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sit voluptatum quidem alias officiis. Accusamus minima dolore delectus perferendis autem tempora, voluptates sequi iusto ad doloribus amet expedita quaerat cumque?
+	</div>
+</div>
+</section>

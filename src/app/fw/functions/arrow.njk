@@ -1,10 +1,6 @@
----
-layout: "create.njk"
-title: "LESS functions"
----
 
 <section>
-	<a name="arrows"></a>
+	<a name="arrows" class="anchor-target" ></a>
 	<h3 class="f3 spaced">Arrow functions</h3>
 	<h4 class="f4">Arrow</h4>
 	<p>Arrows are small triangles by default set to 5px base. </p>
@@ -176,82 +172,4 @@ title: "LESS functions"
 
 
 	<!-- // TODO: collapsable CSS example -->
-</section>
-
-<section>
-	<a name="borders"></a>
-	<h3 class="f3 spaced">Border radius</h3>
-	<p>Use this function to set radius when <code class="shut-inline">@enable-rounded</code> is set to true. Otherwise
-		it is ignored. Default is 2px.</p>
-	<pre><code class="language-less">// enable radius in vars
-@enable-rounded: true;
-
-// use function 
-.border-radius(@radius: 2px);
-</code></pre>
-
-	<p>Or use the following shortcuts to set different borders, independent of <code
-			class="shut-inline">@enable-rounded</code>.</p>
-	<pre><code class="language-less">// default 2px, if less than zero, it is ignored
-#border-radius > .all(@radius: 2px);
-#border-radius > .topright(@radius: 2px);
-#border-radius > .topleft(@radius: 2px);
-#border-radius > .bottomright(@radius: 2px);
-#border-radius > .bottomleft(@radius: 2px);</code></pre>
-
-	<h4 class="f4">Example</h4>
-	<pre><code class="language-less">.borderradius {
-	#border-radius > .topleft(20px);
-	#border-radius > .bottomright(5px);
-	padding: @space;
-}</code></pre>
-	<div class="box box-white">
-		<div class="box-grey borderradius">Adding radius</div>
-	</div>
-</section>
-
-
-<section>
-	<a name="font"></a>
-	<h3 class="f3 spaced">Font</h3>
-
-	<h4 class="f4">Size</h4>
-	
-	<h4 class="f4">Color contrast</h4>
-<pre><code class="language-less">.fcolor (@c);</code></pre>
-</section>
-
-<section>
-	<a name="gradient"></a>
-	<h3 class="f3 spaced">Gradient</h3>
-</section>
-
-<section>
-	<a name="media"></a>
-	<h3 class="f3 spaced">Media</h3>
-</section>
-
-<section>
-	<a name="scroll"></a>
-	<h3 class="f3 spaced">Scroll</h3>
-</section>
-
-<section>
-	<a name="button"></a>
-	<h3 class="f3 spaced">Button</h3>
-</section>
-
-<section>
-	<a name="grid"></a>
-	<h3 class="f3 spaced">Grid</h3>
-</section>
-
-<section>
-	<a name="icon"></a>
-	<h3 class="f3 spaced">Icon</h3>
-</section>
-
-<section>
-	<a name="other"></a>
-	<h3 class="f3 spaced">Other</h3>
 </section>

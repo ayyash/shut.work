@@ -1,0 +1,21 @@
+
+<section>
+	<a name="gradient" class="anchor-target" ></a>
+	<h3 class="f3 spaced">Gradient</h3>
+	<p>Two functions are used a lot, the gradient to bottom, and to right. Thus making it simply, two shortcuts are created.</p>
+<pre><code class="language-less">// to bottom, default 0 to 100%
+.gradient(@start-color, @end-color, @start-location: 0%,  @end-location: 100%);
+
+// to right, default 0 to 100%
+.gradient-h (@start-color, @end-color, @start-location: 0%,  @end-location: 100%);
+
+// usage:
+.grdbox {
+	.gradient(white, black);
+}
+</code></pre>
+
+<div class="box box-white">
+	<div class="grdbox">Gradient box white to black</div>
+</div>
+</section>

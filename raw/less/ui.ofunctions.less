@@ -147,3 +147,47 @@
 	#border-radius > .bottomright(5px);
 	padding: @space;
 }
+
+.colorcontrast-light {
+	.box();
+	background-color: @yellow-light;
+	.fcolor($background-color);
+}
+
+.colorcontrast-dark {
+	.box();
+	background-color: @green;
+	.fcolor($background-color);
+}
+
+
+.grdbox {
+	.box();
+	.gradient(white, black);
+}
+
+.scrollme {
+	overflow-x: hidden;
+	overflow-y: auto;
+	.hm-1(); 
+	.scroll();
+}
+
+.scrollme-x {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	.scroll(2px);
+}
+
+.responsivefont {
+	#rem > .font-size(1.5);
+}
+
+.media(md, {
+	.responsivefont {
+		#rem > .res-font-size(1.5);
+	}
+});
+
+
