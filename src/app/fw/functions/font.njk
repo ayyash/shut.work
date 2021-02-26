@@ -12,7 +12,7 @@
 
 // multiple the font passed by a factor of @resFontFactor
 // depending on @enable-res-fonts option
-.resfont(@fontsize);
+#rem > .res-font-size(@font-size);
 </code></pre>
 
 <p>Usage: this helps in making fonts responsive by a predefined fraction, without fine tuning them.</p>
@@ -41,22 +41,45 @@
 color: contrast(@c, @text-color, @white, @front-color-contrast);
 
 // usage
-.fcolor (@c);</code></pre>
+.fcolor (@c);
+
+// also, set background color to @c and front color to contrast
+.colorbox(@c)</code></pre>
 <p>Example:</p>
 <pre><code class="language-less">.colorcontrast-light {
 	.box();
+
 	background-color: @yellow-light;
 	.fcolor($background-color);
+	// or for short .colorbox(@yellow-light);
 }
 
 .colorcontrast-dark {
 	.box();
+
 	background-color: @green;
 	.fcolor($background-color);
+	// or for short .colorbox(@green);
 }
 </code></pre>
 <div class="box box-white doublespaced">
 	<button class="colorcontrast-light">Light background color .colorcontrast-light</button>
 	<button class="colorcontrast-dark">Dark background color .colorcontrast-dark</button>
+</div>
+
+<h4 class="f4">Ellipses</h4>
+<pre><code class="language-less">.ellipsis();
+/* generates the following props
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+*/
+
+.tight-box {
+	.ellipses();
+}
+</code></pre>
+<div class="box box-white doublespaced">
+	<div class="tight-box">.tight-box Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum ipsum ex ratione impedit sint unde nulla molestiae veritatis, facere, praesentium provident blanditiis! Ipsam praesentium voluptas facilis placeat distinctio sapiente voluptate?</div>
 </div>
 </section>

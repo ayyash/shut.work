@@ -2,4 +2,35 @@
 <section>
 	<a name="button" class="anchor-target" ></a>
 	<h3 class="f3 spaced">Button</h3>
+<p>Use the main button template to create new buttons, or redefine the button template, change some properties, or add new properties, by accessing this function:</p>
+<div class="small box box-yellow-light spaced">Note that the <code>button</code> selector is normalized, but the <code>.btntemplate</code> applies only to <code class="shut-inline">.btn-</code> classes.</div>
+<pre><code class="language-less">// btn-template inside the box looks like this
+.btntemplate(){
+	padding: @button-padding-v @button-padding-h;
+	display: inline-block;
+	transition: background-color .518s;
+	line-height: 1;
+	.border-radius(@radius);
+	text-transform: uppercase;
+	font-size: 90%;
+	cursor: pointer;
+    border: 0;
+}	
+
+// buttons have upper-case default definition, let's remove that
+.btntemplate() {
+	text-transform: none;
+}
+
+// create a new button based on the same template
+.btn-orange {
+	.btntemplate();
+	color: @white;
+    background-color: orange;
+}
+</code></pre>
+<div class="box box-white override">
+	<button class="btn">No longer upper case</button>
+	<button class="btn-orange">New orange button</button>
+</div>
 </section>

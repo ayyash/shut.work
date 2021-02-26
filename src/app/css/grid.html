@@ -39,6 +39,7 @@ title: "Grid"
 </div>
 
 <h2 class="f2 spaced">The flexbox</h2>
+<div class="box box-yellow-light small">The grid column base is dependent on variable <code class="shut-inline">@wrapper</code>, set by default to 12.</div>
 <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;c-1&quot;&gt;c-1&lt;/div&gt;
 	&lt;div class=&quot;c-11&quot;&gt;c-11&lt;/div&gt;
@@ -422,8 +423,8 @@ title: "Grid"
 <section>
 	<h3 class="f5">LESS function</h3>
 	<p>Want more? Use the following function in LessCss to generate new grids.</p>
-	<pre><code class="language-less">/* generate media query for min-width set to 1200px */
-.media(1200, {
+	<pre><code class="language-less">/* generate media query for min-width set to xl (1200px) */
+.media(xl, {
 	/* generates .offset-xl-c1 to .offset-xl-c11 */
 	.generate-offset(11, xl);
 
@@ -449,6 +450,10 @@ title: "Grid"
 .myc-4-lookalike-off {
     .columns(4.5, 10px);
 }
+
+/* or redefine the grid column to something from .c-1 to .c-15
+by modifying the global variable */
+@wrapper: 15;
 </code></pre>
 
 	<div class="box box-white spaced">

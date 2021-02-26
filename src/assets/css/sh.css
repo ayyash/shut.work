@@ -63,16 +63,16 @@ textarea {
 /* rem */
 /* icons*/
 @font-face {
-  font-family: 'sh';
+  font-family: "sh";
   font-display: block;
-  src: url('../fonts/sh.ttf') format('truetype'), url('../fonts/sh.woff') format('woff'), url('../fonts/sh.svg#icons') format('svg');
+  src: url("../fonts/sh.ttf") format("truetype"), url("../fonts/sh.woff") format("woff"), url("../fonts/sh.svg#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'sh';
-    src: url('../fonts/sh.svg#icons') format('svg');
+    font-family: "sh";
+    src: url("../fonts/sh.svg#icons") format("svg");
   }
 }
 .liga,
@@ -82,7 +82,8 @@ textarea {
 .next-icon:after,
 .expand-icon:before,
 .collapse-icon:after,
-.modal-close:before {
+.modal-close:before,
+.my-new-icon:before {
   font-family: 'sh';
   text-transform: none;
   font-style: normal;
@@ -95,9 +96,9 @@ textarea {
   font-smooth: always;
   /* Enable Ligatures ================ */
   letter-spacing: 0;
-  -ms-font-feature-settings: 'liga' 1;
-  -o-font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
   font-variant-ligatures: discretionary-ligatures;
   /* ligatures? */
   content: attr(data-icon);
@@ -1248,7 +1249,7 @@ p {
   font-size: 2.45rem;
 }
 .f4 {
-  font-size: 2.1rem;
+  font-size: 1.82rem;
 }
 .f5 {
   font-size: 1.75rem;
@@ -1261,6 +1262,9 @@ p {
 }
 .smaller {
   font-size: 1.12rem;
+}
+.ayyash {
+  font-size: 28rem;
 }
 .weight-light {
   font-weight: 300;
@@ -1751,6 +1755,9 @@ body {
 .f2 {
   line-height: 1;
 }
+.f4 {
+  font-weight: 400;
+}
 .anchor-target {
   position: relative;
   top: -80px;
@@ -2109,7 +2116,7 @@ pre[class*=language-] {
 .arrow-above:before {
   display: inline-block;
   margin-right: 1.5rem;
-  content: '';
+  content: "";
 }
 .arrow-above:before {
   /* reset first */
@@ -2124,7 +2131,7 @@ pre[class*=language-] {
 .arrow-below:before {
   display: inline-block;
   margin-right: 1.5rem;
-  content: '';
+  content: "";
 }
 .arrow-below:before {
   left: 45%;
@@ -2138,7 +2145,7 @@ pre[class*=language-] {
 .arrow-right:before {
   display: inline-block;
   margin-right: 1.5rem;
-  content: '';
+  content: "";
 }
 .arrow-right:before {
   top: 30%;
@@ -2152,7 +2159,7 @@ pre[class*=language-] {
 .arrow-left:before {
   display: inline-block;
   margin-right: 1.5rem;
-  content: '';
+  content: "";
 }
 .arrow-left:before {
   top: 30%;
@@ -2189,7 +2196,7 @@ pre[class*=language-] {
 }
 .pointer-up:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-up:before {
   margin-right: 8px;
@@ -2209,7 +2216,7 @@ pre[class*=language-] {
 }
 .pointer-right:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-right:before {
   margin-right: 8px;
@@ -2228,7 +2235,7 @@ pre[class*=language-] {
 }
 .pointer-down:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-down:before {
   margin-right: 8px;
@@ -2247,7 +2254,7 @@ pre[class*=language-] {
 }
 .pointer-left:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-left:before {
   margin-right: 8px;
@@ -2267,7 +2274,7 @@ pre[class*=language-] {
 }
 .pointer-diagonalupleft:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-diagonalupleft:before {
   margin-right: 8px;
@@ -2287,7 +2294,7 @@ pre[class*=language-] {
 }
 .pointer-diagonalupright:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-diagonalupright:before {
   margin-right: 8px;
@@ -2308,7 +2315,7 @@ pre[class*=language-] {
 }
 .pointer-diagonaldownleft:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-diagonaldownleft:before {
   margin-right: 8px;
@@ -2328,7 +2335,7 @@ pre[class*=language-] {
 }
 .pointer-diagonaldownright:before {
   display: inline-block;
-  content: '';
+  content: "";
 }
 .pointer-diagonaldownright:before {
   margin-right: 8px;
@@ -2360,7 +2367,7 @@ pre[class*=language-] {
 }
 .coloredarrow:before {
   border-color: #ffc400;
-  content: '';
+  content: "";
   display: inline-block;
   top: 30%;
   right: -10px;
@@ -2460,13 +2467,173 @@ pre[class*=language-] {
   background-color: #272822;
   border-radius: 8px;
 }
+.btn-orange {
+  padding: 1.2rem 1.6rem;
+  display: inline-block;
+  transition: background-color 0.518s;
+  line-height: 1;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 90%;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  background-color: orange;
+}
+.override .btn {
+  text-transform: none;
+}
+.override .btn-orange {
+  text-transform: none;
+}
 .responsivefont {
   font-size: 1.5rem;
+}
+.bleh-1,
+.ubleh-1 > li {
+  width: 8.33333333%;
+}
+.bleh-2,
+.ubleh-2 > li {
+  width: 16.66666667%;
+}
+.bleh-3,
+.ubleh-3 > li {
+  width: 25%;
+}
+.bleh-spaced > .bleh-1,
+.bleh-spaced.ubleh-1 > li {
+  width: calc(8.33333333% - 0.75rem);
+}
+.bleh-spaced > .bleh-2,
+.bleh-spaced.ubleh-2 > li {
+  width: calc(16.66666667% - 0.75rem);
+}
+.bleh-spaced > .bleh-3,
+.bleh-spaced.ubleh-3 > li {
+  width: calc(25% - 0.75rem);
+}
+.gbleh-1 {
+  grid-template-columns: 8.33333333% auto;
+}
+.gbleh-2 {
+  grid-template-columns: 16.66666667% auto;
+}
+.gbleh-3 {
+  grid-template-columns: 25% auto;
+}
+.gbleh-4 {
+  grid-template-columns: 33.33333333% auto;
+}
+.gbleh-5 {
+  grid-template-columns: 41.66666667% auto;
+}
+.offset-bleh-1 {
+  margin-left: 8.33333333%;
+}
+.offset-bleh-2 {
+  margin-left: 16.66666667%;
+}
+.offset-bleh-3 {
+  margin-left: 25%;
+}
+.offset-bleh-4 {
+  margin-left: 33.33333333%;
+}
+.offset-bleh-5 {
+  margin-left: 41.66666667%;
+}
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-card > div {
+  width: 100%;
+}
+.contact-card .name {
+  width: 33.33333333%;
+}
+.contact-card .other {
+  width: 66.66666667%;
+}
+.contact-card dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-card dl dt {
+  font-size: 80%;
+  color: #959595;
+  width: 50%;
+}
+.contact-card dl dd {
+  width: 50%;
+}
+.contact-card dl dd.signature {
+  margin-left: 50%;
+}
+@media only screen and (min-width: 720px) {
+  .contact-card .name {
+    width: 25%;
+  }
+  .contact-card .other {
+    width: 75%;
+  }
+  .contact-card dl dt {
+    width: 33.33333333%;
+  }
+  .contact-card dl dd {
+    width: 66.66666667%;
+  }
+  .contact-card dl dd.signature {
+    margin-left: 33.33333333%;
+  }
 }
 @media only screen and (min-width: 720px) {
   .responsivefont {
     font-size: 1.8rem;
   }
+  .my-font {
+    font-size: 140%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .red-md span {
+    color: #f31109;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .my-new-screen {
+    color: #57b347;
+  }
+}
+.my-new-icon {
+  color: #f31109;
+}
+.my-new-icon:before {
+  content: "\e90d";
+}
+.fancy-icon {
+  position: relative;
+  text-align: center;
+}
+.fancy-icon:before {
+  margin: auto;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background-color: rgba(0, 151, 167, 0.5);
+  /*this is for plain icons content */
+  content: "\e90d";
+  font-family: 'sh';
+}
+.tight-box {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .myc-4-lookalike {
   width: 37.5%;

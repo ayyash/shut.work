@@ -1,4 +1,52 @@
 <section>
 	<a name="media" class="anchor-target" ></a>
 	<h3 class="f3 spaced">Media</h3>
+<p>Those are quick shortcuts to define different media stops for <code>screen and min-width</code>, and <code>screen and max-width</code>. Note the width cut-offs must be defined in <code class="shut-inline">@screen</code> collection in the variables file.</p>
+
+<pre><code class="language-less">// produces rules inside @media only screen and (min-width: @screen[md])
+// where @screen[md] is defined as 720px
+.media(md, {
+	// add rules here
+	.my-font {
+		font-size: 140%;
+	}
+});
+
+// produces rules inside @media only screen and (max-width: @screen[md])
+.mediamax(md, {
+	.red-md {
+		span {
+			color: red;
+		}
+	}
+});
+
+// add your own cut-off in variables file:
+@screen: {
+	xs: 480px; // special cases
+	sm: 600px; // mobile interface
+	md: 720px; // tablet portrait
+	lg: 960px; // the usual desktop and landscape tablets
+	xl: 1200px; // more popular small desktop
+	ds: 1600px; // up above desktop
+	mynewscreen: 1100px;
+};
+
+// then use it
+.media(mynewscreen, {
+	// min-width 1100px rules here
+});
+</code></pre>
+<div class="box box-white">
+	<div class="my-font">
+		<code>.my-font</code> is larger on screens > 720px
+	</div>
+	<div class="red-md">
+		<code>.red-md</code> is <span>red</span> on screens < 720px
+	</div>
+	<div class="my-new-screen">
+		This is green when width is > 1100px
+	</div>
+</div>
 </section>
+

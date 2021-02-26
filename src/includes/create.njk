@@ -2,7 +2,15 @@
 layout: "base"
 list: [
     {name: "Get started", href: "/fw/start/"},
-    {name: "LESS variables", href: "/fw/vars/"},
+    {name: "LESS variables", href: "/fw/vars/", children: [
+		{name: "Options", hname: "#options"},
+		{name: "Fonts", hname: "#fonts"},
+		{name: "Colors", hname: "#colors"},
+		{name: "Layout", hname: "#layout"},
+		{name: "Modals", hname: "#modals"},
+		{name: "Other", hname: "#other"},
+		{name: "In progress", hname: "#inprogress"}
+	]},
     {name: "LESS functions", href: "/fw/functions/", children: [
         {name: "Arrows", hname: "#arrows"},
         {name: "Border", hname: "#borders"},
@@ -12,8 +20,7 @@ list: [
         {name: "Scroll", hname: "#scroll"},
         {name: "Button", hname: "#button"},
         {name: "Grid", hname: "#grid"},
-        {name: "Icon", hname: "#icon"},
-        {name: "Other", hname: "#other"}
+        {name: "Icon", hname: "#icon"}
     ]}
 ]
 ---

@@ -38,7 +38,7 @@ title: "Type"
 			<h3 class="f3">.f3: Header 3</h3>
 		</li>
 		<li>
-			<h4 class="f4">.f4: Header 4</h4>
+			<h4 class="f4">.f4: Header 4</h4> <span class="smaller label label-blue-light">modified</span>
 		</li>
 		<li>
 			<h5 class="f5">.f5: Header 5</h5>
@@ -225,14 +225,20 @@ title: "Type"
 */
 .ellipsis();
 
-/* if @enable-res-fonts is set to true produces
+/* if @enable-res-fonts and @rem-enabled is set to true produces
 font-size: 2rem * @resFontFactor; */
-.resfont(2rem);
+#rem>.res-font-size(2);
 
 /* if @rem-enabled is set to true produces
 font-size: 1.2rem;
 else
 font-size: 12px; */
 #rem>.font-size(1.2);
-</code></pre>
+
+/* add new multipliers to @custom-font-multiplier set, 
+to have more multiplier font sizes using same formula,
+produces class .mynewFont with 4.2 rem, or 42px; */
+@custom-font-multiplier: {
+	mynewFont: 4.2; 
+}</code></pre>
 </section>

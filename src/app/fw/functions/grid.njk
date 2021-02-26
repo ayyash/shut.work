@@ -1,5 +1,168 @@
-
 <section>
-	<a name="grid" class="anchor-target" ></a>
+	<a name="grid" class="anchor-target"></a>
 	<h3 class="f3 spaced">Grid</h3>
+	<p>The grid system already has definitions to the major 12 columns, but those classes are not accessed in LESS
+		files, because they are generated. So in order to define widths using the same grid system, for example for a
+		more controled, declarative style of a specific reused component, use the following functions in LESS files.</p>
+	<pre><code class="language-less">// define grid in less for a contact card
+.contact-card {
+	// make a row
+	.row();
+	> div {
+		// ensures 100% width
+		.col();
+	}
+	.name {
+		// 4/12 (@wrapper is set to 12 in variables)
+		.columns(4);
+	}
+	.other {
+		// 8/12
+		.columns(8);
+	}
+	dl {
+		.row();
+		dt {
+			font-size: 80%;
+			color: @text-light;
+			.columns(6);
+		}
+		dd {
+			.columns(6);
+		}
+		dd.signature {
+			// margin-left by 6/12 columns
+			.offset(6);
+		} 
+	}
+}
+
+
+.media(md, {
+	.contact-card {
+		.name {
+			.columns(3);
+		}
+		.other {
+			.columns(9);
+		}
+		dl {
+			dt {
+				.columns(4);
+			}
+			dd {
+				.columns(8);
+			}
+			dd.signature {
+				.offset(4);
+			} 
+		}
+	}
+});
+
+// the following generates width: 37.5% (4.5 / @wrapper * 100)
+.myc-4-lookalike {
+    .columns(4.5);
+}
+// the following generates width: calc(37.5% - 10px);
+.myc-4-lookalike-off {
+    .columns(4.5, 10px);
+}
+</code></pre>
+
+	<div class="box box-white spaced">
+
+		<div class="contact-card">
+			<div class="name">
+				Ayyash
+			</div>
+			<div class="other">
+				<dl>
+					<dt>Phone</dt>
+					<dd>3045839992</dd>
+					<dt>Work phone</dt>
+					<dd>234324923993</dd>
+					<dd class="signature">Signature</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<div class="box box-white spaced">
+
+		<div class="myc-4-lookalike box-grey spaced">.myc-4-lookalike 4.5</div>
+		<div class="myc-4-lookalike-off box-grey">.myc-4-lookalike-off 4.5 - 10px;</div>
+
+	</div>
+	<h4 class="f4">Layout generation</h4>
+	<p>Also, you can auto generate definitons for columns with different labels, using the following generators. Shut defines grid layout for only three screen cut-offs: plain, <code>min-width: md</code>, and <code>min-width: lg</code>. Use these functions with combinations of media queries to generate more screen cut-offs.</p>
+<div class="box box-yellow-light small spaced">
+	All grid divides by <code class="shut-inline">@wrapper</code> as the base of the grid system. By default, it is <strong>12</strong>.
+</div>
+
+<pre><code class="language-less">// generates basic 
+.generate-column(5, bleh); // generates bleh-1, .ubleh-1 > li to .bleh-5, .ubleh-5 > li
+.generate-offset(5, bleh); // generates .offset-bleh-1 to .offset-bleh-5
+.generate-grid(5, gbleh); // generates .gbleh-1 to .gbleh-5, use inside display: grid
+
+/* generates .bleh-spaced > .bleh-1, .bleh-spaced.ubleh-1 > li 
+to .bleh-spaced > .bleh-3,.bleh-spaced.ubleh-3 > li
+using @halfspace value as the space between columns */
+.bleh-spaced {
+	.generate-spaced-column(3, bleh); 
+}
+</code></pre>
+<div class="box box-white row doublespaced">
+	<div class="bleh-1 box-grey-dark">bleh-1</div>
+	<div class="bleh-2 box-grey-light">bleh-2</div>
+	<div class="bleh-3 box-grey">bleh-3</div>
+</div>
+
+<p><code>.bleh-spaced</code> allows for some  gaps between columns. The way to do that is wrap with <code class="shut-inline">row-spaced</code> which adds <code class="shut-inline">justify-content: space-between;</code>. Then every <code class="shut-inline">.bleh-spaced</code> element, has a calculated reduction in width. This allows for gaps between columns without using <code>gap</code> css property (which is not yet supported on Safari), but with the disadvantage that you must fill the 12 columns, otherwise it would like this:</p>
+<div class="box box-white row-spaced bleh-spaced doublespaced ">
+	<div class="bleh-1 box-grey-dark">bleh-1</div>
+	<div class="bleh-2 box-grey-light">bleh-2</div>
+	<div class="bleh-3 box-grey">bleh-3</div>
+</div>
+
+<p>For grid template, the container is <code>.grid (display: grid)</code>. Shut only contains the simplest grid, where the first column width is defined, and the second is <code>auto</code>. This pattern is so repetaed in prototyping, it needed its own function.</p>
+<div class="box box-white grid gbleh-3 doublespaced">
+	<div class="box-grey-dark">gbleh-3</div>
+	<div class="box-grey">auto</div>
+</div>
+<p>The <code>offset-</code> classes add <code>margin-left</code> calculated values relative to the <code>@wrapper</code> value, allowing gaps in grid layout of specific number of columns. Alone, they look like this:</p>
+<div class="box box-white doublespaced">
+	<div class="box-grey-light offset-bleh-1">.offset-bleh-1</div>
+	<div class="box-grey-light offset-bleh-2">.offset-bleh-2</div>
+	<div class="box-grey-light offset-bleh-3">.offset-bleh-3</div>
+</div>
+
+<p>Here is an example of generating grid layout with <code>xl</code> screen cut-offs:</p>
+<pre><code class="language-less">.media(xl, {
+	/* generates .offset-xl-c1 to .offset-xl-c11 */
+	.generate-offset(11, xl);
+
+	/* generates .xl-1 to .xl-12, 
+	and .uxl-1 > li to .uxl-12 > li */
+	.generate-column(12, xl);
+	
+	// generats .gxl-1 to .gxl-11 with grid template
+	.generate-grid(11, gxl);
+	
+	/* generates .row-spaced > .xl-1 to .row-spaced > .xl-12 
+	and .row-spaced > .uxl-1 to .row-spaced > .uxl-12
+	with slightly smaller percentages to accomodate for spacing */
+	.row-spaced {
+		.generate-spaced-column(12, xl);
+	}
+});</code></pre>
+<h4 class="f4">Grid height</h4>
+<p>The following functions produce heights multiplied by factor <code class="shut-inline">@grid-column-height</code>. Out of the box, Shut defines min-height and max-height with 1 multiplier to 6. Here is how to add more.</p>
+<pre><code class="language-css">/* generate .h-7 to .h-12, .uh-7 to .uh-12 with min-height */
+.generate-min-heights(7, 12);
+
+/* generate .hm-7 to .hm-12, .uhm-7 to .uhm-12 with max-height */
+.generate-max-heights(7, 12);
+
+</code></pre>
+
 </section>
