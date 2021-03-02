@@ -17,7 +17,7 @@ title: "Icons"
 </div>
 
 <p>Icons are very diverse, and special to every project. The only thing that a framework should provide for
-	icons, is a set of functions to use in LESS or SCSS. The following are the defitions and LESS functions in
+	icons, is a set of functions to use in LESS or SCSS. The following are the definitions and LESS functions in
 	this framework, and how to make use of them.</p>
 <div class="spaced box box-yellow-light small">Don't just use a ready made collection of fonts, generate your
 	own icon font using online tools like <a href="https://icomoon.io/app/#/select">icomoon</a>, or <a
@@ -71,7 +71,7 @@ title: "Icons"
 }</code></pre>
 
 	<h4 class="f5 weight-normal">Extend</h4>
-	<p>To extend the defintions in your project, add them like the following example (LESS merges the two
+	<p>To extend the defintion in your project, add it as follows (LESS merges the two
 		definitions into one):</p>
 	<pre><code class="language-less">.symbolDef() {
      vertical-align: middle;
@@ -95,7 +95,7 @@ title: "Icons"
 
 	<h4 class="f5 weight-normal">Use</h4>
 
-	<p>Use it in HTML like this (inside a button as an example)</p>
+	<p>In HTML, combine the class name with <code class="shut-inline">.symbol</code> like this (inside a button as an example)</p>
 	<pre><code class="language-html">&lt;button class=&quot;btn&quot;&gt;
 	&lt;span class=&quot;symbol icon-place&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
@@ -127,7 +127,7 @@ title: "Icons"
 </section>
 <section>
 	<h3 class="f5">LESS functions</h3>
-	<p>Using icon classnames directly in HTML is one way, using them in LESS is another fine-tuned way, here are
+	<p>Using icon class names directly in HTML is one way, using them in LESS is another fine-tuned way, here are
 		some LESS functions you can use.</p>
 	<pre><code class="language-less">// .getIcon(value) makes the rule ready for use with :before
 .search-icon {
@@ -158,6 +158,25 @@ title: "Icons"
 		.changeIcon(@icon-down, "after");
 	}
 }
+
+// and use .displayIcon(value) directly in a pseudo element
+.fancy-icon {
+	position: relative;
+	text-align: center;
+	&:before {
+		margin: auto;
+		border-radius: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		color: @white;
+		background-color: fade(@blue, 50);
+		.displayIcon(@icon-place);
+	}
+
+}
 </code></pre>
 
 	<p>To use in HTML:</p>
@@ -166,7 +185,8 @@ title: "Icons"
 &lt;div class=&quot;expand-icon&quot;&gt;Expand&lt;/div&gt;...
 &lt;div class=&quot;expand-icon expanded&quot;&gt;Expanded&lt;/div&gt;
 &lt;div class=&quot;collapse-icon&quot;&gt;Collapse&lt;/div&gt;... 
-&lt;div class=&quot;collapse-icon collapsed&quot;&gt;Collapsed&lt;/div&gt;</code></pre>
+&lt;div class=&quot;collapse-icon collapsed&quot;&gt;Collapsed&lt;/div&gt;
+&lt;div class=&quot;fancy-icon&quot;&gt;.fancy-icon&lt;/div&gt;</code></pre>
 	<div class="box box-white spaced">
 		<ul class="alist">
 			<li>
@@ -183,7 +203,9 @@ title: "Icons"
 				<div class="collapse-icon">Collapse</div> <span class="hbreath">...</span>
 				<div class="collapse-icon collapsed">Collapsed</div>
 			</li>
-			
+			<li>
+				<div class="fancy-icon">.fancy-icon</div>
+			</li>
 		</ul>
 	</div>
 </section>

@@ -73,16 +73,16 @@ title: "Responsive"
     Creating a more responsive behavior, is project-specific. </div>
   <p>The following function is availbale in LESS when <code class="shut-inline">@enable-res-fonts</code> is set to true
   </p>
-  <pre><code class="language-less">// Produces font-size: 12px * 1.2 
-.resfont(12px);
+  <pre><code class="language-less">// Produces font-size: 20px * @resFontFactor or 2 rem * @resFontFactor
+#rem>.res-font-size(2);
 
 // To use with media queries, to produce a class with responsive font size.
 .myClass {
-  font-size: 2rem;
+  #rem>.font-size(2);
 }
 .media(lg, {
   .myClass {
-    .resfont(2rem);
+    #rem>.res-font-size(2);
   }
 });
 </code></pre>

@@ -3,6 +3,7 @@ layout: "about"
 title: "Why SHUT?"
 ---
 
+
 <div class="page">
 	<div class="container md-8 center">
 
@@ -30,14 +31,18 @@ title: "Why SHUT?"
 		<p><strong>Detailed styling, over-loads the outcome stylesheet</strong>. SHUT framework provides enough for
 			designers to quickly prototype, but to add style, and look and feel, they should roll up their sleeves and
 			get their hands dirty. The output stylesheet is always smaller, and if done right, more maintainable.
-			Bootstrap is a black box, hard to control.</p>
+			Bootstrap is a black box, hard to control, or maintain, let alone customize.</p>
+
+		<p>When Bootstrap came out, a lot of designers found refuge from obstrusive libraries (like Kendo UI), where they controlled the HTML, and let CSS be what it is good for; styling. Unfortunately, as the years went by, <strong>Bootstrap became yet another UI component library with an overloaded HTML hierarchy</strong>, and a huge CSS stylesheet to maintain. This lead to many derived libraries trying to control the output by simply wrapping it inside mroe black boxes! </p>
+			
+		<p>The main take against that is maintainability on large projects. <strong>If you do not get the same HTML you wrote as a developer, fixing style issues becomes a nightmare</strong>. That actually is why I do not buy into web components, just yet. </p>
 
 		<h3 class="f3 spaced">SHUT is to prototype.</h3>
 
 		<p>Shut framework was first built with one target in mind: <strong>I am a designer</strong>, who wants to create
 			a quick prototype, that can be used later to develop real code. I do not want to throw it all away and start
 			over (as we do with prototype apps), and I do not want to dig too deep into the engine to customize it (like
-			in Bootstrap).</p>
+			in Bootstrap). I aslo want to own the HTML output.</p>
 
 		<h3 class="f3 spaced">The case against prototyping apps</h3>
 		<p>
@@ -76,7 +81,7 @@ title: "Why SHUT?"
 			</li>
 			<li>
 				<strong>Does not involve JavaScript,</strong> nor has any prebuilt components. JavaScript is reliant on
-				framework used by developers, to have a CSS framework have an opinion about it, is intrusive.
+				framework used by developers, to have a CSS framework have an opinion about it, is obstrusive.
 
 			</li>
 			<li>

@@ -116,7 +116,7 @@ title: "Grid"
 <section>
 
 	<h3 class="f5 ">Auto width and spaced between</h3>
-	<p>Add <code class="shut-inline">.row-spaced</code> to apply: <code class="shut-inline">justify-content:
+	<p>Replace with <code class="shut-inline">.row-spaced</code> to apply: <code class="shut-inline">justify-content:
 			space-between</code></p>
 	<div class="row-spaced ">
 		<div class="box box-white">auto</div>
@@ -128,7 +128,7 @@ title: "Grid"
 	<h3 class="f5 ">Fixed width and spaced between</h3>
 	<p>
 		On a 12-column grid, adding <code class="shut-inline">c-x</code> for the number of columns, places
-		content in x of 12 segments of the total width. (This is similar to Bootstrap).
+		content in x of <code class="shut-inline">@wrapper</code> segments (default 12) of the total width. (This is similar to Bootstrap).
 	</p>
 	<pre><code class="language-html">&lt;div class=&quot;row-spaced&quot;&gt;
 	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
@@ -142,7 +142,7 @@ title: "Grid"
 	</div>
 </section>
 <section>
-	<h3 class="f5 weight-normal">Auto left and right margin</h3>
+	<h3 class="f5">Auto left and right margin</h3>
 	<p>The element with <code class="shut-inline">.lauto</code> has margin left set to auto.</p>
 	<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
@@ -168,7 +168,7 @@ title: "Grid"
 </section>
 <section>
 
-	<h3 class="f5 weight-normal">Row breaker</h3>
+	<h3 class="f5">Row breaker</h3>
 	<p>To break free from a grid, add an element with <code class="shut-inline">.w100</code>, this sets width to
 		100%.</p>
 	<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
@@ -188,7 +188,7 @@ title: "Grid"
 </section>
 
 <section>
-	<h3 class="f5 weight-normal">Lists</h3>
+	<h3 class="f5">Lists</h3>
 	<p>Rows may apply to ul, will carry forward column definition to li's of the same value. The class names are
 		<code class="shut-inline">.uc-1</code> to <code class="shut-inline">.uc-12</code></p>
 	<div class="spaced">
@@ -292,7 +292,7 @@ title: "Grid"
 	<p>
 		A simpler way to produce two columns of content, using css grid, depending on flat HTML elements.
 		Alternating.
-		The first column is defined by g-n (n is 1 to 11) and the second one is an auto width.
+		The first column is defined by g-n (n is 1 to <code class="shut-inline">@wrapper</code> by default 12) and the second one is an auto width.
 	</p>
 	<pre><code class="language-html">&lt;div class=&quot;grid g-3&quot;&gt;
 	&lt;h5&gt;g-3&lt;/h5&gt;
@@ -338,7 +338,7 @@ title: "Grid"
 <h3 class="f3 spaced">Responsive</h3>
 
 <section>
-	<p>Grid styles apply on smallest screen, if you wan the grid to apply to larger screens, the framework
+	<p>Grid styles apply on smallest screen, if you want the grid to apply to larger screens, the framework
 		defines two stops out of the box <code class="shut-inline">.md</code>, and <code class="shut-inline">.lg</code>,
 		for flex grid, and <code class="shut-inline">.gmd</code>, and <code class="shut-inline">.glg</code> for css
 		grid. As follows.</p>
@@ -524,7 +524,7 @@ by modifying the global variable */
 </section>
 <section>
 	<h3 class="f5">LESS function</h3>
-	<p>The framework provides h-1 to h-6, you can generate more heights using the following LESS functions:</p>
+	<p>The framework provides <code>.h-1</code> to <code>.h-6</code>, you can generate more heights using the following LESS functions:</p>
 	<pre><code class="language-css">/* generate .h-7 to .h-12, .uh-7 to .uh-12 with min-height */
 .generate-min-heights(7, 12);
 

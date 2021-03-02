@@ -45,7 +45,7 @@ title: "Color"
 </div>
 
 
-		<p>The color collection in LESS variable look like this</p>
+		<p>The color collection in LESS variables look like this</p>
 		<pre><code class="language-less">@colors: {
 	red: 		@red;
 	yellow: 	@yellow;
@@ -63,7 +63,7 @@ title: "Color"
 };</code></pre>
 
 		<p>The following styles loop through the collection to define new rules. Adding more to the collection, creates
-			new rules.</p>
+			new rules. (And removing any, also removes rules).</p>
 		<section>
 			<h3 class="f5">Text</h3>
 
@@ -123,40 +123,40 @@ title: "Color"
 			<div class="grid g-4 spacedout doublespaced">
 
 				<h6 class="f6">.label</h6>
-				<div><a href="" class="label">Plain label (padded and hover effect for links)</a></div>
+				<div><a  class="label">Plain label (padded and hover effect for links)</a></div>
 				<h6 class="f6">.label-yellow</h6>
-				<div><a href="" class="label label-yellow">yellow</a></div>
+				<div><a  class="label label-yellow">yellow</a></div>
 				<h6 class="f6">.label-yellow-light</h6>
-				<div><a href="" class="label label-yellow-light">yellow light</a></div>
+				<div><a  class="label label-yellow-light">yellow light</a></div>
 				<h6 class="f6">.label-red</h6>
-				<div><a href="" class="label label-red">red</a></div>
+				<div><a  class="label label-red">red</a></div>
 				<h6 class="f6">.label-red-light</h6>
-				<div><a href="" class="label label-red-light">red light</a></div>
+				<div><a  class="label label-red-light">red light</a></div>
 				<h6 class="f6">.label-green</h6>
-				<div><a href="" class="label label-green">green</a></div>
+				<div><a  class="label label-green">green</a></div>
 				<h6 class="f6">.label-green-light</h6>
-				<div><a href="" class="label label-green-light">green light</a></div>
+				<div><a  class="label label-green-light">green light</a></div>
 				<h6 class="f6">.label-blue</h6>
-				<div><a href="" class="label label-blue">blue</a></div>
+				<div><a  class="label label-blue">blue</a></div>
 				<h6 class="f6">.label-blue-light</h6>
-				<div><a href="" class="label label-blue-light">blue light</a></div>
+				<div><a  class="label label-blue-light">blue light</a></div>
 				<h6 class="f6">.label-light</h6>
-				<div><a href="" class="label label-light">light</a></div>
+				<div><a  class="label label-light">light</a></div>
 				<h6 class="f6">.label-lighter</h6>
-				<div><a href="" class="label label-lighter">lighter</a></div>
+				<div><a  class="label label-lighter">lighter</a></div>
 				<h6 class="f6">.label-grey-light</h6>
-				<div><a href="" class="label label-grey-light">grey light</a></div>
+				<div><a  class="label label-grey-light">grey light</a></div>
 				<h6 class="f6">.label-grey</h6>
-				<div><a href="" class="label label-grey">grey</a></div>
+				<div><a  class="label label-grey">grey</a></div>
 				<h6 class="f6">.label-grey-dark</h6>
-				<div><a href="" class="label label-grey-dark">grey dark</a></div>
+				<div><a  class="label label-grey-dark">grey dark</a></div>
 				<h6 class="f6">.label-white</h6>
-				<div><a href="" class="label label-white">white</a></div>
+				<div><a  class="label label-white">white</a></div>
 			</div>
 		</section>
 		<section>
 			<h3 class="f5">Box</h3>
-			<p>The foreground color is decided in the same way as in labels.</p>
+			<p>The foreground color is decided the same way as with labels.</p>
 			<div class="small box box-yellow-light spaced">
 				Padding is set by <code class="shut-inline">@box-padding</code>. Border radius is set by 
 				<code class="shut-inline">@radius</code>, if <code
@@ -217,7 +217,7 @@ title: "Color"
 		</section>
 		<section>
 			<h3 class="f5">Shadows</h3>
-			<p>The shadow collection in LESS variables look like this </p>
+			<p>The shadow collection in LESS variables look like this (you can add or remove from the list) </p>
 			<pre><code class="language-less">@shadows: {
 	none: none;
     shallow: 0 0 5px 0 rgba(0,0,0,.1); 
@@ -308,11 +308,13 @@ title: "Color"
 					<div class="box box-shadow-inner">Inner shadow</div>
 				</div>
 
+				<p>Using <code class="shut-inline">.colorbox(color)</code> uses <code>contrast</code> LESS function to generate front color.</p>
+
 				<pre><code class="language-less">/* This produces 
+background-color: #883373;
 color: contrast(#883373, @text-color, @white, @front-color-contrast) */
 .myclass {
-	.fcolor(#883373);
-	background-color: #883373;
+	.colorbox(#883373);
 }
 </code></pre>
 				<div class="box box-white spaced">
