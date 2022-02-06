@@ -60,18 +60,24 @@ title: "Type"
 		in case <code>font-variation-settings</code> is not supported, so variable fonts can be used.</div>
 
 	<div class="grid g-4 g-bthin spacedout doublespaced">
+		<h6 class="f6">.weight-light</h6>
+		<div>
+			<div class="weight-light">Light</div>
+			Defined by <code class="shut-inline">@font-weight-light</code>, default 300
+		</div>
 		<h6 class="f6">.weight-normal</h6>
 		<div>
 			<div class="weight-normal">Normal</div>
 			Defined by <code class="shut-inline">@font-weight</code>, default 400
 
 		</div>
-
-		<h6 class="f6">.weight-light</h6>
+		<h6 class="f6">.weight-medium</h6>
 		<div>
-			<div class="weight-light">Light</div>
-			Defined by <code class="shut-inline">@font-weight-light</code>, default 300
+			<div class="weight-medium">Medium</div>
+			Defined by <code class="shut-inline">@font-weight-medium</code>, default 500
+
 		</div>
+
 
 		<h6 class="f6">.weight-bold</h6>
 		<div>
@@ -240,5 +246,18 @@ to have more multiplier font sizes using same formula,
 produces class .mynewFont with 4.2 rem, or 42px; */
 @custom-font-multiplier: {
 	mynewFont: 4.2; 
-}</code></pre>
+}
+
+
+/* this set is looped to create .weight-[key]: font-weight: [value] */
+@font-weight-set: {
+	light: 300;
+	normal: 400;
+	medium: 500;
+	bold: 700;
+	// e.g. adding this, produces .weight-mynewblack class
+	mynewblack: 950; 
+};
+
+</code></pre>
 </section>

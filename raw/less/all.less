@@ -8,35 +8,45 @@
 @import "utilities/arrow";
 @import "utilities/border";
 @import "utilities/gradient";
-@import "utilities/functions.less";
+@import "utilities/functions";
 @import "utilities/media";
 @import "utilities/scroll";
 
-@import "css.Icon.less";
+// icon functions
+@import "css.Icon";
 
+// all other styles
+@import "css.General";
+@import "css.Layout";
+@import "css.Card";
+@import "css.Lists";
+@import "css.Table";
 
-@import "css.General.less";
-@import "css.Layout.less";
-@import "css.Button.less";
-@import "css.Grid.less";
-@import "css.Modal.less";
-@import "css.Card.less";
-@import "css.Type.less"; 
-@import "css.Box.less";
-@import "css.Label.less";
-@import "css.Lists.less";
-@import "css.Table.less";
+// uses utitilites/media
+@import "css.Grid";
+
+// uses utitilites/border and utilities/functions
+@import "css.Button";
+@import "css.Box";
+@import "css.Label";
+
+// uses utitilites/scroll
+@import "css.Modal";
+
+// uses utitilites/media and utilities/functions
+@import "css.Type";
+
 
 /* Print */
-// @import "media.print.less";
+@import "media.print.less";
 
 
+//************KEEP THIS*************
 // you vars, overwrites shut vars
-@import "sh._vars.less";
+@import "sh._vars";
 
 
 // inject:uiless
-@import "ui._web.less";
 @import "ui.icons.less";
 @import "ui.modal.less";
 @import "ui.ocard.less";
@@ -46,8 +56,13 @@
 @import "ui.ogrid.less";
 @import "ui.oheader.less";
 @import "ui.ooutline.less";
+@import "ui._web.less";
 // endinject
 
 
 // inject:medialess
 // endinject
+
+
+// FIXED: overriders all the way at the bottom
+@import "css.Override.less";

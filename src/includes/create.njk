@@ -1,7 +1,13 @@
 ---
 layout: "base"
 list: [
-    {name: "Get started", href: "/fw/start/"},
+    {name: "Get started", href: "/fw/start/", children: [
+		{name: "1. Start", hname: "#step1"},
+		{name: "2. Variables", hname: "#step2"},
+		{name: "3. Icons", hname: "#step3"},
+		{name: "4. Prefix", hname: "#step4"},
+		{name: "Gulp", hname: "#gulp"}
+	]},
     {name: "LESS variables", href: "/fw/vars/", children: [
 		{name: "Options", hname: "#options"},
 		{name: "Fonts", hname: "#fonts"},
@@ -9,6 +15,7 @@ list: [
 		{name: "Layout", hname: "#layout"},
 		{name: "Modals", hname: "#modals"},
 		{name: "Other", hname: "#other"},
+		{name: "CSS Variables", hname: "#cssvars"},
 		{name: "In progress", hname: "#inprogress"}
 	]},
     {name: "LESS functions", href: "/fw/functions/", children: [

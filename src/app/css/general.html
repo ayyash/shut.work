@@ -88,49 +88,49 @@ title: "General"
 		<code class="shut-inline">@halfspace</code>, <code class="shut-inline">@extraspace</code>, and <code
 			class="shut-inline">@doublespace</code>.</p>
 
-	<p>All classes that involve right or left definition, are mirrorred in RTL automatically.</p>
+	<p>All classes that involve right or left definition, are {% mirror %} in RTL automatically. {% logic %} classes use logical <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS logical properties.</a></p>
 
 	<div class="grid g-3 g-bthin spacedout doublespaced">
 		<h6 class="f6">.breath</h6>
 		<div>Breathing (<code>@halfspace</code> padded from top and bottom)</div>
 		<h6 class="f6">.rbreath</h6>
-		<div>Right breath {% mirror %}</div>
+		<div>Inline end padding {% logic %}</div>
 		<h6 class="f6">.lbreath</h6>
-		<div>Left breath {% mirror %}</div>
+		<div>Inline start breath {% logic %}</div>
 		<h6 class="f6">.hbreath</h6>
 		<div>Breathing horizontally (right and left)</div>
 		<h6 class="f6">.breathout</h6>
 		<div>Breath for li elements</div>
 
 		<h6 class="f6">.rpad</h6>
-		<div>Padding right (<code>@space</code>) {% mirror %}</div>
+		<div>Inline end padding (<code>@space</code>) {% logic %}</div>
 
 		<h6 class="f6">.lpad</h6>
-		<div>Padding left {% mirror %}</div>
+		<div>Inline start padding {% logic %}</div>
 
 		<h6 class="f6">.hpad</h6>
 		<div>Padding horizontally (right and left)</div>
 
 		<h6 class="f6">.padtop</h6>
-		<div>Padding top <span class="smaller">(should avoid, if you had to use this, reconsider your design strategy here)</span>.</div>
+		<div>Padding block start <span class="smaller">(should avoid, if you had to use this, reconsider your design strategy here)</span>.</div>
 
 
 		<h6 class="f6">.spaced</h6>
-		<div>Bottom margin (<code>@space</code>)</div>
+		<div>Block end margin (<code>@space</code>)</div>
 		<h6 class="f6">.doublespaced</h6>
-		<div>Double bottom margin (<code>@doublespace</code>)</div>
+		<div>Double block end margin (<code>@doublespace</code>)</div>
 
 		<h6 class="f6">.lspace</h6>
-		<div>Margin left {% mirror %}</div>
+		<div>Margin inline start {% logic %}</div>
 		<h6 class="f6">.rspace</h6>
-		<div>Margin right {% mirror %}</div>
+		<div>Margin inline end {% logic %}</div>
 
 		<h6 class="f6">.spacedout</h6>
-		<div>Bottom margin for li elements, gap for grid elements, or padding around for td elements.</div>
+		<div>Bottom (block-end) margin for li elements, gap for grid elements, or padding around for td elements.</div>
 		<h6 class="f6">.doublespacedout</h6>
-		<div>Double bottom margin for li elements.</div>
+		<div>Double bottom (block-end) margin for li elements.</div>
 		<h6 class="f6">.spacetop</h6>
-		<div>Margin top <span class="smaller">(should avoid)</span>.</div>
+		<div>Margin block start <span class="smaller">(should avoid)</span>.</div>
 
 		<h6 class="f6">.r</h6>
 		<div>Float right {% mirror %}</div>
@@ -138,9 +138,9 @@ title: "General"
 		<div>Float left {% mirror %}</div>
 
 		<h6 class="f6">.lauto</h6>
-		<div>Left auto margin {% mirror %}</div>
+		<div>Margin inline start auto {% logic %}</div>
 		<h6 class="f6">.rauto</h6>
-		<div>Right auto margin {% mirror %}</div>
+		<div>Margin inline end auto {% logic %}</div>
 		<h6 class="f6">.center</h6>
 		<div>Horizontal auto margins</div>
 		<h6 class="f6">.center-content</h6>
@@ -149,6 +149,8 @@ title: "General"
 		<div>Display inline-block</div>
 		<h6 class="f6">.dblock</h6>
 		<div>Display block</div>
+		<h6 class="f6">.dflex</h6>
+		<div>Display flex</div>
 		<h6 class="f6">.hidden</h6>
 		<div>Display none</div>
 		<h6 class="f6">.flex-nowrap</h6>
@@ -175,15 +177,17 @@ title: "General"
 		<div>whites-space: nowrap.</div>
 
 		<h6 class="f6">.bthin</h6>
-		<div>Bottom bordered, thin</div>
+		<div>Bottom bordered, thin {% logic %}</div>
 		<h6 class="f6">.bthick</h6>
-		<div>Bottom bordered, thick</div>
+		<div>Bottom bordered, thick {% logic %}</div>
 		<h6 class="f6">.bthin-dark</h6>
-		<div>Bottom bordered dark, thin</div>
+		<div>Bottom bordered dark, thin {% logic %}</div>
 		<h6 class="f6">.bthick-dark</h6>
-		<div>Bottom bordered dark, thick</div>
+		<div>Bottom bordered dark, thick {% logic %}</div>
 		<h6 class="f6">.clear</h6>
 		<div>Clear both</div>
+		<h6 class="f6">.dscroll</h6>
+		<div>Overflow-y: auto, overflow-x: hidden</div>
 	</div>
 
 

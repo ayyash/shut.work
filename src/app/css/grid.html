@@ -8,6 +8,7 @@ title: "Grid"
 	<ul class="alist">
 		<li><code class="shut-inline">.row</code></li>
 		<li><code class="shut-inline">.row-spaced</code></li>
+		<li><code class="shut-inline">.row-gap</code></li>
 		<li><code class="shut-inline">.w100</code></li>
 		<li><code class="shut-inline">.col</code></li>
 		<li><code class="shut-inline">.c-1</code> to <code class="shut-inline">.c-12</code></li>
@@ -38,7 +39,7 @@ title: "Grid"
 
 </div>
 
-<h2 class="f2 spaced">The flexbox</h2>
+<h2 class="f2 spaced weight-light">The flexbox</h2>
 <div class="box box-yellow-light small">The grid column base is dependent on variable <code class="shut-inline">@wrapper</code>, set by default to 12.</div>
 <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;c-1&quot;&gt;c-1&lt;/div&gt;
@@ -117,18 +118,19 @@ title: "Grid"
 
 	<h3 class="f5 ">Auto width and spaced between</h3>
 	<p>Replace with <code class="shut-inline">.row-spaced</code> to apply: <code class="shut-inline">justify-content:
-			space-between</code></p>
-	<div class="row-spaced ">
+			space-between</code>. </p>
+	<div class="row-spaced">
 		<div class="box box-white">auto</div>
 		<div class="box box-white">auto</div>
 		<div class="box box-white">auto</div>
 	</div>
+
 </section>
 <section>
 	<h3 class="f5 ">Fixed width and spaced between</h3>
 	<p>
 		On a 12-column grid, adding <code class="shut-inline">c-x</code> for the number of columns, places
-		content in x of <code class="shut-inline">@wrapper</code> segments (default 12) of the total width. (This is similar to Bootstrap).
+		content in x of <code class="shut-inline">@wrapper</code> segments (default 12) of the total width. (This is similar to Bootstrap). This also accounts for margins around boxes of <code class="shut-inline">@gutterspace</code>
 	</p>
 	<pre><code class="language-html">&lt;div class=&quot;row-spaced&quot;&gt;
 	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
@@ -142,7 +144,7 @@ title: "Grid"
 	</div>
 </section>
 <section>
-	<h3 class="f5">Auto left and right margin</h3>
+	<h3 class="f5">Auto inline start and end margin</h3>
 	<p>The element with <code class="shut-inline">.lauto</code> has margin left set to auto.</p>
 	<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
@@ -330,6 +332,9 @@ title: "Grid"
 
 		<code class="shut-inline">.w100</code>
 		<span>Width 100%. Important</span>
+
+		<code class="shut-inline">.row-gap</code>
+		<span>Adds a gap of <code>@gutterspace</code></span>
 
 	</div>
 

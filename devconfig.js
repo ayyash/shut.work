@@ -7,7 +7,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
     eleventyConfig.addShortcode("mirror", function () {
-        return `<span class="label label-blue smaller">mirored</span>`;
+        return `<span class="label label-blue smaller">mirrored</span>`;
+    });
+
+	eleventyConfig.addShortcode("logic", function () {
+        return `<span class="label label-yellow smaller">logical</span>`;
     });
 
 

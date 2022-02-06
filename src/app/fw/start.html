@@ -4,16 +4,16 @@ title: "Get started"
 ---
 
 <section>
-<p>
-	Get started immidiately with the default CSS, by including it in the header:
-</p>
-<pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shut@6/dist/css/sh.min.css" /></code></pre>
+	<p>
+		Get started immidiately with the default CSS, by including it in the header:
+	</p>
+	<pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shut@6/dist/css/sh.min.css" /></code></pre>
 
-<p>
-	And here is the simplest starting template:
-</p>
+	<p>
+		And here is the simplest starting template:
+	</p>
 
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+	<pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 	&lt;meta charset=&quot;utf-8&quot;&gt;
@@ -33,12 +33,37 @@ title: "Get started"
 
 <section>
 	<h3 class="f3">Let's open the box</h3>
-	<p>In order to create your own css, based on the basic rules of SHUT, you need to have at least LESS installed, or a <a href="http://lesscss.org/" target="_blank">LESS</a> task running plugin. I use <a href="https://www.npmjs.com/package/gulp" target="_blank">Gulp</a>, and <a href="https://www.npmjs.com/package/gulp-less" target="_blank">Gulp-less</a>.</p>
+	<p>In order to create your own css, based on the basic rules of SHUT, you need to have at least LESS installed, or a
+		<a href="http://lesscss.org/" target="_blank">LESS</a> task running plugin. I use <a
+			href="https://www.npmjs.com/package/gulp" target="_blank">Gulp</a>, and <a
+			href="https://www.npmjs.com/package/gulp-less" target="_blank">Gulp-less</a>.</p>
 </section>
+
 <section>
-	<h3 class="f3">Inside the box</h3>
-	<p>The following imports are used to create the default sh.css. </p>
-<pre><code class="language-less">// you vars
+	<h3 class="f3">Variables and functions</h3>
+	<p>See the list of <a href="/fw/vars">variables</a>, and the list of <a href="/fw/functions">functions</a> inside
+		Shut framework.</p>
+</section>
+
+
+<section>
+
+
+	<h3 class="f3">Steps</h3>
+	<a name="step1" class="anchor-target"></a>
+
+	<section>
+		<h4 class="f4">1. Create a folder for LESS files</h4>
+		<p>Begin with <code class="shut-inline">sh.imports.less</code>. Import all styles in one shot:</p>
+		<pre><code class="language-less">// import all from shut
+@import "sh.less";</pre></code>
+
+		<p>Or be specific and include only the styles you need. Here are all individual imports used to create <code
+				class="shut-inline">sh.less</code></p>
+		<pre><code class="language-less">
+// ***********CUSTOM**************
+
+// shut vars
 @import "sh.vars.less";
 
 /* resetting */
@@ -48,68 +73,158 @@ title: "Get started"
 @import "utilities/arrow";
 @import "utilities/border";
 @import "utilities/gradient";
-@import "utilities/functions.less";
+@import "utilities/functions";
 @import "utilities/media";
 @import "utilities/scroll";
 
-// icon functions 
-@import "css.Icon.less";
+// icon functions
+@import "css.Icon";
 
 // all other styles
-@import "css.General.less";
-@import "css.Layout.less";
-@import "css.Card.less";
-@import "css.Lists.less";
-@import "css.Table.less";
+@import "css.General";
+@import "css.Layout";
+@import "css.Card";
+@import "css.Lists";
+@import "css.Table";
 
 // uses utitilites/media
-@import "css.Grid.less";
+@import "css.Grid";
 
 // uses utitilites/border and utilities/functions
-@import "css.Button.less";
-@import "css.Box.less";
-@import "css.Label.less";
+@import "css.Button";
+@import "css.Box";
+@import "css.Label";
 
 // uses utitilites/scroll
-@import "css.Modal.less";
+@import "css.Modal";
 
 // uses utitilites/media and utilities/functions
-@import "css.Type.less"; 
+@import "css.Type";
 
 /* Print */
-@import "media.print.less";</code></pre>
+@import "media.print.less";
 
-TODO: steps of creating a local version
+// overriders all the way at the bottom, after all the other styles
+@import "css.Override.less";
 
-	<!-- <ol class="normal spacedout">
-		<li>
-			or // or simply
-			@import "sh.less";
-			// you vars
-			@import "sh._vars.less";
-		</li>
-		<li>
-			Create a folder for extended LESS files
-		</li>
-		<li>
-			Imports and override the vars
-			
-// you vars, overwrites shut vars
+</code></pre>
+		<p>Add the following, begin with overriding with your variables file, then Gulp task indicators. The task hints
+			to
+			inject and
+			create css files in development environment If you do not wish to use the gulp tasks included in Shut
+			Framework,
+			you can remove them.</p>
+
+		<pre><code class="language-less">// you vars, overwrites shut vars
 @import "sh._vars.less";
-		</li>
-		<li>
-			import your css files afterwards, or use gulp-inject 
-			
-			// inject:uiless
-			// endinject
-			// inject:medialess
-			// endinject
-			
-		</li>
-	</ol> -->
-</section>
 
+/************GULP RELATED*************/
+// inject:uiless
+// endinject
+
+// inject:medialess
+// endinject
+
+// overriders kept at last
+@import "css.Override.less";</code></pre>
+	</section>
+	<a name="step2" class="anchor-target"></a>
+
+	<section>
+		<h4 class="f4">2. Create the variables overrides</h4>
+		<p>Add a file <code class="shut-inline">sh._vars.less</code> (or anything). Add the variables you want to
+			overrdie
+			from the <a href="/fw/vars/">list of variables in Shut</a>. Import the file into your <code
+				class="shut-inline">sh.imports.less</code> created above.</p>
+		<div class="box box-yellow-light small">The framework loops through the following collections to
+			produce
+			<strong>.box-</strong>, <strong>.label-</strong>, <strong>.font-weight-</strong> and <strong>.box-shadow</strong>, and basic color-named
+			styles:
+			<code class="shut-inline">@color</code>, <code class="shut-inline">@shadows</code>, <code class="shut-inline">@font-weight-set</code> Removing elements,
+			removes output rules.</div>
+	</section>
+
+	<a name="step3" class="anchor-target"></a>
+
+	<section>
+		<h4 class="f4">3. Optional: Create an Icons file</h4>
+		<p>Shut framework is basic, it does not have icons out of the box (nor will it ever). But it, however, includes
+			basic functions to make dealing with custom icons easy. If you have a font icon to use, first, set the <code
+				class="shut-inline">@enable-icon-font</code> to true, to include icon related rules. </p>
+		<div class="box box-yellow-light small spaced">The following method depends on IcoMoon generated files, and <code>sekrab-gulpbin</code> gulp tasks.</div>
+
+		<ol class="normal">
+			<li>
+				Create a font using IcoMoon, with settings:
+				<ul class="normal">
+					<li>
+						<strong>Generate preprocessor variables for LESS</strong>
+
+					</li>
+					<li>
+						Class prefix: <strong>icon-</strong>
+					</li>
+					<li>
+						Add ligatures (optional but wonderful)
+					</li>
+					<li>
+						Name your font, and use that name to update <code class="shut-inline">@icon-font</code> variable.
+					</li>
+				</ul>
+
+			</li>
+			<li>
+				Download the font file into root folder: <strong>fontfiles</strong>, and extract.
+			</li>
+			<li>
+				Change <strong>gulpfile.js/config</strong> to point to folder location <code>iconfontspath</code>: './fontfiles/'
+			</li>
+			<li>
+				Add a file <strong>ui.icons.less</strong> with gulpinject comments like this:
+<pre><code class="language-less">// inject:icons
+// endinject
+</code></pre>
+			</li>
+			<li>
+				run <code class="language-cmd">gulp createicons</code>
+			</li>
+			<li>
+				run <code class="language-cmd">gulp rawless</code> to build the main css file
+			</li>
+			<li>
+				you can browse the icons generated in <strong>dummy/iconset.html</strong> file. 
+			</li>
+		</ol>
+		<p>
+			Now the icons are ready. You can see the generated icons in ui.icons.less
+		</p>
+
+	</section>
+	<a name="step4" class="anchor-target"></a>
+	<section>
+		<h4 class="f4">4. Add <strong>ui.</strong> prefixed less styles</h4>
+		<p>In order to make use of the gulp tasks included, the files of different styles, should be prefixed with
+			<strong>ui.</strong>. Like for example, <code class="shut-inline">ui.header.less</code>.</p>
+		<div class="box box-yellow-light small">The files are included in alphebetical order, a good CSS design, should
+			not
+			be bothered by this.</div>
+		<pre><code class="language-less">// ui.header.less:
+header {
+	position: fixed;
+	background-color: @white;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+</code></pre>
+		<p>Now you are ready to use gulp in development, to generate the output css file, the RTL version (if required),
+			and
+			the minified versios of them.</p>
+	</section>
+</section>
 <section>
-	<h3 class="f3">Variables and functions</h3>
-	<p>See the list of <a href="/fw/vars">variables</a>, and the list of <a href="/fw/functions">functions</a> inside Shut framework.</p>
+	<a name="gulp" class="anchor-target"></a>
+
+	<h3 class="f3 spaced">Gulp!</h3>
+	<p>Gulp tasks for assets are document in <a href="https://github.com/ayyash/gulpbin#assets">sekrab-gulpbin</a></p>
 </section>
