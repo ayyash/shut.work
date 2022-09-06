@@ -1,6 +1,6 @@
 .github
-fontfiles/
-
+/fontfiles
+/gulpbin
 # Logs
 logs
 *.log

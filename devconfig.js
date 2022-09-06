@@ -1,6 +1,6 @@
 
-const del = require("del");
-del.sync("./_site");
+const fs = require('fs');
+fs.rmSync('./_site', {recursive: true, force: true});
 
 module.exports = function (eleventyConfig) {
 

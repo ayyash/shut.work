@@ -65,7 +65,6 @@ img {
   border: 0 none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 form {
@@ -1729,10 +1728,12 @@ button {
 }
 /* CRITICAL END */
 section {
-  margin-bottom: 2.25rem;
+  -webkit-margin-after: 2.25rem;
+          margin-block-end: 2.25rem;
 }
 p {
-  margin-bottom: 1.5rem;
+  -webkit-margin-after: 1.5rem;
+          margin-block-end: 1.5rem;
 }
 /* font size */
 .larger {
@@ -1810,7 +1811,7 @@ p {
   direction: ltr;
 }
 .rtl {
-  font-family: var(--fontface-ar);
+  font-family: var(--sh-fontface-ar);
   direction: rtl;
 }
 /* CRITICAL END */

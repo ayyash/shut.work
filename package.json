@@ -4,10 +4,9 @@
   "description": "Shut framework documentation",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx eleventy --serve --config=devconfig.js",
-    "build": "gulp buildcss && npx eleventy  --config=distconfig.js",
-    "install:dev": "npm install --save-dev gulp sekrab-gulpbin"
+	 "prebuid": "cd gulpbin && gulp buildcss",
+    "build": "npx eleventy  --config=distconfig.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +19,8 @@
   ],
   "author": "Ayyash",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ayyash/shut.work/issues"
-  },
   "homepage": "https://github.com/ayyash/shut.work#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "shut": "^6.3.2"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "sekrab-gulpbin": "^1.2.3"
+    "@11ty/eleventy": "^1.0.2"
   }
 }

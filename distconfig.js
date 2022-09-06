@@ -1,6 +1,8 @@
 
-const del = require("del");
-del.sync("./dist");
+const fs = require('fs');
+fs.rmSync('./dist', {recursive: true, force: true});
+// const del = require("del");
+// del.sync("./dist");
 
 const devConfig = require('./devconfig.js');
 
