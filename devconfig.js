@@ -1,6 +1,6 @@
 
-const fs = require('fs');
-fs.rmSync('./_site', {recursive: true, force: true});
+// const fs = require('fs');
+// fs.rmSync('./_site', {recursive: true, force: true});
 
 module.exports = function (eleventyConfig) {
 

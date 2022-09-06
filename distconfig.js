@@ -1,6 +1,6 @@
 
-const fs = require('fs');
-fs.rmSync('./dist', {recursive: true, force: true});
+// const fs = require('fs');
+// fs.rmSync('./dist', {recursive: true, force: true});
 // const del = require("del");
 // del.sync("./dist");
 
