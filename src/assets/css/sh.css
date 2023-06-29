@@ -153,23 +153,23 @@ textarea {
   position: relative;
 }
 .l {
-  float: left;
+  float: inline-start;
 }
 .r {
-  float: right;
+  float: inline-end;
 }
 /* CRITICAL END */
 .clear {
   clear: both;
 }
 .txt-r {
-  text-align: right;
+  text-align: end;
 }
 .txt-c {
   text-align: center;
 }
 .txt-l {
-  text-align: left;
+  text-align: start;
 }
 .breath,
 ul.breathout > li,
@@ -464,14 +464,14 @@ table td {
   vertical-align: top;
 }
 table th {
-  text-align: left;
+  text-align: start;
 }
 table.txt-r th,
 table th.txt-r {
-  text-align: right;
+  text-align: end;
 }
 table caption {
-  text-align: left;
+  text-align: start;
 }
 table.tabulated th {
   -webkit-padding-after: 2px;
@@ -532,7 +532,7 @@ table.rich tfoot td {
 /* CRITICAL BEGIN */
 /* affects wrapper and site width */
 .w100 {
-  width: 100%!important;
+  width: 100% !important;
 }
 .h100 {
   height: 100%;
@@ -741,6 +741,57 @@ table.rich tfoot td {
 .row-spaced.uc-12 > li {
   width: calc(100% - 1.5rem/2);
 }
+.row-c {
+  container-type: inline-size;
+}
+.row-c .cc-1,
+.row-c.ucc-1 > li {
+  width: 8.33333333%;
+}
+.row-c .cc-2,
+.row-c.ucc-2 > li {
+  width: 16.66666667%;
+}
+.row-c .cc-3,
+.row-c.ucc-3 > li {
+  width: 25%;
+}
+.row-c .cc-4,
+.row-c.ucc-4 > li {
+  width: 33.33333333%;
+}
+.row-c .cc-5,
+.row-c.ucc-5 > li {
+  width: 41.66666667%;
+}
+.row-c .cc-6,
+.row-c.ucc-6 > li {
+  width: 50%;
+}
+.row-c .cc-7,
+.row-c.ucc-7 > li {
+  width: 58.33333333%;
+}
+.row-c .cc-8,
+.row-c.ucc-8 > li {
+  width: 66.66666667%;
+}
+.row-c .cc-9,
+.row-c.ucc-9 > li {
+  width: 75%;
+}
+.row-c .cc-10,
+.row-c.ucc-10 > li {
+  width: 83.33333333%;
+}
+.row-c .cc-11,
+.row-c.ucc-11 > li {
+  width: 91.66666667%;
+}
+.row-c .cc-12,
+.row-c.ucc-12 > li {
+  width: 100%;
+}
 .grid {
   --sh-only-display: grid;
   display: grid;
@@ -780,6 +831,106 @@ table.rich tfoot td {
 }
 .g-11 {
   grid-template-columns: 91.66666667% auto;
+}
+@container (width > 720px ) {
+  .row-c .cmd-1,
+  .row-c.ucmd-1 > li {
+    width: 8.33333333%;
+  }
+  .row-c .cmd-2,
+  .row-c.ucmd-2 > li {
+    width: 16.66666667%;
+  }
+  .row-c .cmd-3,
+  .row-c.ucmd-3 > li {
+    width: 25%;
+  }
+  .row-c .cmd-4,
+  .row-c.ucmd-4 > li {
+    width: 33.33333333%;
+  }
+  .row-c .cmd-5,
+  .row-c.ucmd-5 > li {
+    width: 41.66666667%;
+  }
+  .row-c .cmd-6,
+  .row-c.ucmd-6 > li {
+    width: 50%;
+  }
+  .row-c .cmd-7,
+  .row-c.ucmd-7 > li {
+    width: 58.33333333%;
+  }
+  .row-c .cmd-8,
+  .row-c.ucmd-8 > li {
+    width: 66.66666667%;
+  }
+  .row-c .cmd-9,
+  .row-c.ucmd-9 > li {
+    width: 75%;
+  }
+  .row-c .cmd-10,
+  .row-c.ucmd-10 > li {
+    width: 83.33333333%;
+  }
+  .row-c .cmd-11,
+  .row-c.ucmd-11 > li {
+    width: 91.66666667%;
+  }
+  .row-c .cmd-12,
+  .row-c.ucmd-12 > li {
+    width: 100%;
+  }
+}
+@container (width > 960px ) {
+  .row-c .clg-1,
+  .row-c.uclg-1 > li {
+    width: 8.33333333%;
+  }
+  .row-c .clg-2,
+  .row-c.uclg-2 > li {
+    width: 16.66666667%;
+  }
+  .row-c .clg-3,
+  .row-c.uclg-3 > li {
+    width: 25%;
+  }
+  .row-c .clg-4,
+  .row-c.uclg-4 > li {
+    width: 33.33333333%;
+  }
+  .row-c .clg-5,
+  .row-c.uclg-5 > li {
+    width: 41.66666667%;
+  }
+  .row-c .clg-6,
+  .row-c.uclg-6 > li {
+    width: 50%;
+  }
+  .row-c .clg-7,
+  .row-c.uclg-7 > li {
+    width: 58.33333333%;
+  }
+  .row-c .clg-8,
+  .row-c.uclg-8 > li {
+    width: 66.66666667%;
+  }
+  .row-c .clg-9,
+  .row-c.uclg-9 > li {
+    width: 75%;
+  }
+  .row-c .clg-10,
+  .row-c.uclg-10 > li {
+    width: 83.33333333%;
+  }
+  .row-c .clg-11,
+  .row-c.uclg-11 > li {
+    width: 91.66666667%;
+  }
+  .row-c .clg-12,
+  .row-c.uclg-12 > li {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 720px) {
   .offset-md-1 {
@@ -1490,19 +1641,13 @@ a.label-pink:hover {
 .modal-overlay {
   display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 1030;
   background-color: rgba(39, 40, 34, 0.6);
 }
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 1040;
   overflow: hidden;
   outline: 0;
@@ -1528,31 +1673,23 @@ a.label-pink:hover {
 }
 .animate.fromleft .modal-content {
   transform: translateX(-100%);
-  -webkit-animation: fromleft 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-          animation: fromleft 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fromleft 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+  animation-fill-mode: forwards;
 }
 .animate.fromright .modal-content {
   transform: translateX(100%);
-  -webkit-animation: fromright 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-          animation: fromright 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fromright 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+  animation-fill-mode: forwards;
 }
 .animate.fromtop .modal-content {
   transform: translateY(-100%);
-  -webkit-animation: fromtop 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-          animation: fromtop 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fromtop 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+  animation-fill-mode: forwards;
 }
 .animate.frombottom .modal-content {
   transform: translateY(100%);
-  -webkit-animation: frombottom 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-          animation: frombottom 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: frombottom 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+  animation-fill-mode: forwards;
 }
 .modal-header {
   display: flex;
@@ -1584,8 +1721,8 @@ a.label-pink:hover {
 .modal-body::-webkit-scrollbar-track-piece {
   background-color: #f3f3f3;
   border-radius: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-end-end-radius: 8px;
+  border-end-start-radius: 8px;
 }
 .modal-body::-webkit-scrollbar-thumb:vertical {
   height: 50px;
@@ -1644,25 +1781,9 @@ a.label-pink:hover {
   }
 }
 /* RTL BEGIN */
-@-webkit-keyframes fromleft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 @keyframes fromleft {
   from {
     transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes fromright {
-  from {
-    transform: translateX(100%);
   }
   to {
     transform: translateX(0);
@@ -1677,25 +1798,9 @@ a.label-pink:hover {
   }
 }
 /* RTL END */
-@-webkit-keyframes frombottom {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 @keyframes frombottom {
   from {
     transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes fromtop {
-  from {
-    transform: translateY(-100%);
   }
   to {
     transform: translateY(0);
@@ -2041,8 +2146,8 @@ pre::-webkit-scrollbar-button:end:increment {
 pre::-webkit-scrollbar-track-piece {
   background-color: #f3f3f3;
   border-radius: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-end-end-radius: 8px;
+  border-end-start-radius: 8px;
 }
 pre::-webkit-scrollbar-thumb:vertical {
   height: 50px;
@@ -2063,8 +2168,8 @@ pre[class*=language-] {
 }
 .arrow-standalone {
   display: inline-block;
-  top: 30%;
-  left: -10px;
+  inset-block-start: 30%;
+  inset-inline-start: -10px;
   border-width: 10px;
   border-inline-start-width: 0;
   border-style: solid;
@@ -2079,8 +2184,8 @@ pre[class*=language-] {
 }
 .arrow-above:before {
   /* reset first */
-  left: 45%;
-  top: -5px;
+  inset-inline-start: 45%;
+  inset-block-start: -5px;
   border-width: 0 5px 5px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2093,8 +2198,8 @@ pre[class*=language-] {
   content: "";
 }
 .arrow-below:before {
-  left: 45%;
-  bottom: -5px;
+  inset-inline-start: 45%;
+  inset-block-end: -5px;
   border-width: 5px 5px 0;
   border-style: solid;
   border-inline-end-color: transparent;
@@ -2107,8 +2212,8 @@ pre[class*=language-] {
   content: "";
 }
 .arrow-right:before {
-  top: 30%;
-  right: -5px;
+  inset-block-start: 30%;
+  inset-inline-end: -5px;
   border-width: 5px 0 5px 5px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2121,8 +2226,8 @@ pre[class*=language-] {
   content: "";
 }
 .arrow-left:before {
-  top: 30%;
-  left: -5px;
+  inset-block-start: 30%;
+  inset-inline-start: -5px;
   border-width: 5px;
   border-inline-start-width: 0;
   border-style: solid;
@@ -2141,13 +2246,10 @@ pre[class*=language-] {
   display: inline-block;
   -webkit-margin-end: 12px;
           margin-inline-end: 12px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  right: -10px;
+  inset-block-start: 30%;
+  inset-inline-end: -10px;
   border-width: 10px 0 10px 10px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2161,14 +2263,11 @@ pre[class*=language-] {
 .pointer-up:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
   /* reset first */
-  left: 45%;
-  top: -6px;
+  inset-inline-start: 45%;
+  inset-block-start: -6px;
   border-width: 0 6px 6px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2182,13 +2281,10 @@ pre[class*=language-] {
 .pointer-right:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  right: -6px;
+  inset-block-start: 30%;
+  inset-inline-end: -6px;
   border-width: 6px 0 6px 6px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2202,13 +2298,10 @@ pre[class*=language-] {
 .pointer-down:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  left: 45%;
-  bottom: -6px;
+  inset-inline-start: 45%;
+  inset-block-end: -6px;
   border-width: 6px 6px 0;
   border-style: solid;
   border-inline-end-color: transparent;
@@ -2222,13 +2315,10 @@ pre[class*=language-] {
 .pointer-left:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  left: -6px;
+  inset-block-start: 30%;
+  inset-inline-start: -6px;
   border-width: 6px;
   border-inline-start-width: 0;
   border-style: solid;
@@ -2243,13 +2333,10 @@ pre[class*=language-] {
 .pointer-diagonalupleft:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  right: -8px;
+  inset-block-start: 30%;
+  inset-inline-end: -8px;
   border-width: 8px 0 8px 8px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2264,13 +2351,10 @@ pre[class*=language-] {
 .pointer-diagonalupright:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  left: -8px;
+  inset-block-start: 30%;
+  inset-inline-start: -8px;
   border-width: 8px;
   border-inline-start-width: 0;
   border-style: solid;
@@ -2286,13 +2370,10 @@ pre[class*=language-] {
 .pointer-diagonaldownleft:before {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  right: -8px;
+  inset-block-start: 30%;
+  inset-inline-end: -8px;
   border-width: 8px 0 8px 8px;
   border-style: solid;
   border-block-start-color: transparent;
@@ -2308,13 +2389,10 @@ pre[class*=language-] {
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
   /* reset */
-  right: auto;
-  bottom: auto;
-  left: auto;
-  top: auto;
+  inset: auto;
   border: 1px solid;
-  top: 30%;
-  left: -8px;
+  inset-block-start: 30%;
+  inset-inline-start: -8px;
   border-width: 8px;
   border-inline-start-width: 0;
   border-style: solid;
@@ -2337,18 +2415,13 @@ pre[class*=language-] {
   border-color: #ffc400;
   content: "";
   display: inline-block;
-  top: 30%;
-  right: -10px;
+  inset-block-start: 30%;
+  inset-inline-end: -10px;
   border-width: 10px 0 10px 10px;
   border-style: solid;
   border-block-start-color: transparent;
   border-inline-end-color: transparent;
   border-block-end-color: transparent;
-}
-.borderradius {
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 5px;
-  padding: 1.5rem;
 }
 .colorcontrast-light {
   padding: 1.5rem;
@@ -2389,8 +2462,8 @@ pre[class*=language-] {
 .scrollme::-webkit-scrollbar-track-piece {
   background-color: #f3f3f3;
   border-radius: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-end-end-radius: 8px;
+  border-end-start-radius: 8px;
 }
 .scrollme::-webkit-scrollbar-thumb:vertical {
   height: 50px;
@@ -2421,8 +2494,8 @@ pre[class*=language-] {
 .scrollme-x::-webkit-scrollbar-track-piece {
   background-color: #f3f3f3;
   border-radius: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-end-end-radius: 8px;
+  border-end-start-radius: 8px;
 }
 .scrollme-x::-webkit-scrollbar-thumb:vertical {
   height: 50px;
@@ -2707,8 +2780,8 @@ header nav a {
   .dt-menu::-webkit-scrollbar-track-piece {
     background-color: #f3f3f3;
     border-radius: 0;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
   }
   .dt-menu::-webkit-scrollbar-thumb:vertical {
     height: 50px;
@@ -2758,8 +2831,8 @@ header nav a {
   .outline::-webkit-scrollbar-track-piece {
     background-color: #f3f3f3;
     border-radius: 0;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
   }
   .outline::-webkit-scrollbar-thumb:vertical {
     height: 50px;

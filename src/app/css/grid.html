@@ -40,7 +40,8 @@ title: "Grid"
 </div>
 
 <h2 class="f2 spaced weight-light">The flexbox</h2>
-<div class="box box-yellow-light small">The grid column base is dependent on variable <code class="shut-inline">@wrapper</code>, set by default to 12.</div>
+<div class="box box-yellow-light small">The grid column base is dependent on variable <code
+		class="shut-inline">@wrapper</code>, set by default to 12.</div>
 <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;c-1&quot;&gt;c-1&lt;/div&gt;
 	&lt;div class=&quot;c-11&quot;&gt;c-11&lt;/div&gt;
@@ -130,7 +131,9 @@ title: "Grid"
 	<h3 class="f5 ">Fixed width and spaced between</h3>
 	<p>
 		On a 12-column grid, adding <code class="shut-inline">c-x</code> for the number of columns, places
-		content in x of <code class="shut-inline">@wrapper</code> segments (default 12) of the total width. (This is similar to Bootstrap). This also accounts for margins around boxes of <code class="shut-inline">@gutterspace</code>
+		content in x of <code class="shut-inline">@wrapper</code> segments (default 12) of the total width. (This is
+		similar to Bootstrap). This also accounts for margins around boxes of <code
+			class="shut-inline">@gutterspace</code>
 	</p>
 	<pre><code class="language-html">&lt;div class=&quot;row-spaced&quot;&gt;
 	&lt;div class=&quot;c-5&quot;&gt;c-5&lt;/div&gt;
@@ -192,7 +195,8 @@ title: "Grid"
 <section>
 	<h3 class="f5">Lists</h3>
 	<p>Rows may apply to ul, will carry forward column definition to li's of the same value. The class names are
-		<code class="shut-inline">.uc-1</code> to <code class="shut-inline">.uc-12</code></p>
+		<code class="shut-inline">.uc-1</code> to <code class="shut-inline">.uc-12</code>
+	</p>
 	<div class="spaced">
 		<pre><code class="language-html">&lt;ul class=&quot;uc-3 row&quot;&gt;
 	&lt;li&gt;item&lt;/li&gt;
@@ -294,7 +298,8 @@ title: "Grid"
 	<p>
 		A simpler way to produce two columns of content, using css grid, depending on flat HTML elements.
 		Alternating.
-		The first column is defined by g-n (n is 1 to <code class="shut-inline">@wrapper</code> by default 12) and the second one is an auto width.
+		The first column is defined by g-n (n is 1 to <code class="shut-inline">@wrapper</code> by default 12) and the
+		second one is an auto width.
 	</p>
 	<pre><code class="language-html">&lt;div class=&quot;grid g-3&quot;&gt;
 	&lt;h5&gt;g-3&lt;/h5&gt;
@@ -340,9 +345,9 @@ title: "Grid"
 
 </section>
 
-<h3 class="f3 spaced">Responsive</h3>
 
 <section>
+	<h3 class="f3 spaced">Responsive</h3>
 	<p>Grid styles apply on smallest screen, if you want the grid to apply to larger screens, the framework
 		defines two stops out of the box <code class="shut-inline">.md</code>, and <code class="shut-inline">.lg</code>,
 		for flex grid, and <code class="shut-inline">.gmd</code>, and <code class="shut-inline">.glg</code> for css
@@ -426,6 +431,44 @@ title: "Grid"
 </section>
 
 <section>
+	<h3 class="f3 spaced">Container <span class="small label label-blue">Beta</span> </h3>
+	<p>Now that container queries are supported by major browsers, Shut uses the same screen stubs as container queries,
+		for the grid system. Apply <code class="shut-inline">.row-c</code> to the container (the row wrapper), then use
+		a the prefix <code class="shut-inline">c*</code> to the same grid classes above. Here is how.</p>
+
+	<div class="spaced">
+		<pre><code class="language-html">&lt;div class=&quot;row row-c&quot;&gt;
+	&lt;div class=&quot;col cc-5&quot;&gt;col cc-5&lt;/div&gt;
+	&lt;div class=&quot;col cmd-4&quot;&gt;col cmd-4&lt;/div&gt;
+	&lt;div class=&quot;col clg-3&quot;&gt;col clg-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<div class="row row-c">
+			<div class="col cc-5 box box-white">col cc-5</div>
+			<div class="col cmd-4 box box-white">col cmd-4</div>
+			<div class="col clg-3 box box-white">col clg-3</div>
+		</div>
+	</div>
+
+	<p>If the same row is contained in a tighter section (for example <code class="shut-inline">.c-6</code>), the container query kicks in relative to the new wrapping section.</p>
+	<div class="spaced">
+		<pre><code class="language-html">&lt;div class=&quot;c-6&quot;&gt;
+	&lt;div class=&quot;row row-c&quot;&gt;
+		&lt;div class=&quot;col cc-5&quot;&gt;col cc-5&lt;/div&gt;
+		&lt;div class=&quot;col cmd-4&quot;&gt;col cmd-4&lt;/div&gt;
+		&lt;div class=&quot;col clg-3&quot;&gt;col clg-3&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<div class="c-6">
+			<div class="row row-c">
+				<div class="col cc-5 box box-white">col cc-5</div>
+				<div class="col cmd-4 box box-white">col cmd-4</div>
+				<div class="col clg-3 box box-white">col clg-3</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
 	<h3 class="f5">LESS function</h3>
 	<p>Want more? Use the following function in LessCss to generate new grids.</p>
 	<pre><code class="language-less">/* generate media query for min-width set to xl (1200px) */
@@ -474,7 +517,8 @@ by modifying the global variable */
 	<p class="small box box-yellow-light">The heights are multiples of <code
 			class="shut-inline">@grid-column-height</code>. </p>
 	<p class="small box box-yellow-light">For <code>max-height</code> replace <code class="shut-inline">h-</code> with
-		<code class="shut-inline">hm-</code></p>
+		<code class="shut-inline">hm-</code>
+	</p>
 
 	<pre><code class="language-html">&lt;ul class=&quot;row-spaced uc-2&quot;&gt;
 	&lt;li&gt;&lt;div class=&quot;h-1&quot;&gt;h-1&lt;/div&gt;&lt;/li&gt;
@@ -507,7 +551,8 @@ by modifying the global variable */
 
 	<p>List minimum height</p>
 	<p class="small box box-yellow-light">For <code>max-height</code> replace <code class="shut-inline">uh-</code> with
-		<code class="shut-inline">uhm-</code></p>
+		<code class="shut-inline">uhm-</code>
+	</p>
 
 	<pre><code class="language-html">&lt;ul class=&quot;row-spaced uc-2 uh-4&quot;&gt;
 	&lt;li&gt;uh-4&lt;/li&gt;
@@ -529,7 +574,8 @@ by modifying the global variable */
 </section>
 <section>
 	<h3 class="f5">LESS function</h3>
-	<p>The framework provides <code>.h-1</code> to <code>.h-6</code>, you can generate more heights using the following LESS functions:</p>
+	<p>The framework provides <code>.h-1</code> to <code>.h-6</code>, you can generate more heights using the following
+		LESS functions:</p>
 	<pre><code class="language-css">/* generate .h-7 to .h-12, .uh-7 to .uh-12 with min-height */
 .generate-min-heights(7, 12);
 

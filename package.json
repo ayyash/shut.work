@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npx eleventy --serve --config=devconfig.js",
-	 "prebuid": "cd gulpbin && gulp buildcss",
+    "prebuild": "cd gulpbin && gulp buildcss",
     "build": "npx eleventy  --config=distconfig.js"
   },
   "repository": {
