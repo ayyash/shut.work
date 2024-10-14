@@ -88,7 +88,8 @@ title: "General"
 		<code class="shut-inline">@halfspace</code>, <code class="shut-inline">@extraspace</code>, and <code
 			class="shut-inline">@doublespace</code>.</p>
 
-	<p>All classes that involve right or left definition, are {% mirror %} in RTL automatically. {% logic %} classes use logical <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS logical properties.</a></p>
+	<h3 class="f5">Fully logical</h3>	
+	<p>All classes that involve right or left definition, are {% logic %} classes and use logical <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS logical properties</a>. You code for LTR, and it will be reversed when the RTL stylesheet is appended to body.</p>
 
 	<div class="grid g-3 g-bthin spacedout doublespaced">
 		<h6 class="f6">.breath</h6>
@@ -132,10 +133,10 @@ title: "General"
 		<h6 class="f6">.spacetop</h6>
 		<div>Margin block start <span class="smaller">(should avoid)</span>.</div>
 
-		<h6 class="f6">.r</h6>
-		<div>Float right {% mirror %}</div>
 		<h6 class="f6">.l</h6>
-		<div>Float left {% mirror %}</div>
+		<div>Float inline start {% logic %}</div>
+		<h6 class="f6">.r</h6>
+		<div>Float inline end {% logic %}</div>
 
 		<h6 class="f6">.lauto</h6>
 		<div>Margin inline start auto {% logic %}</div>
@@ -163,9 +164,9 @@ title: "General"
 		<h6 class="f6">.txt-c</h6>
 		<div>Text center aligned</div>
 		<h6 class="f6">.txt-l</h6>
-		<div>Text left aligned {% mirror %}</div>
+		<div>Text start aligned {% logic %}</div>
 		<h6 class="f6">.txt-r</h6>
-		<div>Text right aligned {% mirror %}</div>
+		<div>Text end aligned {% logic %}</div>
 
 		<h6 class="f6">.text-nowrap</h6>
 		<div>Prepares element for ellipses text overflow.</div>

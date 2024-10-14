@@ -1,18 +1,24 @@
-
-
 .dt-menu {
-    display: none;
+	display: none;
+	a {
+		text-decoration: underline;
+		font-weight: 570;
+		display: block;
+		padding-inline-start: @halfspace;
+		
+	}
 }
 
 a[aria-current="page"] {
-    pointer-events: none;
-    color: @text-color;
-    font-weight: @font-weight-bold;
+	pointer-events: none;
+	color: @text-color;
+	text-decoration: none;
+	font-weight: @font-weight-bold;
 }
 
 .homelogo {
-    display: block;
-    width: 100%;
+	display: block;
+	width: 100%;
 }
 
 header {
@@ -21,91 +27,105 @@ header {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	.logo { 
-        width: 40px;
-    }
-    .menu {
-        padding-right: @space;
-        font-size: 150%;
-        line-height: 1;
-    }
 
-    nav {
-        a {
-            display: inline-block;
-            padding-left: @space;
-            .smaller();
-            
-            color: @text-color;
-        }
-       
-    }
-} 
+	.logo {
+		width: 40px;
+	}
+
+	.menu {
+		padding-right: @space;
+		font-size: 150%;
+		line-height: 1;
+
+		a {
+			text-decoration: underline;
+			font-weight: 570;
+		}
+	}
+
+	nav {
+		a {
+			display: inline-block;
+			padding-left: @space;
+			.smaller();
+
+
+			color: @text-color;
+		}
+
+	}
+}
+
 .subnav {
-    padding-left: @halfspace;
-    margin-left: @halfspace;
-    border-left: 1px solid @grey-light;
-    margin-top: @halfspace;
-    margin-bottom: @halfspace;
+	padding-left: @halfspace;
+	margin-left: @halfspace;
+	border-left: 1px solid @grey-light;
+	margin-top: @halfspace;
+	margin-bottom: @halfspace;
 }
+
 .download {
-     
-    .liga {
-        font-size: 110%;
-    }
-   
-    span {
-        display: none;
-    }
+
+	.liga {
+		font-size: 110%;
+	}
+
+	span {
+		display: none;
+	}
 }
+
 .github {
-    font-size: 1.4rem;
-} 
+	font-size: 1.4rem;
+}
+
 .media(md, {
-    .download span {
-        display: inline;
-    }
-    .homelogo {
-        width: 400px;
-    }
+	.download span {
+		display: inline;
+	}
+
+	.homelogo {
+		width: 400px;
+	}
 });
 
 .media(xl, {
 
-   .menu {
-       display: none;
-   }
-    .modal-drawer {
-        display: none;
-    }
+	.menu {
+		display: none;
+	}
 
-    .dt-menu {
-        display: block;
-        position: fixed;
-        top: 10rem;
-        left: 0;
-        width: 10vw;
-        padding: @space;
-        font-size: 90%;
-        bottom: 0;
-        overflow-y: auto;
-        .scroll(2px);
-    }
+	.modal-drawer {
+		display: none;
+	}
 
-    .page.withoutline {
+	.dt-menu {
+		display: block;
+		position: fixed;
+		top: 10rem;
+		left: 0;
+		width: 10vw;
+		padding: @space;
+		font-size: 90%;
+		bottom: 0;
+		overflow-y: auto;
+		.scroll(2px);
+	}
+
+	.page.withoutline {
 		.container {
 			padding-left: 10vw;
 		}
 	}
-    
-   
+
+
 });
 
 
 .media(ds, {
-    .page.withoutline {
-        .container {
-            padding-left: @space;
-        }
-    }
+	.page.withoutline {
+		.container {
+			padding-left: @space;
+		}
+	}
 });

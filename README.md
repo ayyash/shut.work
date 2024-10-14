@@ -1,7 +1,7 @@
 # shut.work
 Shut framework documentation 
 
-npm start to run on eleventy
-gulp watch to watch css
-gulp buildcss to build css in assets
-git checkin to deploy on netlify
+[![Ceasefire Now](https://badge.techforpalestine.org/default)](https://techforpalestine.org/learn-more)
+
+
+<a href="https://shut.work">Shut Framework</a>

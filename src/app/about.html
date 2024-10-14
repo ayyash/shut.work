@@ -4,18 +4,23 @@ title: "Why SHUT?"
 ---
 
 
-<div class="page">
+<div class="page about">
 	<div class="container md-8 center">
 
 
 		<h1 class="f1 spaced">{{ title }}</h1>
 
 		<p>
-			As all frameworks (or libraries if you may), this started from the necessity to control repeating patterns
-			of design and coding. Naming CSS before css processors, was very crucial, maintaining them was not easy.
-			Shut framework was conceived in around 2004.
-			<strong>Yes. I am a procrastinator.</strong>
+			Like all frameworks (or libraries, if you may), this one emerged from the need to manage recurring design
+			and
+			coding patterns. Before CSS preprocessors, naming and maintaining CSS was a significant challenge. Shut
+			framework was conceived around 2004 to address these issues. And yes, I admit, I tend to procrastinate.
 		</p>
+	</div>
+</div>
+<div class="page">
+	<div class="container md-8 center">
+
 
 		<h3 class="f3 spaced">The case against Bootstrap</h3>
 
@@ -25,17 +30,42 @@ title: "Why SHUT?"
 				HTML pages</strong>. It created chaos.</p>
 
 		<p><strong>Naming in Bootstrap is data-driven</strong> (sometimes), meaning, "btn-danger" is not always used for
-			"danger" related options. Making a distinctive different looking button is a design option. CSS is not
+			"danger" related actions. Making a distinctive button is a design decision. CSS is not
 			supposed to describe data, rather style, or choice of style. (For example, box-red, or box-light).</p>
 
-		<p><strong>Detailed styling, over-loads the outcome stylesheet</strong>. SHUT framework provides enough for
-			designers to quickly prototype, but to add style, and look and feel, they should roll up their sleeves and
-			get their hands dirty. The output stylesheet is always smaller, and if done right, more maintainable.
+		<p><strong>Detailed styling, over-loads the outcome stylesheet</strong>. When designers need more specific and
+			custom design, instead of opening the box of Bootstrap (which they should do), they roll up their sleeves
+			and get their hands dirty, ending up with a much larger CSS bundle.
 			Bootstrap is a black box, hard to control, or maintain, let alone customize.</p>
 
-		<p>When Bootstrap came out, a lot of designers found refuge from obstrusive libraries (like Kendo UI), where they controlled the HTML, and let CSS be what it is good for; styling. Unfortunately, as the years went by, <strong>Bootstrap became yet another UI component library with an overloaded HTML hierarchy</strong>, and a huge CSS stylesheet to maintain. This lead to many derived libraries trying to control the output by simply wrapping it inside mroe black boxes! </p>
-			
-		<p>The main take against that is maintainability on large projects. <strong>If you do not get the same HTML you wrote as a developer, fixing style issues becomes a nightmare</strong>. That actually is why I do not buy into web components, just yet. </p>
+		<p>When Bootstrap came out, a lot of designers found refuge in it, from obtrusive libraries (like Kendo UI), and
+			let CSS be what it is good for; styling. Unfortunately, as the years went by, <strong>Bootstrap became yet
+				another UI component library with an overloaded HTML hierarchy</strong>, and a huge CSS stylesheet to
+			maintain. This lead to many derived libraries trying to control the output by simply wrapping it inside more
+			black boxes! </p>
+
+		<p>The main take against that is maintainability on large projects. I have yet to walk into a project that uses
+			Bootstrap the way it was designed to be used. It's simply all customization via overrides. </p>
+
+		<h3 class="f3 spaced">The case against popular libararies</h3>
+
+		<p>When a library becomes popular and more developers buy into it, and more contributors come in, it may look
+			like it's a good thing. You are outsourcing testing and maintanance to another group. They know what they're
+			doing. Right?</p>
+
+		<p>Just remember next time you have a CSS output of 250KB of one basic theme, that it was never about you.
+			<strong>It was about the millions of users sharing your code.</strong>
+		</p>
+
+		<p>Tailwind looks like they tried to fix this problem with tools that remove extra unused CSS. Tailwind don't
+			understand developers. <a href="https://www.israelpantsonfire.com/">
+				<strong>If there is a chance to screw up CSS, they will most definitely screw up
+					CSS.</strong>
+			</a></p>
+
+		<p><strong>The biggest challenge is staying up to date.</strong> The code added for “backward compatibility”
+			with older versions keeps growing, leading to bloat. The latest version of Bootstrap doesn’t fully utilize
+			logical properties, even though CSS is now officially logical across all browsers.</p>
 
 		<h3 class="f3 spaced">SHUT is to prototype.</h3>
 
@@ -58,16 +88,19 @@ title: "Why SHUT?"
 		<p>In addition to that, my fingers hurt after a couple of hours moving and clicking the mouse to align things on
 			screen! Am I becoming the grumpy old neighbor?</p>
 
-		<p>My argument: just as Bootstrap caters for developers who do not design, those apps cater for designers who do
-			not develop. They may have some coding skills though. But if you know how to code like I do, you would feel
-			absolutely limited by those apps. <strong>So if you know how to code, CODE your prototype</strong>.</p>
 
+		<p>
+			My argument:<strong> Just as Bootstrap serves developers who aren't designers, these apps are designed for
+				designers who don't develop.</strong> They might have some coding skills, but if you know how to code
+			like I do, you'll find these apps very limiting. So, if you can code, CODE your prototype.
+		</p>
 		<h3 class="f3 spaced">Developers are color-blind</h3>
 
-		<p>My cynical comeback to developers trying to design something out of the box. Developers who do not design,
-			should not be given the power Bootstrap gives, they will most definitely screw it up. Stopped counting the
-			number of times I was asked to “clean up and fix” code that went out of control, that was built by
-			Bootstrap.</p>
+		<p>My cynical comeback to developers who attempt to design something out of the box. Developers who do not
+			design,
+			should not be given the power Bootstrap (or TailwindCss) gives, they will most definitely screw it up.
+			Stopped counting the
+			number of times I was asked to “clean up and fix” Bootstrap code that went out of control.</p>
 
 		<h3 class="f3 spaced">SHUT, the world between.</h3>
 
@@ -77,7 +110,8 @@ title: "Why SHUT?"
 		<ul class="normal alist">
 			<li>
 				<strong>LESS based.</strong> Better documentation, easier, and simpler. Sorry SASS people, but nothing
-				beats the simple “.small()” to include existing rules with no hassle.
+				beats the simple “.small()” to include existing rules with no hassle. Another feature that I could not
+				reproduce in SASS is “@imporrt (reference) filename”
 			</li>
 			<li>
 				<strong>Does not involve JavaScript,</strong> nor has any prebuilt components. JavaScript is reliant on
@@ -96,7 +130,9 @@ title: "Why SHUT?"
 				LESS functions are documented to allow every project to have its own extended values.
 			</li>
 			<li>
-				<strong>RTL enabled.</strong> I speak Arabic.
+				<strong>Fully logical.</strong> I speak Arabic. Having a framework that can easily be swapped to RTL is
+				crucial. The lastest version of Shut is fully logical. Instead of mirorring the whole CSS file, we can
+				now simply add an override CSS file, for the rough edges.
 			</li>
 		</ul>
 
