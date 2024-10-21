@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     modals.forEach(n => {
 
-        new Modal(n);
+        (new Modal(n)).hide();
 
     });
 
