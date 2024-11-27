@@ -18,7 +18,7 @@
   --sh-grey: #727468;
   --sh-grey-dark: #272822;
   --sh-black: #272822;
-  --sh-linkcolor: #3112ca;
+  --sh-linkcolor: #1B14EE;
   --sh-visitedcolor: #800080;
   --sh-altcolor: #048bca;
   --sh-red: #f31109;
@@ -39,7 +39,7 @@
   --sh-modal-bg: rgba(39, 40, 34, 0.6);
   --sh-modal-index-10: calc(1040 - 10);
   --sh-btn-hover: rgba(243, 243, 243, 0.5);
-  --sh-btn-rev-hover: #4524eb;
+  --sh-btn-rev-hover: #4944f1;
   --sh-btn-bg: #f3f3f3;
   --sh-btn-padding-h: 1.6rem;
   --sh-btn-padding-v: 1.2rem;
@@ -1416,7 +1416,7 @@ ul.boxed > li {
   color: #fff;
 }
 .box-pink {
-  background-color: #e611a6;
+  background-color: #EE147A;
   color: #fff;
 }
 .box-white-dark {
@@ -1490,7 +1490,7 @@ ul.boxed > li {
   color: #272822;
 }
 .pink {
-  color: #e611a6;
+  color: #EE147A;
 }
 .label {
   padding: var(--sh-label-padding);
@@ -1605,11 +1605,11 @@ a.label-grey-dark:hover {
   color: #fff;
 }
 .label-pink {
-  background-color: #e611a6;
+  background-color: #EE147A;
   color: #fff;
 }
 a.label-pink:hover {
-  background-color: #f251c2;
+  background-color: #f35ba2;
   color: #fff;
 }
 .label-white {
@@ -2816,6 +2816,9 @@ body {
 }
 .f4 {
   font-weight: 400;
+}
+.weight-bolder {
+  font-weight: 900;
 }
 .anchor-target {
   position: relative;
