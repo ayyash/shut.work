@@ -2,6 +2,12 @@
 layout: "base"
 list: [
     {name: "General", href: "/examples/general/"},
+    {name: "Card", href: "/examples/card/"},
+    {name: "List", href: "/examples/list/"},
+    {name: "Dialog", href: "/examples/dialog/"},
+    {name: "Form", href: "/examples/form/"},
+    {name: "Table", href: "/examples/table/"},
+    {name: "Image", href: "/examples/image/"},
    
 ]
 ---
@@ -64,7 +70,7 @@ list: [
 <div class="page withoutline">
     <div class="container">
 
-        <h1 class="f1 spaced">{{ title }}</h1>
+        <h1 class="f3 spaced">{{ title }}</h1>
         {% block content %}
             {{ content | safe }}
         {% endblock content %}
